@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
+
+Route::get('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
+
+Route::get('/about-us',['uses'=>'BlogController@getAboutUs','as'=>'aboutus']);
+
+Route::get('/blog/{slug?}',['uses'=>'BlogController@getBlogDescription','as'=>'blogDescription']);
