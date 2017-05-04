@@ -15,7 +15,8 @@ class BlogController extends Controller
 
     public function getHomePage(){
     	
-    	return "dhhd";
+    	return view('blog.homepage',[]);
+    
     }
 
     public function getAboutUs(){
@@ -24,7 +25,7 @@ class BlogController extends Controller
 
 
     public function getBlogDescription(){
-    	
+    	return view('blog.fulldescription',[]);
     }
 
 }

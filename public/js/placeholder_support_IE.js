@@ -1,6 +1,6 @@
 /* Copy and paste in footer for active Placeholder text in all older IE browsers */
 			
-				<script type="text/javascript">
+				
 					$(function() {
 						var input = document.createElement("input");
 						if(('placeholder' in input)==false) { 
@@ -31,4 +31,4 @@
 							});
 						}
 					}); 
-				</script>
+				
