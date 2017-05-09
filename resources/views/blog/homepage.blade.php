@@ -14,21 +14,21 @@
 				<div class="manu_area">
 					<div class="mainmenu menu-wrap wrap">
 						<ul id="nav-bottom">
-							<li><a href="">Categories</a></li>
-							<li><a href="">Freebies</a></li>
-							<li><a href="">Services</a>
+							<li><a href="">Greek Mythology</a></li>
+							<li><a href="">Roman Mythology</a></li>
+							<li><a href="">Hindu Mythology</a>
 								<ul>
-									<li><a href="">Single item</a></li>
-									<li><a href="">Single item</a></li>
-									<li><a href="">Single item</a></li>
-									<li><a href="">Single item</a></li>
-									<li><a href="">Single item</a></li>
+									<li><a href="">Mahabharatha</a></li>
+									<li><a href="">Ramayana</a></li>
+									<li><a href="">Krishana</a></li>
+									<li><a href="">Gita</a></li>
+									
 								</ul>
 							</li>
-							<li><a href="">Gallery</a></li>
-							<li><a href="">About us</a></li>
+							<li><a href="">Egyptian Mythology</a></li>
+							<!-- <li><a href="">About us</a></li>
 							<li><a href="">Privacy policy</a></li>
-							<li><a href="">Contact us</a></li>
+							<li><a href="">Contact us</a></li> -->
 						</ul>
 					</div>
 				</div>
