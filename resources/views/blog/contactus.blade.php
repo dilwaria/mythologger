@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="http://placehold.it/700x90"/></div>
+					<div style="width:700px;margin:0 auto;"><img src=""/></div>
 				</div>
 			</div>
 			</div>
@@ -78,7 +78,7 @@
 
 @section('javascript')
 
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
 
 		<script>
 		function initialize()

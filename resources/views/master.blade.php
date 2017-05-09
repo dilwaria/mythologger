@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <body>
 	<head>
@@ -20,7 +20,7 @@
 	
 	 
 
-<script src="http://code.jquery.com/jquery.js"></script>	
+<script src="https://code.jquery.com/jquery.js"></script>	
 <script type="text/javascript" src="js/placeholder_support_IE.js"></script>
 		<script type="text/javascript" src="js/selectnav.min.js"></script>
 		
@@ -36,7 +36,8 @@
 			  nested: true,
 			  indent: '-'
 			});			
-		</script>		
+		</script>	
+		<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>	
 		
 		
 		@yield('javascript')

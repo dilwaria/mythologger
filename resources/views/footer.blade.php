@@ -46,9 +46,9 @@
 				<div class="fix footer_area">
 			<div class="wrap">
 			<div class="fix copyright_text floatleft">
-				<p>Designed By <a href="http://www.wpfreeware.com" rel="nofollow">WpFreeware</a></p>
+				<p>Registered @ <a href="https://www.mythologger.com" rel="nofollow">Mythologger 2017</a></p>
 			</div>
-			<div class="fix social_area floatright">
+			<!-- <div class="fix social_area floatright">
 				<ul>
 					<li><a href="" class="feed"></a></li>
 					<li><a href="" class="facebook"></a></li>
@@ -58,6 +58,6 @@
 					<li><a href="" class="pin"></a></li>
 					<li><a href="" class="tumblr"></a></li>
 				</ul>
-			</div>
+			</div> -->
 			</div>
 		</div>

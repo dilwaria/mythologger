@@ -3,7 +3,7 @@
 <div class="fix header_area">
 			<div class="fix wrap header">
 				<div class="logo floatleft">
-					<h1>Fresh Blog</h1>
+					<h1>Mythologger</h1>
 				</div>
 				<div class="manu floatright">
 					<ul id="nav-top">

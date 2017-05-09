@@ -7,7 +7,7 @@
 @section('content')
 <div class="fix content_area">
 				<div class="fix top_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="http://placehold.it/700x90"/></div>
+					<div style="width:700px;margin:0 auto;"><img src=""/></div>
 				</div>
 				<div class="manu_area">
 					<div class="mainmenu wrap">
@@ -53,7 +53,7 @@
 							<h5>Nibh Pharetra Venenatis Magna</h5>
 							<h6>Nibh Pharetra Venenatis Magna</h6>
 							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.</p>
-							<div class="addbar_ractangle aligncenter"><img src="http://placehold.it/300x280"/></div>
+							<div class="addbar_ractangle aligncenter"><img src=""></div>
 							<br/><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
 							<ul>
 								<li>list items</li>

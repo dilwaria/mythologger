@@ -1,13 +1,14 @@
 @extends('master')
 
  @section('title')
+ Mythologger- Applied Mythology Blogging Site
  @endsection
 
 @section('content')
 		<div class="fix content_area">
 				
 				<div class="fix top_add_bar">
-					<div class="addbar_leaderborard"><img src="http://placehold.it/728x90"/></div>
+					<div class="addbar_leaderborard"><img src=""/></div>
 				</div>
 				
 				<div class="manu_area">
@@ -213,7 +214,7 @@
 			</div>
 			
 				<div class="fix bottom_add_bar">
-					<div class="addbar_leaderborard"><img src="http://placehold.it/728x90"/></div>
+					<div class="addbar_leaderborard"><img src=""/></div>
 				</div>
 				
 		</div>
