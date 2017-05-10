@@ -20,12 +20,16 @@ class BlogController extends Controller
     }
 
     public function getAboutUs(){
-    	return "dhhd";
+    	return view('blog.aboutus',[]);
     }
 
 
     public function getBlogDescription(){
     	return view('blog.fulldescription',[]);
+    }
+
+    public function admin(){
+        return view('adminportal',[]);
     }
 
 }

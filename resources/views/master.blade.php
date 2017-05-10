@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<body>
+
 	<head>
 		<title> @yield('title')</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,7 +12,10 @@
 		<link href="/css/responsive.css" rel="stylesheet" media="screen">		
 	</head>
 
+<body>
 	@include('header')
+
+
 	@yield('content')
 
 	@include('footer')
@@ -37,7 +40,7 @@
 			  indent: '-'
 			});			
 		</script>	
-		<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>	
+		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>	
 		
 		
 		@yield('javascript')

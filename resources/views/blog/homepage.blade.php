@@ -153,12 +153,6 @@
 							</div>
 							
 						</div>
-						
-					
-						
-						
-						
-						
 						</div>
 						
 						<div class="pagination fix">
@@ -196,16 +190,16 @@
 								<input class="search" type="text" placeholder="Search and hit enter"/>
 						</div>
 						<div class="fix single_sidebar">
-							<h2>A little about me</h2>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum. Sed posuere consectetur est at mant lobortis. Sed posuere consectetur est lobortis. Fusce  mauris condimentum.</p>
+							<h2>A little about Mythologger</h2>
+							<p>We started this blogging platform for mythologists from all over the world to share knowledge. Mythology is epic and will always be present in many applied form in different context</p>
 						</div>
 						<div class="fix single_sidebar">
 							<h2>Categories</h2>
-							<a href="">photography(5)</a>
-							<a href="">food(9)</a>
-							<a href="">Salads(4)</a>
-							<a href="">spicy(3)</a>
-							<a href="">Wine(5)</a>
+							<a href="">Krishana(5)</a>
+							<a href="">Hindu Mythology(9)</a>
+							<a href="">Drauapati(4)</a>
+							<a href="">Illiad(3)</a>
+							<!-- <a href="">Wine(5)</a> -->
 						</div>
 					</div>
 				</div>
