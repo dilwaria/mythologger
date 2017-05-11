@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="robots" content="noindex, nofollow" />
 	<link href="/css/admin.css" rel="stylesheet" media="screen">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
