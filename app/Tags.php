@@ -4,15 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Tags extends Model
 {
     const CREATED_AT = 'createDateTime';
     const UPDATED_AT = 'updateDateTime';
+    
+    protected $fillable = array('tagName');
 
-    protected $table = 'blogs';
+    protected $table = 'tagList';
 
-    function tags(){
-    	return $this->belongsToMany('App\Tags','tagMapping','blogID','tagID');
+    function blogs(){
+    	return $this->belongsToMany('App\Blog','tagMapping','tagID','blogID');
     }
 
     function createFromArray($arr){
@@ -23,5 +25,4 @@ class Blog extends Model
     	}
     	return $this;
     }
-
 }

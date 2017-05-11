@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use  Illuminate\Support\Facades\Request;
+use App\Services\BlogService;
 use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
+
+    private $blogService;
+
+    public function __construct(BlogService $b){
+        $this->blogService= $b;
+    }
 
     public function getContactUs(){
 
@@ -28,8 +35,20 @@ class BlogController extends Controller
     	return view('blog.fulldescription',[]);
     }
 
-    public function admin(){
-        return view('adminportal',[]);
+    // /blog/admin/mythologger/mYthologgerBlog123@mty
+    public function getAdminPanel($userName,$password){
+        if($userName=='mythologger' && $password== 'mYthologgerBlog123@mty'){
+            return view('blog.blogAdmin',[]);
+        }else{
+            abort(404);
+            
+        }
     }
+
+    public function saveBlog(){
+        $blog= Request::input('blog');
+        $tags= Request::input('tags');
+        $this->blogService->saveBlog($blog,$tags);
+   }
 
 }

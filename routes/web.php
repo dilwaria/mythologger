@@ -22,5 +22,6 @@ Route::get('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus
 Route::get('/about-us',['uses'=>'BlogController@getAboutUs','as'=>'aboutus']);
 
 Route::get('/blog/{slug?}',['uses'=>'BlogController@getBlogDescription','as'=>'blogDescription']);
+Route::get('/blog/admin/{userName}/{password}',['uses'=>'BlogController@getAdminPanel','as'=>'adminPanel']);
 
-Route::get('/admin',['uses'=>'BlogController@admin','as'=>'admin']);
+Route::post('/blog/saveBlog',['uses'=>'BlogController@saveBlog']);
