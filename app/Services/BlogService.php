@@ -15,6 +15,11 @@ class BlogService{
         $t= $t->createFromArray($tags);
         $b->tags()->save($t);
 	}
+
+	public function getBlog($blogID){
+			$blog= Blog::where('id','=',$blogID)->get();
+			return $blog[0];
+	}
 }
 
 ?>

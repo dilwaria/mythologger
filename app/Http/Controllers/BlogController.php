@@ -31,8 +31,9 @@ class BlogController extends Controller
     }
 
 
-    public function getBlogDescription(){
-    	return view('blog.fulldescription',[]);
+    public function getBlogDescription($slug,$blogID){
+        $blog= $this->blogService->getBlog($blogID);
+    	return view('blog.fulldescription',['blog'=>$blog]);
     }
 
     // /blog/admin/mythologger/mYthologgerBlog123@mty

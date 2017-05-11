@@ -41,7 +41,7 @@
 	<script type="text/javascript">
 	$(window).ready(
 		function(){
-			CKEDITOR.replace( 'blog[blogContent]');
+			// CKEDITOR.replace( 'blog[blogContent]');
 		}
 	);
 
