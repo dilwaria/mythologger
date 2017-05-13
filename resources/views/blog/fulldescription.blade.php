@@ -36,9 +36,9 @@
 						<div class="single_page_content fix">
 							<h1>{!! $blog->title !!}</h1>
 							<div class="single_post_meta fix">
-								<p>28 Sep, 2012   |   Photography, Wine, Food   |   12 Comments</p>
+								<p> {!! $blog->createDateTime !!}  |   Photography, Wine, Food   |   12 Comments</p>
 							</div>
-							<img src="{!! $blog->imgPath !!}" class="single_feature_img" alt=""/>
+							<img src="{!! $blog->imgPath !!}" class="single_feature_img" style="width:100%" alt=""/>
 							
 							{!! $blog->blogContent !!}
 
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="http://placehold.it/700x90"/></div>
+					<div style="width:700px;margin:0 auto;"><img src="https://placehold.it/700x90"/></div>
 				</div>
 			</div>
 		</div>
