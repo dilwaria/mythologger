@@ -50,6 +50,12 @@ class BlogController extends Controller
         $blog= Request::input('blog');
         $tags= Request::input('tags');
         $this->blogService->saveBlog($blog,$tags);
+        echo "Saved Sucessfully";
+   }
+
+   public function getTagListFromQuery(){
+        $val= Request::input('tag');
+        return $this->blogService->searchTags($val);
    }
 
 }
