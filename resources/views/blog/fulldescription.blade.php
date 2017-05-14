@@ -1,7 +1,7 @@
 @extends('master')
 
  @section('title')
- Narayan vs Narayan Sena
+{!! $blog->title !!}
  @endsection
 
 @section('content')
@@ -36,7 +36,7 @@
 						<div class="single_page_content fix">
 							<h1>{!! $blog->title !!}</h1>
 							<div class="single_post_meta fix">
-								<p> {!! $blog->createDateTime !!}  |   Photography, Wine, Food   |   12 Comments</p>
+								<p> {!! $blog->createDateTime !!}  |   By : {!! $blog->createdBy !!}     </p>
 							</div>
 							<img src="{!! $blog->imgPath !!}" class="single_feature_img" style="width:100%" alt=""/>
 							
