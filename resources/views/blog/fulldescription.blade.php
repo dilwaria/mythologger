@@ -1,7 +1,7 @@
 @extends('master')
 
  @section('title')
-{!! $blog->title !!}
+{{ strip_tags($blog->title) }}
  @endsection
 
 @section('content')
