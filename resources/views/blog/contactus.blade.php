@@ -4,6 +4,18 @@
 
 		
 @section('content')
+<div class="fix content_area">
+<!-- <div class="fix top_add_bar">
+					<div style="width:700px;margin:0 auto;"></div>
+				</div> -->
+
+
+				<div class="manu_area">
+					<div class="mainmenu wrap">
+						
+					</div>
+				</div>
+
 			<div class="fix wrap content_wrapper">
 				<div class="fix content">
 					<div class="fix main_content floatleft">
@@ -72,6 +84,7 @@
 				<div class="fix bottom_add_bar">
 					<div style="width:700px;margin:0 auto;"><img src=""/></div>
 				</div>
+			</div>
 			</div>
 			</div>
 		@endsection
