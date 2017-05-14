@@ -23,7 +23,7 @@
 					<div class="fix main_content floatleft">
 						<div class="single_page_content fix">
 							<h1>About Us</h1>
-							<img src="images/single_feature_img.png" class="single_feature_img" alt=""/>
+							<img src="/images/about_us.jpg" class="single_feature_img" alt=""/>
 							<p>There are so many cultures in this world and each culture has its own Mythology.
 
 The stories of these Mythologies has become popular as the inspiration of
