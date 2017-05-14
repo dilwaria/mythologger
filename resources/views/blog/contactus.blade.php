@@ -42,44 +42,7 @@
 							
 						</div>
 					</div>
-					<div class="fix sidebar floatright">
-						<div class="fix single_sidebar">
-							<div class="popular_post fix">
-								<h2>Popular</h2>
-								<div class="fix single_popular">
-									<img src="images/popular.png" class="floatleft"/>
-									<h2>Vestibum Malesuada Etiam Magna</h2>
-									<p>12 Nov, 2012</p>
-								</div>
-								<div class="fix single_popular">
-									<img src="images/popular.png" class="floatleft"/>
-									<h2>Vestibum Malesuada Etiam Magna</h2>
-									<p>12 Nov, 2012</p>
-								</div>
-								<div class="fix single_popular">
-									<img src="images/popular.png" class="floatleft"/>
-									<h2>Vestibum Malesuada Etiam Magna</h2>
-									<p>12 Nov, 2012</p>
-								</div>
-							</div>
-						</div>
-						<div class="fix single_sidebar">
-								<h2>Search</h2>
-								<input class="search" type="text" placeholder="Search and hit enter"/>
-						</div>
-						<div class="fix single_sidebar">
-							<h2>A little about me</h2>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum. Sed posuere consectetur est at mant lobortis. Sed posuere consectetur est lobortis. Fusce  mauris condimentum.</p>
-						</div>
-						<div class="fix single_sidebar">
-							<h2>Categories</h2>
-							<a href="">photography(5)</a>
-							<a href="">food(9)</a>
-							<a href="">Salads(4)</a>
-							<a href="">spicy(3)</a>
-							<a href="">Wine(5)</a>
-						</div>
-					</div>
+					@include('commonleftsidebar')
 				</div>
 				<div class="fix bottom_add_bar">
 					<div style="width:700px;margin:0 auto;"><img src=""/></div>
@@ -90,15 +53,17 @@
 		@endsection
 
 @section('javascript')
+		
+AIzaSyBlDbIZnZH8KBfyQhAolKEn7ZaMZ6LH_0A	
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlDbIZnZH8KBfyQhAolKEn7ZaMZ6LH_0A&sensor=false"></script>
 
 		<script>
 		function initialize()
 		{
 		var mapProp = {
-		  center:new google.maps.LatLng(51.508742,-0.120850),
-		  zoom:5,
+		  center:new google.maps.LatLng(28.5110641,77.0630248),
+		  zoom:10,
 		  mapTypeId:google.maps.MapTypeId.ROADMAP
 		  };
 		var map=new google.maps.Map(document.getElementById("googleMap")
