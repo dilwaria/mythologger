@@ -34,7 +34,7 @@
 				<div class="fix content">
 					<div class="fix main_content floatleft">
 						<div class="single_page_content fix">
-							<h1>{!! $blog->title !!}</h1>
+							<h1>{{ strip_tags($blog->title) }}</h1>
 							<div class="single_post_meta fix">
 								<p> {!! $blog->createDateTime !!}  |   By : {!! $blog->createdBy !!}     </p>
 							</div>
