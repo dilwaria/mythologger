@@ -21,8 +21,8 @@ class BlogController extends Controller
     }
 
     public function getHomePage(){
-    	
-    	return view('blog.homepage',[]);
+    	$blogs= $this->blogService->getPopularBlogs();
+    	return view('blog.homepage',['popularBlogs'=>$blogs]);
     
     }
 

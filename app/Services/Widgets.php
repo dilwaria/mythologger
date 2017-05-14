@@ -5,13 +5,18 @@ namespace App\Services;
 use App\Blog;
 use App\Tags;
 use DB;
+use App\Services\BlogService;
 
 class Widgets{
 
+	private $blogService;
+
+	public function __construct(){
+		$this->blogService= new BlogService();
+	}
+
 	public function getPopularPosts(){
-		$blogs= DB::table('blogs')->where('showOnWeb','=',1)
-					->orderBy('views')->orderBy('createDateTime')->limit(3)->get();
-		return $blogs->toArray();
+		return $this->blogService->getPopularBlogs(3);
 	}
 
 	public function getCategories(){

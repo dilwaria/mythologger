@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Blog;
 use App\Tags;
+use DB;
 
 class BlogService{
 	
@@ -14,6 +15,31 @@ class BlogService{
         	$t= $this->handleTags($tempTags);
         	$b->tags()->save($t);
         }
+	}
+
+	public function getPopularBlogs($limit=6){
+		$blogs= Blog::where('showOnWeb','=',1)
+					->orderBy('views')->orderBy('createDateTime')->limit($limit)->get();
+		foreach($blogs as $b){
+			$this->preprocessPopularPosts($b);
+		}
+		return $blogs->toArray();
+	}
+
+	private function preprocessPopularPosts(&$blog){
+		//strip off html from title and content
+		$resultBlogContent= strip_tags($blog->blogContent);
+		$resultBlogContent = substr($resultBlogContent,0,100);
+		$resultBlogContent.="...";
+	 	$blog->blogContent= $resultBlogContent;
+		$blog->title= strip_tags($blog->title);
+		// var_dump($blog->tags[0]->tagName);die;
+		// add the tags after implode
+		$tagArr=[];
+		foreach ($blog->tags as $t){
+			$tagArr[]=$t->tagName;
+		}
+		$blog->tagList= implode(",",$tagArr);
 	}
 
 	public function getBlog($blogID){

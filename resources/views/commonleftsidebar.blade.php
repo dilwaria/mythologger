@@ -4,9 +4,9 @@
 								<h2>Popular</h2>
 								@foreach ( Widgets::getPopularPosts() as $posts)
 									<div class="fix single_popular">
-										<img src="{!! $posts->imgPath !!}" class="floatleft"/>
-										<h2>{!! $posts->title !!}</h2>
-										<p>{!! $posts->createDateTime !!}</p>
+										<img src="{{$posts['imgPath']}}" class="floatleft"/>
+										<h2>{{$posts['title']}}</h2>
+										<p>{{$posts['createDateTime']}}</p>
 									</div>
 								@endforeach
 							</div>
@@ -24,7 +24,7 @@
 						<div class="fix single_sidebar">
 							<h2>Categories</h2>
 							@foreach ( Widgets::getCategories() as $categories) 
-								<a href="">{!! $categories['tagName'] !!}( {!! $categories['blogs_count'] !!} )</a>
+								<a href="">{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a>
 							@endforeach
 							<!-- <a href="">Wine(5)</a> -->
 						</div>
