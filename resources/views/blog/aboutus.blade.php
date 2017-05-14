@@ -63,7 +63,7 @@ as “The Applied Mythology”, invented by Mythologger.com.
 					@include('commonleftsidebar')
 				</div>
 				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="http://placehold.it/700x90"/></div>
+					<div style="width:700px;margin:0 auto;"><img src=""/></div>
 				</div>
 			</div>
 		</div>
