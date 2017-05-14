@@ -47,5 +47,3 @@ class BlogService{
     	return $b;
 	}
 }
-
-?>
