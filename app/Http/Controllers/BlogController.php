@@ -32,8 +32,8 @@ class BlogController extends Controller
 
 
     public function getBlogDescription($slug,$blogID){
-        $this->blogService->getBlog($blogID);
-    	return view('blog.fulldescription',['blogDescription']);
+        $blog= $this->blogService->getBlog($blogID);
+    	return view('blog.fulldescription',['blog'=>$blog]);
     }
 
     // /blog/admin/mythologger/mYthologgerBlog123@mty
@@ -50,6 +50,12 @@ class BlogController extends Controller
         $blog= Request::input('blog');
         $tags= Request::input('tags');
         $this->blogService->saveBlog($blog,$tags);
+        echo "Saved Sucessfully";
+   }
+
+   public function getTagListFromQuery(){
+        $val= Request::input('tag');
+        return $this->blogService->searchTags($val);
    }
 
 }

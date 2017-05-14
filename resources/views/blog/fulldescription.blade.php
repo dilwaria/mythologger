@@ -34,12 +34,16 @@
 				<div class="fix content">
 					<div class="fix main_content floatleft">
 						<div class="single_page_content fix">
-							<h1>Ullamcorper Mollis Pellentesque</h1>
+							<h1>{!! $blog->title !!}</h1>
 							<div class="single_post_meta fix">
-								<p>28 Sep, 2012   |   Photography, Wine, Food   |   12 Comments</p>
+								<p> {!! $blog->createDateTime !!}  |   Photography, Wine, Food   |   12 Comments</p>
 							</div>
-							<img src="images/single_feature_img.png" class="single_feature_img" alt=""/>
-							{{$blogContent}}
+							<img src="{!! $blog->imgPath !!}" class="single_feature_img" style="width:100%" alt=""/>
+							
+							{!! $blog->blogContent !!}
+
+							<a href="" class="gray btn">Preview</a>
+							<a href="" class="gray btn">Download</a>
 							
 							<div class="related_post fix">
 								<h2>Related Post</h2>
@@ -68,7 +72,7 @@
 					@include('commonleftsidebar')
 				</div>
 				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="http://placehold.it/700x90"/></div>
+					<div style="width:700px;margin:0 auto;"><img src="https://placehold.it/700x90"/></div>
 				</div>
 			</div>
 		</div>
