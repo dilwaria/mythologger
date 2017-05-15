@@ -33,6 +33,9 @@ class BlogController extends Controller
 
     public function getBlogDescription($slug,$blogID){
         $blog= $this->blogService->getBlog($blogID);
+        if($slug!=$blog->slug){
+            return redirect(route('blogDescription',['slug'=>$blog->slug,'blogID'=>$blogID]),301);
+        }
     	return view('blog.fulldescription',['blog'=>$blog]);
     }
 
