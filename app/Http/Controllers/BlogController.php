@@ -72,4 +72,13 @@ class BlogController extends Controller
         return $this->blogService->searchTags($val);
    }
 
+   public function sitemap()
+   {
+    
+
+
+    $content = View::make('sitemap', ['doctors' => $doctors, 'patients' => $patients]);
+    return Response::make($content)->header('Content-Type', 'text/xml;charset=utf-8');
+}
+
 }

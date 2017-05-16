@@ -40,7 +40,7 @@
 						@foreach ($popularBlogs as $b)
 							<div class="fix single_content floatleft pointerMouse" 
 							   onclick='location.href="<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>"' >
-								<img src="{{$b['imgPath']}}" alt="" style="max-width: 80%"/>
+								<img src="{{$b['imgPath']}}" alt="" style="max-width: 100%"/>
 								<div class="fix single_content_info">
 									<h1>{{$b['title']}}</h1>
 									<p class="author">By {{$b['createdBy']}} In {{$b['tagList']}}</p>
