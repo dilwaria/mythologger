@@ -51,6 +51,9 @@ class BlogService{
 		return Tags::where('tagName', 'LIKE', "%$val%")->get();
 	}
 
+
+
+
 	private function handleTags($tempTags){
 		if($t=Tags::where('tagName','=',$tempTags['tagName'])->first()){
 			return $t;
