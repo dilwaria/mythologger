@@ -80,7 +80,10 @@ margin-left: 15px;
 max-height: 440px;
 min-height: 440px;
 width: 322px;}
-.single_content img{}
+.single_content img{
+	width: 322px;
+    height: 206px;
+}
 .single_content h1{font-size: 18px;
 color: #6b6b6b;
 margin-top: 15px;
