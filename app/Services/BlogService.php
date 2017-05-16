@@ -29,7 +29,7 @@ class BlogService{
 	private function preprocessPopularPosts(&$blog){
 		//strip off html from title and content
 		$resultBlogContent= strip_tags($blog->blogContent);
-		$resultBlogContent = substr($resultBlogContent,0,100);
+		$resultBlogContent = substr($resultBlogContent,0,130);
 		$resultBlogContent.="...";
 	 	$blog->blogContent= $resultBlogContent;
 		$blog->title= strip_tags($blog->title);
