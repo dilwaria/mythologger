@@ -50,7 +50,7 @@ padding: 10px 15px;
 text-transform: uppercase;
 font-weight: bold;
 }
-.content_area{background: url(/images/bg.png) repeat;}
+.content_area{background: url(../images/bg.png) repeat;}
 .content_wrapper{}
 .top_add_bar,.bottom_add_bar{background: none repeat scroll 0 0 #FFFFFF;
 border-bottom: 2px solid #999999;
