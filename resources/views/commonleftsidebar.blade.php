@@ -4,13 +4,14 @@
 								<h2>Popular</h2>
 								@foreach ( Widgets::getPopularPosts() as $posts)
 									<div class="fix single_popular">
-										<img src="{{$posts['imgPath']}}" class="floatleft"/>
-										<h2>{{$posts['title']}}</h2>
+										<img src="{{$posts['imgPath']}}" class="floatleft popularImages"/>
+										<h2><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>" > {{$posts['title']}}</a></h2>
 										<p>{{$posts['createDateTime']}}</p>
 									</div>
 								@endforeach
 							</div>
 						</div>
+
 						<!--
 						<div class="fix single_sidebar">
 								<h2>Search</h2>

@@ -38,7 +38,8 @@
 						<div class="fix single_content_wrapper">
 						
 						@foreach ($popularBlogs as $b)
-							<div class="fix single_content floatleft">
+							<div class="fix single_content floatleft pointerMouse" 
+							   onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")' >
 								<img src="{{$b['imgPath']}}" alt="" style="max-width: 100%"/>
 								<div class="fix single_content_info">
 									<h1>{{$b['title']}}</h1>

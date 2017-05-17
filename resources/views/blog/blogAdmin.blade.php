@@ -28,11 +28,11 @@
 
     <label><b>Title(to display)</b></label>
      Please convert to HTML before insertion. <a rel="nofollow" target="_blank" href="https://wordhtml.com/"> Open</a>
-    <input type="text" name="blog[title]" 
+    <input type="textarea" name="blog[title]" 
         @if ($blog)
             value="{!! $blog->title !!}"
         @endif
-    required>
+    required><br><br>
 
     <label><b>seoTitle</b></label>
     <input type="text" name="blog[seoTitle]" 
