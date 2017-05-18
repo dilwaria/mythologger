@@ -17,9 +17,18 @@ class BlogService{
         }
 	}
 
+	public function getHomePageBlogs($limit=10){
+		$blogs= Blog::where('showOnWeb','=',1)
+					->orderBy('views')->orderBy('createDateTime','desc')->limit($limit)->get();
+		foreach($blogs as $b){
+			$this->preprocessPopularPosts($b);
+		}
+		return $blogs->toArray();
+	}
+
 	public function getPopularBlogs($limit=6){
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('views')->orderBy('createDateTime')->limit($limit)->get();
+					->orderBy('views')->orderBy('createDateTime','desc')->limit($limit)->get();
 		foreach($blogs as $b){
 			$this->preprocessPopularPosts($b);
 		}
