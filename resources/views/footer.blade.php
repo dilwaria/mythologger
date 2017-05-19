@@ -1,63 +1,75 @@
+    <!-- Footer Area
+        ================================================== -->
 
+	<div class="footer-container"><!-- Begin Footer -->
+    	<div class="container">
+        	<div class="row footer-row">
+                <div class="span3 footer-col">
+                    <h5>About Us</h5>
+                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                    <address>
+                        <strong>Design Team</strong><br />
+                        123 Main St, Suite 500<br />
+                        New York, NY 12345<br />
+                    </address>
+                    <ul class="social-icons">
+                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="#" class="social-icon twitter"></a></li>
+                        <li><a href="#" class="social-icon dribble"></a></li>
+                        <li><a href="#" class="social-icon rss"></a></li>
+                        <li><a href="#" class="social-icon forrst"></a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Tweets</h5>
+                    <ul>
+                        <li><a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><a href="#">@room122</a> In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.</li>
+                        <li><a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.</li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Posts</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><a href="#">Consectetur adipiscing elit est lacus gravida</a></li>
+                        <li><a href="#">Lectus sed orci molestie molestie etiam</a></li>
+                        <li><a href="#">Mattis consectetur adipiscing elit est lacus</a></li>
+                        <li><a href="#">Cras rutrum, massa non blandit convallis est</a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Flickr Photos</h5>
+                    <ul class="img-feed">
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="span6"><span class="left">Copyright 2012 Piccolo Theme. All rights reserved.</span></div>
+                        <div class="span6">
+                            <span class="right">
+                            <a href="#">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Gallery</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Blog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
 
-		<div class="fix footer_top_area">
-			<div class="fix footer_top wrap">
-			<div class="fix footer_top_container">
-				<div class="fix single_footer floatleft">
-					<h2>From Twitter</h2>
-					<p>Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies vehicula ut id elit. <br/><br/>Cum sociis natoque penatibus et magnis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis. </p>
-					<br/><p>Cum sociis natoque penatibus et magnis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
-				</div>
-				<div class="fix single_footer floatleft">
-					<h2>usefull links</h2>
-					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">about us</a></li>
-						<li><a href="">privacy policy</a></li>
-						<li><a href="">contact us</a></li>
-					</ul>
-				</div>
-				<div class="fix single_footer floatleft">
-					<div class="popular_post fix">
-						<h2>Popular</h2>
-						<div class="fix single_popular">
-							<img src="images/popular.png" class="floatleft"/>
-							<a href=""><h2>Vestibum Malesuada Etiam Magna</h2></a>
-							<p>12 Nov, 2012</p>
-						</div>
-						<div class="fix single_popular">
-							<img src="images/popular.png" class="floatleft"/>
-							<a href=""><h2>Vestibum Malesuada Etiam Magna</h2></a>
-							<p>12 Nov, 2012</p>
-						</div>
-						<div class="fix single_popular">
-							<img src="images/popular.png" class="floatleft"/>
-							<a href=""><h2>Vestibum Malesuada Etiam Magna</h2></a>
-							<p>12 Nov, 2012</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-
-
-				<div class="fix footer_area">
-			<div class="wrap">
-			<div class="fix copyright_text floatleft">
-				<p>Registered @ <a href="https://www.mythologger.com" rel="nofollow">Mythologger 2017</a></p>
-			</div>
-			<!-- <div class="fix social_area floatright">
-				<ul>
-					<li><a href="" class="feed"></a></li>
-					<li><a href="" class="facebook"></a></li>
-					<li><a href="" class="twitter"></a></li>
-					<li><a href="" class="drible"></a></li>
-					<li><a href="" class="flickr"></a></li>
-					<li><a href="" class="pin"></a></li>
-					<li><a href="" class="tumblr"></a></li>
-				</ul>
-			</div> -->
-			</div>
-		</div>
+        </div>
+    </div><!-- End Footer --> 
+    

@@ -4,57 +4,74 @@
 
 		
 @section('content')
-<div class="fix content_area">
-<!-- <div class="fix top_add_bar">
-					<div style="width:700px;margin:0 auto;"></div>
-				</div> -->
 
 
-				<div class="manu_area">
-					<div class="mainmenu wrap">
-						
-					</div>
-				</div>
 
-			<div class="fix wrap content_wrapper">
-				<div class="fix content">
-					<div class="fix main_content floatleft">
-						<div class="single_page_content fix">
-							<h1 style="margin-bottom:15px;">Contact Us</h1>
-							
-							<div class="google_map">
-								<div id="googleMap"></div>
-								<div class="contact_info">
-									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
-								</div>
-							</div>
+        <!-- Page Content
+    ================================================== --> 
+    <div class="row"><!--Container row-->
 
-								<div class="contact_form">
-									<form>
-										<p><input type="text" class="text" placeholder="Name"/></p>
-										<p><input type="text" class="email" placeholder="Email"/></p>
-										<p><input type="text" class="text" placeholder="Subject"/></p>
-										<p><textarea class="textarea" placeholder="Message"></textarea></p>
-										<p><input type="submit" class="submit" value="Submit"/></p>
-									</form>
-								</div>
+        <div class="span8 contact"><!--Begin page content column-->
 
-							
-						</div>
-					</div>
-					@include('commonleftsidebar')
-				</div>
-				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src=""/></div>
-				</div>
-			</div>
-			</div>
-			</div>
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna.</p>
+
+            <div class="alert alert-success">
+                Well done! You successfully read this important alert message. 
+            </div>
+
+            <form action="#" id="contact-form">
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Name">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-envelope"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Email Address">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-globe"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
+                </div>
+                <textarea class="span6"></textarea>
+                <div class="row">
+                    <div class="span2">
+                        <input type="submit" class="btn btn-inverse" value="Send Message">
+                    </div>
+                </div>
+            </form>
+
+        </div> <!--End page content column-->
+
+        <!-- Sidebar
+        ================================================== --> 
+        <div class="span4 sidebar page-sidebar"><!-- Begin sidebar column -->
+            <h5 class="title-bg">Our Location</h5>
+            <address>
+            <strong>Piccolo</strong><br>
+            123 Main St, Suite 600<br>
+            San Francisco, CA 94107<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+             
+            <address>
+            <strong>Jimmy Doe</strong><br>
+            <a href="mailto:#">first.last@gmail.com</a>
+            </address>
+
+            <h5 class="title-bg">Map Us</h5>
+            <img src="img/location-map.jpg" alt="map">
+
+        </div><!-- End sidebar column -->
+
+    </div><!-- End container row -->
+
+
 		@endsection
 
 @section('javascript')
 		
-AIzaSyBlDbIZnZH8KBfyQhAolKEn7ZaMZ6LH_0A	
+
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlDbIZnZH8KBfyQhAolKEn7ZaMZ6LH_0A&sensor=false"></script>
 

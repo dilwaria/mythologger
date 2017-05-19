@@ -1,19 +1,6 @@
-/*
 
-Template Name: Clean
-Template URI: http://www.wpfreeware.com/clean/
-Author: WpFreeware
-Author URI: http://www.wpfreeware.com
-Version: 1.0 
-License: GPL
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-*/
 
-*{
-    font-family: 'open sans';
-    color: rgba(0,0,0,0.6);
-}
 *{margin:0;padding:0}
 body{font-family:san-serif,arial;
     font-size:14px;line-height:20px;background:#fff;}
@@ -63,7 +50,7 @@ padding: 10px 15px;
 text-transform: uppercase;
 font-weight: bold;
 }
-.content_area{background: url(/images/bg.png) repeat;}
+.content_area{background: {{url('/images/bg.png')}} repeat;}
 .content_wrapper{}
 .top_add_bar,.bottom_add_bar{background: none repeat scroll 0 0 #FFFFFF;
 border-bottom: 2px solid #999999;
@@ -83,10 +70,7 @@ margin-left: 15px;
 max-height: 440px;
 min-height: 440px;
 width: 322px;}
-.single_content img{
-	width: 322px;
-    height: 206px;
-}
+.single_content img{}
 .single_content h1{font-size: 18px;
 color: #6b6b6b;
 margin-top: 15px;
@@ -167,8 +151,8 @@ padding: 8px 10px;}
 margin: 20px 0;
 padding: 10px 0;
 border-bottom: 2px dotted #999;}
-.single_post_meta p{color: #F28888;
-font-size: 13px;}
+.single_post_meta p{color: #C4C4C4;
+font-size: 11px;}
 .single_feature_img{margin: 15px 0;}
 .related_post{padding: 15px 0;
 margin: 20px 0;
@@ -263,5 +247,5 @@ padding: 10px;}
 font-weight: bold;
 padding: 2px 10px;}
 .more_post a:Hover{text-decoration:underline;}
-.pointerMouse {cursor: pointer}
-.popularImages{height: 60px;width:60px;}
+
+.popularImages {height:60px;width:60px;}

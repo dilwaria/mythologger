@@ -5,75 +5,184 @@
  @endsection
 
 @section('content')
-<div class="fix content_area">
-				<div class="fix top_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src=""/></div>
-				</div>
-				<div class="manu_area">
-					<div class="mainmenu menu-wrap wrap">
-						<ul id="nav-bottom">
-							<li><a href="">Greek Mythology</a></li>
-							<li><a href="">Roman Mythology</a></li>
-							<li><a href="">Hindu Mythology</a>
-								<ul>
-									<li><a href="">Mahabharatha</a></li>
-									<li><a href="">Ramayana</a></li>
-									<li><a href="">Krishana</a></li>
-									<li><a href="">Gita</a></li>
-									
-								</ul>
-							</li>
-							<li><a href="">Egyptian Mythology</a></li>
-							<!-- <li><a href="">About us</a></li>
-							<li><a href="">Privacy policy</a></li>
-							<li><a href="">Contact us</a></li> -->
-						</ul>
-					</div>
-				</div>
-			<div class="fix wrap content_wrapper">
-				<div class="fix content">
-					<div class="fix main_content floatleft">
-						<div class="single_page_content fix">
-							<h1>{{ strip_tags($blog->title) }}</h1>
-							<div class="single_post_meta fix">
-								<p> {!! $blog->createDateTime !!}  |   By : {!! $blog->createdBy !!}     </p>
-							</div>
-							<img src="{!! $blog->imgPath !!}" class="single_feature_img" style="width:100%" alt=""/>
-							
-							{!! $blog->blogContent !!}
 
-							<a href="" class="gray btn">Preview</a>
-							<a href="" class="gray btn">Download</a>
-							
-							<div class="related_post fix">
-								<h2>Related Post</h2>
-								<div class="fix related_post_container">
-									<div class="fix single_related_post floatleft">
-										<img src="images/related_feature_img.png"/>
-										<h2>Dapibus Elit Amet Parturient</h2>
-										<p>28 Sep, 2012   |   14 Comments</p>
-									</div>
-									<div class="fix single_related_post floatleft">
-										<img src="images/related_feature_img.png"/>
-										<h2>Dapibus Elit Amet Parturient</h2>
-										<p>28 Sep, 2012   |   14 Comments</p>
-									</div>
-									<div class="fix single_related_post floatleft">
-										<img src="images/related_feature_img.png"/>
-										<h2>Dapibus Elit Amet Parturient</h2>
-										<p>28 Sep, 2012   |   14 Comments</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
 
-					</div>
-					@include('commonleftsidebar')
-				</div>
-				<div class="fix bottom_add_bar">
-					<div style="width:700px;margin:0 auto;"><img src="https://placehold.it/700x90"/></div>
-				</div>
-			</div>
-		</div>
+    <!---================================================== --> 
+    <div class="row"><!--Container row-->
+
+        <!-- Blog Full Post
+        ================================================== --> 
+        <div class="span8 blog">
+
+            <!-- Blog Post 1 -->
+            <article>
+                <h3 class="title-bg"><a href="#">{{ strip_tags($blog->title) }}<</a></h3>
+                <div class="post-content">
+                    <a href="#"><img src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
+
+                    <div class="post-body">
+                        
+                    	{!! $blog->blogContent !!}
+
+                        
+
+                        <p class="well"><a href="#" rel="tooltip" title="An important message">Proin tristique</a> tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidudui.</p>
+
+                       
+
+                       <blockquote>
+                            Maecenas felis tellus, ferment Nulla faucibus ligula eget ante varius ac euismod odio placerat.
+                       </blockquote>
+
+                       
+                    </div>
+
+                    <div class="post-summary-footer">
+                        <ul class="post-data">
+                            <li><i class="icon-calendar"></i> {!! $blog->createDateTime !!} </li>
+                            <li><i class="icon-user"></i> <a href="#">{!! $blog->createdBy !!}</a></li>
+                            <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
+                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- About the Author -->
+            <section class="post-content">
+                <div class="post-body about-author">
+                    <img src="img/author-avatar.jpg" alt="author">
+                    <h4>About Nathan Brown</h4>
+                    Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+                </div>
+            </section>
+
+        <!-- Post Comments
+        ================================================== --> 
+            <section class="comments">
+                <h4 class="title-bg"><a name="comments"></a>5 Comments so far</h4>
+               <ul>
+                    <li>
+                        <img src="img/user-avatar.jpg" alt="Image" />
+                        <span class="comment-name">John Doe</span>
+                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
+                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
+                        <!-- Reply -->
+                        <ul>
+                            <li>
+                                <img src="img/user-avatar.jpg" alt="Image" />
+                                <span class="comment-name">Jason Doe</span>
+                                <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
+                                <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
+                                </li>
+                             <li>
+                                <img src="img/user-avatar.jpg" alt="Image" />
+                                <span class="comment-name">Jason Doe</span>
+                                <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
+                                <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
+                                </li>
+                         </ul>
+                    </li>
+                    <li>
+                        <img src="img/user-avatar.jpg" alt="Image" />
+                        <span class="comment-name">John Doe</span>
+                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
+                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
+                    </li>
+                    <li>
+                        <img src="img/user-avatar.jpg" alt="Image" />
+                        <span class="comment-name">John Doe</span>
+                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
+                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
+                    </li>
+                    
+               </ul>
+            
+                <!-- Comment Form -->
+                <div class="comment-form-container">
+                    <h6>Leave a Comment</h6>
+                    <form action="#" id="comment-form">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span>
+                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Name">
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-envelope"></i></span>
+                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Email Address">
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-globe"></i></span>
+                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
+                        </div>
+                        <textarea class="span6"></textarea>
+                        <div class="row">
+                            <div class="span2">
+                                <input type="submit" class="btn btn-inverse" value="Post My Comment">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </section><!-- Close comments section-->
+
+        </div><!--Close container row-->
+
+        <!-- Blog Sidebar
+        ================================================== --> 
+        <div class="span4 sidebar">
+
+            <!--Search-->
+            <section>
+                <div class="input-append">
+                    <form action="#">
+                        <input id="appendedInputButton" size="16" type="text" placeholder="Search"><button class="btn" type="button"><i class="icon-search"></i></button>
+                    </form>
+                </div>
+            </section>
+
+           
+            @include('commonleftsidebar')
+
+            <!--Tabbed Content-->
+            <h5 class="title-bg">More Info</h5>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#comments" data-toggle="tab">Comments</a></li>
+                <li><a href="#tweets" data-toggle="tab">Tweets</a></li>
+                <li><a href="#about" data-toggle="tab">About</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="comments">
+                     <ul>
+                        <li><i class="icon-comment"></i>admin on <a href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><i class="icon-comment"></i>admin on <a href="#">Consectetur adipiscing elit</a></li>
+                        <li><i class="icon-comment"></i>admin on <a href="#">Ipsum dolor sit amet consectetur</a></li>
+                        <li><i class="icon-comment"></i>admin on <a href="#">Aadipiscing elit varius elementum</a></li>
+                        <li><i class="icon-comment"></i>admin on <a href="#">ulla iaculis mattis lorem</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="tweets">
+                    <ul>
+                        <li><a href="#"><i class="icon-share-alt"></i>@room122</a> Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna.</li>
+                        <li><a href="#"> <i class="icon-share-alt"></i>@room122</a> Nulla faucibus ligula eget ante varius ac euismod odio placerat.</li>
+                        <li><a href="#"> <i class="icon-share-alt"></i>@room122</a> Pellentesque iaculis lacinia leo. Donec suscipit, lectus et hendrerit posuere, dui nisi porta risus, eget adipiscing</li>
+                        <li><a href="#"> <i class="icon-share-alt"></i>@room122</a> Vivamus augue nulla, vestibulum ac ultrices posuere, vehicula ac arcu.</li>
+                        <li><a href="#"> <i class="icon-share-alt"></i>@room122</a> Sed ac neque nec leo condimentum rhoncus. Nunc dapibus odio et lacus.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="about">
+                    <p>Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                </div>
+            </div>
+
+            <!--Video Widget-->
+            <h5 class="title-bg">Video Widget</h5>
+            <iframe src="http://player.vimeo.com/video/24496773" width="370" height="208"></iframe>
+        </div>
+
+    </div>
+
+
+
 		 @endsection

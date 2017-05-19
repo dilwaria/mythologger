@@ -1,32 +1,25 @@
-<div class="fix sidebar floatright">
-						<div class="fix single_sidebar">
-							<div class="popular_post fix">
-								<h2>Popular</h2>
-								@foreach ( Widgets::getPopularPosts() as $posts)
-									<div class="fix single_popular">
-										<img src="{{$posts['imgPath']}}" class="floatleft popularImages"/>
-										<h2><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>" > {{$posts['title']}}</a></h2>
-										<p>{{$posts['createDateTime']}}</p>
-									</div>
-								@endforeach
-							</div>
-						</div>
 
-						<!--
-						<div class="fix single_sidebar">
-								<h2>Search</h2>
-								<input class="search" type="text" placeholder="Search and hit enter"/>
-						</div>
-						!-->
-						<div class="fix single_sidebar">
-							<h2>A little about Mythologger</h2>
-							<p>We started this blogging platform for mythologists from all over the world to share knowledge. Mythology is epic and will always be present in many applied form in different context</p>
-						</div>
-						<div class="fix single_sidebar">
-							<h2>Categories</h2>
-							@foreach ( Widgets::getCategories() as $categories) 
-								<a href="">{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a>
-							@endforeach
-							<!-- <a href="">Wine(5)</a> -->
-						</div>
-					</div>
+
+<!--Categories-->
+            <h5 class="title-bg">Categories</h5>
+            <ul class="post-category-list">
+            @foreach ( Widgets::getCategories() as $categories)
+                <li><a href="#"><i class="icon-plus-sign"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
+                @endforeach
+            </ul>
+
+            <!--Popular Posts-->
+            <h5 class="title-bg">Popular Posts</h5>
+<ul class="popular-posts">
+@foreach ( Widgets::getPopularPosts() as $posts)
+                <li>
+                    <a href="#"><img src="{{$posts['imgPath']}}" alt="Popular Post"></a>
+                    <h6><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></h6>
+                    <em>Posted on {{$posts['createDateTime']}}</em>
+                </li>
+                @endforeach
+            </ul>
+
+
+
+

@@ -5,91 +5,46 @@
  @endsection
 
 @section('content')
-		<div class="fix content_area">
-				
-				<div class="fix top_add_bar">
-					<div class="addbar_leaderborard"><img src=""/></div>
-				</div>
-				
-				<div class="manu_area">
-					<div class="mainmenu menu-wrap wrap">
-						<ul id="nav-bottom">
-							<li><a href="">Greek Mythology</a></li>
-							<li><a href="">Roman Mythology</a></li>
-							<li><a href="">Hindu Mythology</a>
-								<ul>
-									<li><a href="">Mahabharatha</a></li>
-									<li><a href="">Ramayana</a></li>
-									<li><a href="">Krishana</a></li>
-									<li><a href="">Gita</a></li>
-									
-								</ul>
-							</li>
-							<li><a href="">Egyptian Mythology</a></li>
-							<!-- <li><a href="">About us</a></li>
-							<li><a href="">Privacy policy</a></li>
-							<li><a href="">Contact us</a></li> -->
-						</ul>
-					</div>
-				</div>
-			<div class="fix wrap content_wrapper">
-				<div class="fix content">
-					<div class="fix main_content floatleft">
-						<div class="fix single_content_wrapper">
-						
-						@foreach ($popularBlogs as $b)
-							<div class="fix single_content floatleft pointerMouse" 
-							   onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")' >
-								<img src="{{$b['imgPath']}}" alt="" style="max-width: 100%"/>
-								<div class="fix single_content_info">
-									<h1>{{$b['title']}}</h1>
-									<p class="author">By {{$b['createdBy']}} In {{$b['tagList']}}</p>
-									<p>
-										{{$b['blogContent']}}
-									</p>
-									<div class="fix post-meta">
-										<p>{{$b['createDateTime']}}  <!-- |  24 Comments  !--></p>
-									</div>
-								</div>
-								
-							</div>
-						@endforeach
-						<!--
-						<div class="fix single_content floatleft">
-							<img src="images/home_featured.png" alt=""/>
-							<div class="fix single_content_info">
-								<h1>Ullamcorper Mollis Pellentesque</h1>
-								<p class="author">By Admin In Photography,Wine,Food</p>
-								<p>Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec 
-								id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .</p>
-								<div class="fix post-meta">
-									<p>26 Sep, 2012  |  24 Comments</p>
-								</div>
-							</div>
-							
-						</div>
-						!-->
-						</div>
-						<!--
-						<div class="pagination fix">
-							<a href="">1</a>
-							<a href="">2</a>
-							<a href="">3</a>
-							<a href="">4</a>
-							<a href="">5</a>
-							
-						</div>
-						-->
-					</div>
-					@include('commonleftsidebar')
-				</div>
-				
-				
-			</div>
-			
-				<div class="fix bottom_add_bar">
-					<div class="addbar_leaderborard"><img src=""/></div>
-				</div>
-				
-		</div>
+
+    <div class="row headline"><!-- Begin Headline -->
+    
+     	<!-- Slider Carousel
+        ================================================== -->
+        <div class="span8">
+            <div class="flexslider">
+              <ul class="slides">
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <!-- Headline Text
+        ================================================== -->
+        <div class="span4">
+        	<h3>Welcome to Mythologger. <br />
+            An applied mythology blogging and sharing.</h3>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium vulputate magna sit amet blandit.</p>
+            <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
+            <a href="#"><i class="icon-plus-sign"></i>Read More</a> 
+        </div>
+    </div><!-- End Headline -->
+
+
+    <h3 class="title-bg"> This is a sub head divider</h3>
+            <div class="row">
+            @foreach ($popularBlogs as $b)
+                <div class="span4">
+                    <img src="{{$b['imgPath']}}" alt="image">
+                    <h5>{{$b['title']}}</h5>
+                    <p>{{$b['blogContent']}}-- {{$b['createDateTime']}}  -- By {{$b['createdBy']}} In {{$b['tagList']}}</p>
+                    <button class="btn btn-small btn-inverse" type="button" onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")'>Read more</button>
+                </div>
+              @endforeach
+					
+            </div>
+
 		@endsection
