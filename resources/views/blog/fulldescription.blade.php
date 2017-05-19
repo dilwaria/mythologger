@@ -59,70 +59,7 @@
 
         <!-- Post Comments
         ================================================== --> 
-            <section class="comments">
-                <h4 class="title-bg"><a name="comments"></a>5 Comments so far</h4>
-               <ul>
-                    <li>
-                        <img src="img/user-avatar.jpg" alt="Image" />
-                        <span class="comment-name">John Doe</span>
-                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
-                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
-                        <!-- Reply -->
-                        <ul>
-                            <li>
-                                <img src="img/user-avatar.jpg" alt="Image" />
-                                <span class="comment-name">Jason Doe</span>
-                                <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
-                                <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
-                                </li>
-                             <li>
-                                <img src="img/user-avatar.jpg" alt="Image" />
-                                <span class="comment-name">Jason Doe</span>
-                                <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
-                                <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
-                                </li>
-                         </ul>
-                    </li>
-                    <li>
-                        <img src="img/user-avatar.jpg" alt="Image" />
-                        <span class="comment-name">John Doe</span>
-                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
-                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
-                    </li>
-                    <li>
-                        <img src="img/user-avatar.jpg" alt="Image" />
-                        <span class="comment-name">John Doe</span>
-                        <span class="comment-date">March 15, 2015 | <a href="#">Reply</a></span>
-                        <div class="comment-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis, ligula quis sagittis euismod, odio ante molestie tortor, eget ullamcorper lacus nunc a ligula. Donec est lacus, aliquet in interdum id, rutrum ac tellus. Ut rutrum, justo et lobortis commodo, est metus ornare tortor, vitae luctus turpis leo sed magna. In leo dolor, suscipit non mattis in.</div>
-                    </li>
-                    
-               </ul>
-            
-                <!-- Comment Form -->
-                <div class="comment-form-container">
-                    <h6>Leave a Comment</h6>
-                    <form action="#" id="comment-form">
-                        <div class="input-prepend">
-                            <span class="add-on"><i class="icon-user"></i></span>
-                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Name">
-                        </div>
-                        <div class="input-prepend">
-                            <span class="add-on"><i class="icon-envelope"></i></span>
-                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Email Address">
-                        </div>
-                        <div class="input-prepend">
-                            <span class="add-on"><i class="icon-globe"></i></span>
-                            <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
-                        </div>
-                        <textarea class="span6"></textarea>
-                        <div class="row">
-                            <div class="span2">
-                                <input type="submit" class="btn btn-inverse" value="Post My Comment">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-        </section><!-- Close comments section-->
+            <div id="disqus_thread"></div>
 
         </div><!--Close container row-->
 
@@ -182,7 +119,29 @@
         </div>
 
     </div>
-
-
-
 		 @endsection
+
+
+@section('javascript')
+       <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-mythologger-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+<script id="dsq-count-scr" src="//www-mythologger-com.disqus.com/count.js" async></script>
+        @endsection

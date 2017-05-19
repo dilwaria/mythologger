@@ -8,7 +8,7 @@
         <!-- Logo
         ================================================== -->
         <div class="span5 logo">
-        	<a href="index.htm"><img src="img/piccolo-logo.png" alt="" /></a>
+        	<a href="{{route('homePage')}}"><img src="img/piccolo-logo.png" alt="" /></a>
             <h5>Big Things... Small Packages</h5>
         </div>
         
@@ -19,12 +19,8 @@
             
             <ul class="nav">
             <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.htm">Full Page</a></li>
-                    <li><a href="index-gallery.htm">Gallery Only</a></li>
-                    <li><a href="index-slider.htm">Slider Only</a></li>
-                </ul>
+                <a c href="{{route('homePage')}}">Home </a>
+
             </li>
            <li><a href="features.htm">Features</a></li>
             <li class="dropdown">
@@ -46,7 +42,7 @@
                     <li><a href="gallery-single.htm">Gallery Single</a></li>
                 </ul>
              </li>
-             <li class="dropdown">
+             <!-- <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Blog <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="blog-style1.htm">Blog Style 1</a></li>
@@ -55,8 +51,8 @@
                     <li><a href="blog-style4.htm">Blog Style 4</a></li>
                     <li><a href="blog-single.htm">Blog Single</a></li>
                 </ul>
-             </li>
-             <li><a href="page-contact.htm">Contact</a></li>
+             </li> -->
+             <li><a href="{{route('contactus')}}">Contact</a></li>
             </ul>
            
             </div>
