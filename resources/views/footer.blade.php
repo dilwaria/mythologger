@@ -8,9 +8,9 @@
                     <h5>About Us</h5>
                    <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
                     <address>
-                        <strong>Design Team</strong><br />
-                        123 Main St, Suite 500<br />
-                        New York, NY 12345<br />
+                        <strong>Mythologger Team</strong><br />
+                        Sector-23, Gurugram<br />
+                        Haryana, India<br />
                     </address>
                     <ul class="social-icons">
                         <li><a href="#" class="social-icon facebook"></a></li>
@@ -39,7 +39,7 @@
                     </ul>
                 </div>
                 <div class="span3 footer-col">
-                    <h5>Flickr Photos</h5>
+                    <!-- <h5>Flickr Photos</h5>
                     <ul class="img-feed">
                         <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
                         <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
@@ -53,14 +53,14 @@
                         <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
                         <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
                         <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
 
             <div class="row"><!-- Begin Sub Footer -->
                 <div class="span12 footer-col footer-sub">
                     <div class="row no-margin">
-                        <div class="span6"><span class="left">Copyright 2012 Piccolo Theme. All rights reserved.</span></div>
+                        <div class="span6"><span class="left">Copyright 2017 Mythologger. All rights reserved.</span></div>
                         <div class="span6">
                             <span class="right">
                             <a href="#">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Gallery</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Blog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
