@@ -18,8 +18,9 @@
             <article>
                 <h3 class="title-bg"><a href="#">{{ strip_tags($blog->title) }}<</a></h3>
                 <div class="post-content">
-                    <a href="#"><img src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
-
+                <div style="max-width:100%;">
+                    <a href="#"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
+                </div>
                     <div class="post-body">
                         
                     	{!! $blog->blogContent !!}

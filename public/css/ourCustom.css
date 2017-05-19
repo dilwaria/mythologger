@@ -1,0 +1,31 @@
+.dashboardImage {
+  max-height:350px;
+  min-width: 507px;
+   display: block;
+    margin: auto;
+}
+@media screen and (min-width: 510px)
+.dashboardImageMinWidth{
+	min-width: 507px;
+}
+@media screen and (max-width: 500px)
+.dashboardImageMinWidth{
+	min-width: 100%;
+}
+
+.popularImage {
+	height: 60px;
+	width:60px;
+}
+
+.homePageImage {
+  height:250px;
+  width: 350px;
+   display: block;
+    margin: auto;
+}
+
+.homePageCells{
+	padding-bottom: 15px;
+	padding-top: 15px;
+}

@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="/css/flexslider.css" />
 <link rel="stylesheet" href="/css/custom-styles.css">
 
+<link rel="stylesheet" href="/css/ourCustom.css">
+
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <link rel="stylesheet" href="css/style-ie.css"/>

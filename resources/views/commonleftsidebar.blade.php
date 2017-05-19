@@ -13,7 +13,7 @@
 <ul class="popular-posts">
 @foreach ( Widgets::getPopularPosts() as $posts)
                 <li>
-                    <a href="#"><img src="{{$posts['imgPath']}}" alt="Popular Post"></a>
+                    <a href="#"><img class="popularImage" src="{{$posts['imgPath']}}" alt="Popular Post"></a>
                     <h6><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></h6>
                     <em>Posted on {{$posts['createDateTime']}}</em>
                 </li>
