@@ -17,9 +17,9 @@ class BlogService{
         }
 	}
 
-	public function getHomePageBlogs($limit=10){
+	public function getHomePageBlogs($offset=0,$limit=3){
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('views')->orderBy('createDateTime','desc')->limit($limit)->get();
+					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
 		foreach($blogs as $b){
 			$this->preprocessPopularPosts($b);
 		}
