@@ -8,7 +8,7 @@
         <!-- Logo
         ================================================== -->
         <div class="span5 logo">
-        	<a href="{{route('homePage')}}"><img src="img/piccolo-logo.png" alt="" /></a>
+        	<a href="{{route('homePage')}}"><img src="/images/logo.png" alt="" /></a>
             <h5>Big Things... Small Packages</h5>
         </div>
         
