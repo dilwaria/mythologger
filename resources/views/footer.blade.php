@@ -5,12 +5,14 @@
     	<div class="container">
         	<div class="row footer-row">
                 <div class="span3 footer-col">
-                    <h5>About Us</h5>
+                    <h5>Contact Us</h5>
                    <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
                     <address>
                         <strong>Mythologger Team</strong><br />
                         Sector-23, Gurugram<br />
                         Haryana, India<br />
+
+                        Contact Us: <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com">contact@mythologger.com</a> 
                     </address>
                     <ul class="social-icons">
                         <li><a href="#" class="social-icon facebook"></a></li>

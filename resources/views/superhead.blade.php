@@ -12,7 +12,10 @@
 <link rel="stylesheet" href="/css/flexslider.css" />
 <link rel="stylesheet" href="/css/custom-styles.css">
 
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+
 <link rel="stylesheet" href="/css/ourCustom.css">
+
 
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,7 +37,6 @@
 <script src="/js/jquery.flexslider.js"></script>
 <script src="/js/jquery.custom.js"></script>
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>    
-
 <script type="text/javascript">
 $(document).ready(function () {
 

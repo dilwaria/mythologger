@@ -4,7 +4,7 @@
    display: block;
     margin: auto;
 }
-@media screen and (min-width: 510px)
+@media screen and (min-width: 500px)
 .dashboardImageMinWidth{
 	min-width: 507px;
 }
@@ -29,4 +29,14 @@
 	padding-bottom: 15px;
 	padding-top: 15px;
 	text-align: center;
+}
+
+.fontDescription{
+	font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.fontAboutUs{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
 }
