@@ -20,10 +20,17 @@ class BlogController extends Controller
 	 return view('blog.contactus',[]);
     }
 
-    public function getHomePage(){
-    	$blogs= $this->blogService->getHomePageBlogs();
-        $blogs1= $this->blogService->getHomePageBlogs(3,3);
-    	return view('blog.homepage',['popularBlogs'=>$blogs,'popularBlogs1'=>$blogs1]);
+    public function getHomePage($category=Null){
+        if($category==Null){
+        	$blogs= $this->blogService->getHomePageBlogs();
+            $blogs1= $this->blogService->getHomePageBlogs(3,3);
+    	   return view('blog.homepage',['popularBlogs'=>$blogs,'popularBlogs1'=>$blogs1]);
+        }
+        else{
+            $blogs= $this->blogService->getHomePageBlogs();
+            $params = ['blogs'=>$blogs];
+            return view('blog.categorypage', $params);
+        }
     
     }
 

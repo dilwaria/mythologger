@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
+Route::get('/{category?}',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
 
 Route::get('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
 
