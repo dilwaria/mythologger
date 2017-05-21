@@ -71,6 +71,8 @@
            
              @include('commonleftsidebar')
             <!--Tabbed Content-->
+
+            <!--
             <h5 class="title-bg">More Info</h5>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#comments" data-toggle="tab">Comments</a></li>
@@ -103,10 +105,15 @@
                     Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
                 </div>
             </div>
-
+                -->
             <!--Video Widget-->
+
+            <!--
+            Here we will place google ads
             <h5 class="title-bg">Video Widget</h5>
             <iframe src="http://player.vimeo.com/video/24496773" width="370" height="208"></iframe>
+
+            -->
         </div>
 
     </div>

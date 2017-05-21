@@ -15,7 +15,7 @@
          <input type="hidden" name="blogID" value="{!! $blog->id !!}"> 
       @endif
     <label><b>Blog Content</b></label><br>
-        Please convert to HTML before insertion. <a rel="nofollow" target="_blank" href="https://wordhtml.com/"> Open</a>
+        Please convert to HTML before insertion. <a rel="nofollow" target="_blank" href="http://www.textfixer.com/html/convert-word-to-html.php"> Open</a>
     <br><br>
     <textarea name="blog[blogContent]">@if ($blog){!! $blog->blogContent !!}@endif</textarea><br><br>
 
@@ -27,7 +27,7 @@
     required>
 
     <label><b>Title(to display)</b></label>
-     Please convert to HTML before insertion. <a rel="nofollow" target="_blank" href="https://wordhtml.com/"> Open</a>
+     
     <input type="textarea" name="blog[title]" 
         @if ($blog)
             value="{!! $blog->title !!}"

@@ -4,13 +4,15 @@
    display: block;
     margin: auto;
 }
-@media screen and (min-width: 500px)
-.dashboardImageMinWidth{
-	min-width: 507px;
+@media screen and (min-width: 500px){
+	.dashboardImageMinWidth{
+		min-width: 507px;
+	}
 }
-@media screen and (max-width: 500px)
-.dashboardImageMinWidth{
-	min-width: 100%;
+@media screen and (max-width: 500px){
+	.dashboardImageMinWidth{
+		min-width: 100%;
+	}
 }
 
 .popularImage {
@@ -48,10 +50,17 @@
 	width:270px;
 	height: 220px;
 }
-
-.fontDescription{
-	font-family: 'Raleway', sans-serif;
-    font-size: 13.5px;
+@media screen and (min-width: 700px){
+	.fontDescription{
+		font-family: 'Raleway', sans-serif;
+	    font-size: 13.5px;
+	}
+}
+@media screen and (max-width: 700px){
+	.fontDescription{
+		font-family: 'Raleway', sans-serif;
+	    font-size: 11px;
+	}
 }
 
 .fontAboutUs{
