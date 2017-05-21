@@ -6,7 +6,6 @@
         	<div class="row footer-row">
                 <div class="span3 footer-col">
                     <h5>Contact Us</h5>
-                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
                     <address>
                         <strong>Mythologger Team</strong><br />
                         Sector-23, Gurugram<br />
