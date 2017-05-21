@@ -17,7 +17,7 @@
             <!-- Blog Post  -->
               @foreach ($blogs as $b)
             <article class="clearfix">
-                <a href="blog-single.htm"><img src="{{$b['imgPath']}}" alt="Post Thumb" class="align-left"></a>
+                <a href="blog-single.htm"><img src="{{$b['imgPath']}}" alt="Post Thumb" class="align-left imageCategories"></a>
                 <h4 class="title-bg"><a href="blog-single.htm">{{$b['title']}}</a></h4>
                     <p>{{$b['blogContent']}}</p>
                     <button class="btn btn-mini btn-inverse" type="button" onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")'>Read more</button>

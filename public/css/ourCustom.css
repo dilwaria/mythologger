@@ -44,6 +44,11 @@
 	max-height: 60%;
 }
 
+.imageCategories{
+	width:270px;
+	height: 220px;
+}
+
 .fontDescription{
 	font-family: 'Raleway', sans-serif;
     font-size: 13.5px;
