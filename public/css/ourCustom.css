@@ -32,20 +32,21 @@
 }
 
 .logoMoto{
-	float:left;
-	font-size:12px;
+	font-size:13px;
 	margin-top: -15px;
+	float: left;
 }
 
 .logoCss{
 	margin-left: -30px;
-	display:block;
-	max-width:58%;
+	display: block;
+	max-width:48%;
+	max-height: 60%;
 }
 
 .fontDescription{
 	font-family: 'Raleway', sans-serif;
-    font-size: 13.7px;
+    font-size: 13.5px;
 }
 
 .fontAboutUs{
