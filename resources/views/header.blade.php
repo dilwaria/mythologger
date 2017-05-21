@@ -8,8 +8,8 @@
         <!-- Logo
         ================================================== -->
         <div class="span5 logo">
-        	<a href="{{route('homePage')}}"><img src="/images/logo.png" alt="" /></a>
-            <h5>Big Things... Small Packages</h5>
+        	<a href="{{route('homePage')}}"><img class="logoCss" src="/images/logo.png" alt="Applied Mythology Site" /></a>
+            <h2 class="logoMoto">Applied Mythology Site</h2>
         </div>
         
         <!-- Main Navigation

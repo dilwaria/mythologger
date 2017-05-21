@@ -31,12 +31,25 @@
 	text-align: center;
 }
 
+.logoMoto{
+	float:left;
+	font-size:12px;
+	margin-top: -15px;
+}
+
+.logoCss{
+	margin-left: -30px;
+	display:block;
+	max-width:58%;
+}
+
 .fontDescription{
 	font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 13.7px;
 }
 
 .fontAboutUs{
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 }
+
