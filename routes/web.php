@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/{category?}',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
+Route::get('/',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
 
 Route::get('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
 
@@ -29,3 +29,5 @@ Route::post('/blog/saveBlog',['uses'=>'BlogController@saveBlog']);
 Route::get('/getTags',['uses'=>'BlogController@getTagListFromQuery','as'=>'getTags']);
 
 Route::get("sitemap.xml", ['uses'=>'BlogController@sitemap','as'=>'sitemap']);
+
+Route::get('/category/{category?}',['uses'=>'BlogController@getCategories','as'=>'categoryPage']);
