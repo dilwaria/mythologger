@@ -31,13 +31,15 @@ class BlogService{
 		return $blogs->toArray();
 	}
 
-	public function getHomePageBlogs($offset=0,$limit=3){
+	public function getHomePageBlogs($limit){
+		$offset=0;
 		$blogs= Blog::where('showOnWeb','=',1)
 					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
 		foreach($blogs as $b){
-			$this->preprocessPopularPosts($b);
+			$this->preprocessPopularPosts($b,250);
 		}
-		return $blogs->toArray();
+		$tempBlogs= $blogs->toArray();
+		return array_chunk($tempBlogs, 3);
 	}
 
 	public function getPopularBlogs($limit=6){
@@ -49,10 +51,10 @@ class BlogService{
 		return $blogs->toArray();
 	}
 
-	private function preprocessPopularPosts(&$blog){
+	private function preprocessPopularPosts(&$blog,$contentLimit=130){
 		//strip off html from title and content
 		$resultBlogContent= strip_tags($blog->blogContent);
-		$resultBlogContent = substr($resultBlogContent,0,130);
+		$resultBlogContent = substr($resultBlogContent,0,$contentLimit);
 		$resultBlogContent.="...";
 	 	$blog->blogContent= $resultBlogContent;
 		$blog->title= strip_tags($blog->title);

@@ -21,9 +21,8 @@ class BlogController extends Controller
     }
 
     public function getHomePage(){
-        	$blogs= $this->blogService->getHomePageBlogs();
-            $blogs1= $this->blogService->getHomePageBlogs(3,3);
-    	   return view('blog.homepage',['popularBlogs'=>$blogs,'popularBlogs1'=>$blogs1]);
+        	$blogs= $this->blogService->getHomePageBlogs(9);
+    	   return view('blog.homepage',['allDisplayBlogs'=>$blogs]);
     }
 
     public function getCategories($category){
