@@ -24,9 +24,9 @@
                     <div class="post-summary-footer">
                         <ul class="post-data-3">
                             <li><i class="icon-calendar"></i>{{ Carbon\Carbon::parse($b['createDateTime'])->format('d/m/Y') }}</li>
-                            <li><i class="icon-user"></i> <a title="{{ $b['createdBy'] }}" href="#">{{ str_limit($b['createdBy'], $limit = 10, $end = '...') }}</a></li>
-                            <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
-                            <li><i class="icon-tags"></i> <a title="{{ $b['tagList']}}" href="#">{{ str_limit($b['tagList'], $limit = 15, $end = '...') }}</a>
+				<li><i class="icon-user"></i> <a title="{{ $b['createdBy'] }}" href="#">5 views</a></li>
+                            <li><i class="icon-user"></i> <a title="{{ $b['createdBy'] }}" href="#">{{ $b['createdBy'] }}</a></li>
+                            <li><i class="icon-tags"></i> <a title="{{ $b['tagList']}}" href="#"><?php echo substr($b['tagList'],0,12). '...' ?></a>
                              <!-- ,<a href="#">tutorials</a> -->
                              </li>
                         </ul>
