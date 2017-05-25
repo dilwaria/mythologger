@@ -15,7 +15,7 @@
         <div class="span8 contact"><!--Begin page content column-->
 
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna.</p>
+            <p>If you have any suggestion or critical view point related to Mythologger or Mythology, feel free to contact us. We invite guest articles also, if you have imagination and want to publish it on our site, you are most welcome. Thanks for landing on Mythologger. </p>
 
             <div class="alert alert-success">
                 Well done! You successfully read this important alert message. 
@@ -49,19 +49,20 @@
         <div class="span4 sidebar page-sidebar"><!-- Begin sidebar column -->
             <h5 class="title-bg">Our Location</h5>
             <address>
-            <strong>Piccolo</strong><br>
-            123 Main St, Suite 600<br>
-            San Francisco, CA 94107<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
+            <strong>Mythologger</strong><br>
+            Sector 23, Gurugram<br>
+            Harayana, India<br>
+            <!-- <abbr title="Phone">P:</abbr>  -->
             </address>
              
             <address>
-            <strong>Jimmy Doe</strong><br>
-            <a href="mailto:#">first.last@gmail.com</a>
+            <strong>Admin</strong><br>
+            <a href="mailto:#">contact@mythologger.com</a>
             </address>
 
             <h5 class="title-bg">Map Us</h5>
-            <img src="img/location-map.jpg" alt="map">
+            <div id="googleMap" style="width:400px;height:350px;"></div>
+            <!-- <img src="img/location-map.jpg" alt="map"> -->
 
         </div><!-- End sidebar column -->
 
