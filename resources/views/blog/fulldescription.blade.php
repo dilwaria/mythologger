@@ -1,8 +1,16 @@
 @extends('master')
 
  @section('title')
-{{ strip_tags($blog->title) }}
+{{ strip_tags($blog->seoTitle) }}
  @endsection
+
+
+@section('metadescription')
+<meta name="description" content="{{ strip_tags($blog->seoDescription) }}" />
+<meta name="keywords" content="{{ strip_tags($blog->seoMetakeywords) }}"/>
+<link rel="canonical" href="<?php echo route('blogDescription',['blogID'=>$blog['id'], 'slug'=>$blog['slug']] ) ?>" />
+@endsection
+@section('content')
 
 @section('content')
 

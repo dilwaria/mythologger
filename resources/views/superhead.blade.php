@@ -7,7 +7,7 @@
 @yield('metadescription')
 <!-- CSS
 ================================================== -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/css/bootstrap.css">
 <link rel="stylesheet" href="/css/bootstrap-responsive.css">
 <link rel="stylesheet" href="/css/prettyPhoto.css" />
@@ -33,7 +33,7 @@
 
 <!-- JS
 ================================================== -->
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/jquery.prettyPhoto.js"></script>
 <script src="/js/jquery.flexslider.js"></script>
