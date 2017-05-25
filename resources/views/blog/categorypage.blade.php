@@ -42,12 +42,16 @@
             <!-- Pagination -->
             <div class="pagination">
                 <ul>
-                <li class="prev"><a href="javascript:void(0);">Prev</a></li>
 
-                @for($i=1; $i<=$pageCount; $i++)
-                    <li id="paginationTab_{{$i}}" @if($i == $pageNo) class="active paginationTab" @else class="paginationTab" @endif><a href="javascript:void(0);">{{$i}}</a></li>
-                @endfor
-                <li class="next"><a href="javascript:void(0);">Next</a></li>
+                @if($pageCount>1)
+                    <li class="prev"><a href="javascript:void(0);">Prev</a></li>
+                    
+                    @for($i=1; $i<=$pageCount; $i++)
+                        <li id="paginationTab_{{$i}}" @if($i == $pageNo) class="active paginationTab" @else class="paginationTab" @endif><a href="javascript:void(0);">{{$i}}</a></li>
+                    @endfor
+                   
+                    <li class="next"><a href="javascript:void(0);">Next</a></li>
+                @endif
                 <input type="hidden" id="currPageNo" value="{{$pageNo}}">
                 <input type="hidden" id="pageCount" value="{{$pageCount}}">
                 </ul>
