@@ -58,11 +58,10 @@
 
             <!--Search-->
             <section>
-                <div class="input-append">
-                    <form action="#">
-                        <input id="appendedInputButton" size="16" type="text" placeholder="Search"><button class="btn" type="button"><i class="icon-search"></i></button>
-                    </form>
-                </div>
+                <div class="sidebar">
+               
+         <gcse:search enableAutoComplete="true"></gcse:search>
+                    </div>
             </section>
 
             <!--Categories-->
@@ -120,3 +119,18 @@
 
 
 @endsection
+
+@section('javascript')
+       <script>
+  (function() {
+    var cx = '009569975203262159236:fm6oey7khng';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+        @endsection
