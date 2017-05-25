@@ -20,18 +20,20 @@ class BlogController extends Controller
 	 return view('blog.contactus',[]);
     }
 
-    public function getHomePage($category=Null){
-        if($category==Null){
+    public function getHomePage(){
         	$blogs= $this->blogService->getHomePageBlogs();
             $blogs1= $this->blogService->getHomePageBlogs(3,3);
     	   return view('blog.homepage',['popularBlogs'=>$blogs,'popularBlogs1'=>$blogs1]);
-        }
-        else{
-            $blogs= $this->blogService->getHomePageBlogs();
-            $params = ['blogs'=>$blogs];
-            return view('blog.categorypage', $params);
-        }
-    
+    }
+
+    public function getCategories($category){
+        $pageNo= Request::input('pageNumber');
+        $pageSize= Request::input('limit',10);
+        $pageSize=1;
+        $pageNo=2;
+        $blogs= $this->blogService->getBlogsByCategory($category,$pageNo-1,$pageSize);
+        $params = ['blogs'=>$blogs];
+        return view('blog.categorypage', $params);
     }
 
     public function getAboutUs(){

@@ -17,6 +17,20 @@ class BlogService{
         }
 	}
 
+	public function getBlogsByCategory($category,$offset=0,$limit=5){
+		$blogs= Blog::where('showOnWeb','=',1)->
+		//use comma sepaated for multiple in use clause
+				whereHas('tags',function($query) use ($category){
+					$query->where('tagName','=',$category);
+				})
+					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
+		foreach($blogs as $b){
+			$this->preprocessPopularPosts($b);
+		}
+		
+		return $blogs->toArray();
+	}
+
 	public function getHomePageBlogs($offset=0,$limit=3){
 		$blogs= Blog::where('showOnWeb','=',1)
 					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
