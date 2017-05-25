@@ -27,15 +27,29 @@
 
             </li>
 
-            <li class="dropdown ">
+                @if (url()->current() == route('categoryPage',['category'=>'hindu-mythology']))
+                <li class="dropdown  active">
+               @else
+                <li class="dropdown  ">
+                @endif
                 <a href="{{route('categoryPage')}}/hindu-mythology">Hindu Mlogs </a>
 
             </li>
-            <li class="dropdown ">
+                
+                @if (url()->current() == route('categoryPage',['category'=>'greek-mythology']))
+                <li class="dropdown  active">
+               @else
+                <li class="dropdown  ">
+                @endif
+                
                 <a href="{{route('categoryPage')}}/greek-mythology">Greek Mlogs </a>
 
             </li>
-            <li class="dropdown ">
+                @if (url()->current() == route('categoryPage',['category'=>'other-mythology']))
+                <li class="dropdown  active">
+               @else
+                <li class="dropdown  ">
+                @endif
                 <a href="{{route('categoryPage')}}/other-mythology">Other Mlogs </a>
 
             </li>
