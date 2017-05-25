@@ -26,12 +26,11 @@ class BlogController extends Controller
     }
 
     public function getCategories($category){
-        $pageNo= Request::input('pageNumber');
+        $pageNo= Request::input('pageNo',1);
         $pageSize= Request::input('limit',10);
-        $pageSize=1;
-        $pageNo=2;
-        $blogs= $this->blogService->getBlogsByCategory($category,$pageNo-1,$pageSize);
-        $params = ['blogs'=>$blogs];
+        $pageSize=6;
+        $blogRes= $this->blogService->getBlogsByCategory($category,$pageNo-1,$pageSize);
+        $params = [ 'blogs'=>$blogRes['blogs'],'count'=>$blogRes['count'], 'pageNo'=>$pageNo, 'pageCount'=> $blogRes['count']/$pageSize ];
         return view('blog.categorypage', $params);
     }
 

@@ -22,13 +22,15 @@ class BlogService{
 		//use comma sepaated for multiple in use clause
 				whereHas('tags',function($query) use ($category){
 					$query->where('tagName','=',$category);
-				})
-					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
+				});
+		$count= $blogs->count();	
+
+		$blogs= $blogs->orderBy('views')->orderBy('createDateTime','desc')->
+			offset($offset)->limit($limit)->get();
 		foreach($blogs as $b){
 			$this->preprocessPopularPosts($b);
 		}
-		
-		return $blogs->toArray();
+		return ['count'=>$count,'blogs'=>$blogs->toArray()];
 	}
 
 	public function getHomePageBlogs($limit){

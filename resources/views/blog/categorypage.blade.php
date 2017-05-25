@@ -42,12 +42,14 @@
             <!-- Pagination -->
             <div class="pagination">
                 <ul>
-                <li class="active"><a href="#">Prev</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">Next</a></li>
+                <li class="prev"><a href="javascript:void(0);">Prev</a></li>
+
+                @for($i=1; $i<=$pageCount; $i++)
+                    <li id="paginationTab_{{$i}}" @if($i == $pageNo) class="active paginationTab" @else class="paginationTab" @endif><a href="javascript:void(0);">{{$i}}</a></li>
+                @endfor
+                <li class="next"><a href="javascript:void(0);">Next</a></li>
+                <input type="hidden" id="currPageNo" value="{{$pageNo}}">
+                <input type="hidden" id="pageCount" value="{{$pageCount}}">
                 </ul>
             </div>
         </div>
@@ -120,3 +122,37 @@
 
 
 @endsection
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    
+    $('.paginationTab').click( function(){
+        var pageNum=$('#currPageNo').val();
+        var clickedPageNo= $(this).attr('id').split('_')[1];
+        var url= window.location.href.split('?')[0];
+        window.location.href= url+"?pageNo="+clickedPageNo;
+    });
+
+    $('.prev').click( function(){
+        var pageNum=$('#currPageNo').val();
+        var prevPage=parseInt(pageNum)-1;
+        if(prevPage<1){
+            prevPage=1;
+        }
+        var url= window.location.href.split('?')[0];
+        window.location.href= url+"?pageNo="+prevPage;
+    });
+
+    $('.next').click( function(){
+        var pageNum=$('#currPageNo').val();
+        var nextPage=parseInt(pageNum)+1;
+        var pageCount= $('#pageCount').val();
+        if(nextPage>pageCount){
+            nextPage=pageCount;
+        }
+        var url= window.location.href.split('?')[0];
+        window.location.href= url+"?pageNo="+nextPage;
+    });
+});
+</script>
