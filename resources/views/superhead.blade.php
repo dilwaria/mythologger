@@ -1,8 +1,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en">
 <title>@yield('title')</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+@yield('metadescription')
 <!-- CSS
 ================================================== -->
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>

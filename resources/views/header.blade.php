@@ -18,11 +18,28 @@
             <div class="navbar hidden-phone">
             
             <ul class="nav">
-            <li class="dropdown active">
+           @if (url()->current() == route('homePage'))
+            <li class="dropdown  active">
+           @else
+            <li class="dropdown  ">
+            @endif
                 <a href="{{route('homePage')}}">Home </a>
 
             </li>
-            <li class="dropdown">
+
+            <li class="dropdown ">
+                <a href="{{route('categoryPage')}}/hindu-mythology">Hindu Mlogs </a>
+
+            </li>
+            <li class="dropdown ">
+                <a href="{{route('categoryPage')}}/greek-mythology">Greek Mlogs </a>
+
+            </li>
+            <li class="dropdown ">
+                <a href="{{route('categoryPage')}}/other-mythology">Other Mlogs </a>
+
+            </li>
+            <!-- <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Categories <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="page-full-width.htm">Chinese</a></li>
@@ -30,8 +47,12 @@
                     <li><a href="page-left-sidebar.htm">Greek</a></li>
                     <li><a href="page-double-sidebar.htm">Other</a></li>
                 </ul>
-            </li>
-             <li class="dropdown">
+            </li> -->
+            @if (url()->current() == route('contactus'))
+            <li class="dropdown  active">
+           @else
+            <li class="dropdown  ">
+            @endif
                 <a href="{{route('contactus')}}">Contact </a>
 
             </li>

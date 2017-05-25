@@ -1,8 +1,13 @@
 @extends('master')
 
  @section('title')
- Mythologger- Applied Mythology Blogging
+ CONNECTING CONTEMPORARY WORLD & MYTHOLOGY | MYTHOLOGY
  @endsection
+
+@section('metadescription')
+<meta name="description" content="Mythologger - a concept for relating contemporary world with mythology like Greek, Roman, Chinese, Hindu and Norse Mythology " />
+@endsection
+
 
 @section('content')
 
