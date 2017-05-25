@@ -27,13 +27,13 @@
 
                         
 
-                        <p class="well"><a href="#" rel="tooltip" title="An important message">Proin tristique</a> tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidudui.</p>
+                        <!-- <p class="well"><a href="#" rel="tooltip" title="An important message">Proin tristique</a> tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidudui.</p> -->
 
                        
-
+<!-- 
                        <blockquote>
                             Maecenas felis tellus, ferment Nulla faucibus ligula eget ante varius ac euismod odio placerat.
-                       </blockquote>
+                       </blockquote> -->
 
                        
                     </div>
