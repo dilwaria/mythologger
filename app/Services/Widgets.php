@@ -15,8 +15,8 @@ class Widgets{
 		$this->blogService= new BlogService();
 	}
 
-	public function getPopularPosts(){
-		return $this->blogService->getPopularBlogs(3);
+	public function getPopularPosts($limit=4){
+		return $this->blogService->getPopularBlogs($limit);
 	}
 
 	public function getCategories(){

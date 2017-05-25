@@ -34,9 +34,10 @@
 }
 
 .logoMoto{
-	font-size:13px;
-	margin-top: -15px;
-	float: left;
+    font-size: 13px;
+    margin-top: -14px;
+    /* float: left; */
+    margin-left: 46px;
 }
 
 .logoCss{

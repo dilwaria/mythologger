@@ -9,7 +9,7 @@
         ================================================== -->
         <div class="span5 logo">
         	<a href="{{route('homePage')}}"><img class="logoCss" src="/images/logo.png" alt="Applied Mythology Site" /></a>
-            <h2 class="logoMoto">Applied Mythology Site</h2>
+            <h2 class="logoMoto">Connecting Contemporary World & Mythology </h2>
         </div>
         
         <!-- Main Navigation
@@ -32,7 +32,7 @@
                 </ul>
             </li>
              <li class="dropdown">
-                <a>Archive </a>
+                <a href="{{route('contactus')}}">Contact </a>
 
             </li>
              <!-- <li class="dropdown">

@@ -22,39 +22,32 @@
                     </ul>
                 </div>
                 <div class="span3 footer-col">
-                    <h5>Latest Tweets</h5>
+                    <h5>Testimonials</h5>
                     <ul>
-                        <li><a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li><a href="#">@room122</a> In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.</li>
-                        <li><a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.</li>
+                        <li> Comendable concept. Elucidating mythology in this sense is worth appreciating -- Rajeev Goyal,India</li>
+                        <li>Amazing idea. Newer thought that myhtology could be this much interesitng -- Zhang Yu, Philippines</li>
+                        <li>Nice, succinct, simple. Great perspective. -- Maya Morris, U.S.A</li>
                     </ul>
                 </div>
                 <div class="span3 footer-col">
-                    <h5>Latest Posts</h5>
+                    <h5>Popular M-logs</h5>
                      <ul class="post-list">
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Consectetur adipiscing elit est lacus gravida</a></li>
-                        <li><a href="#">Lectus sed orci molestie molestie etiam</a></li>
-                        <li><a href="#">Mattis consectetur adipiscing elit est lacus</a></li>
-                        <li><a href="#">Cras rutrum, massa non blandit convallis est</a></li>
+                     @foreach ( Widgets::getPopularPosts(4) as $posts)
+
+                        <li><a href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></li>
+                         @endforeach
                     </ul>
                 </div>
                 <div class="span3 footer-col">
-                    <!-- <h5>Flickr Photos</h5>
-                    <ul class="img-feed">
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                    </ul> -->
+                    <h5>Other Links</h5>
+                     <ul class="post-list">
+
+                        <li><a href="{{route('categoryPage')}}/hindu-mythology">Hindu Mythology</a></li>
+                        <li><a href="{{route('categoryPage')}}/greek-mythology">Greek Mythology</a></li>
+                        <li><a href="{{route('categoryPage')}}/chinese-mythology">Chinese Mythology</a></li>
+                        <li><a href="{{route('categoryPage')}}/other-mythology">Other Mythologies</a></li>
+                        
+                    </ul>
                 </div>
             </div>
 
@@ -64,7 +57,7 @@
                         <div class="span6"><span class="left">Copyright 2017 Mythologger. All rights reserved.</span></div>
                         <div class="span6">
                             <span class="right">
-                            <a href="#">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Gallery</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Blog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+                            <a href="{{route('homePage')}}">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{route('contactus')}}">Contact</a>
                             </span>
                         </div>
                     </div>

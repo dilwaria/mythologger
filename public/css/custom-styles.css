@@ -61,7 +61,10 @@ blockquote.pull-right {border-right: 5px solid #999;}
 / Header
 **************************************/
 .logo { margin-top:40px; }
-.logo img { padding-right:20px; }
+.logo img { 
+	padding-right: 44px;
+    padding-left: 84px;
+	 }
 .logo h5 { display: inline-block; }
 .headline { margin-bottom:20px; }
 

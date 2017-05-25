@@ -44,7 +44,7 @@ class BlogService{
 
 	public function getPopularBlogs($limit=6){
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('views')->orderBy('createDateTime','desc')->limit($limit)->get();
+					->orderBy('views')->orderBy('priority','desc')->orderBy('createDateTime','desc')->limit($limit)->get();
 		foreach($blogs as $b){
 			$this->preprocessPopularPosts($b);
 		}
