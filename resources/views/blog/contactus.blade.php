@@ -1,8 +1,15 @@
 @extends('master')
 
 
+     @section('title')
+Contact Us - mythologger.com • Contact Us
+		 @endsection
 
-		
+@section('metadescription')
+<meta name="description" content="Contact Details of mythologger team. Connect with mythologger team." />
+<meta name="keywords" content="mythologger contact, mythologger contacts, contact us, contact, Mythology , Greek Mythology, Hindu Mythology, Norse Mythology"/>
+<link rel="canonical" href="https://www.mythologger.com/contact-us" />
+@endsection
 @section('content')
 
 

@@ -60,11 +60,10 @@
 
             <!--Search-->
             <section>
-                <div class="input-append">
-                    <form action="#">
-                        <input id="appendedInputButton" size="16" type="text" placeholder="Search"><button class="btn" type="button"><i class="icon-search"></i></button>
-                    </form>
-                </div>
+                <div class="sidebar">
+               
+         <gcse:search enableAutoComplete="true"></gcse:search>
+                    </div>
             </section>
 
             <!--Categories-->
@@ -122,10 +121,13 @@
 
 
 @endsection
-
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
+@section('javascript')
+
+       <script>
+
+
+       $(document).ready(function () {
     
     $('.paginationTab').click( function(){
         var pageNum=$('#currPageNo').val();
@@ -155,4 +157,16 @@ $(document).ready(function () {
         window.location.href= url+"?pageNo="+nextPage;
     });
 });
+
+  (function() {
+    var cx = '009569975203262159236:fm6oey7khng';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
 </script>
+
+        @endsection
