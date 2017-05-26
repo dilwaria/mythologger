@@ -39,7 +39,7 @@
             <p class="fontAboutUs">
                 Mythology is an integral part of any culture. The world, being a place of various diverse cultures and myths is filled with many stories. Stories, which can be a great source of inspiration to our mankind. Our platform is an amalgamation of various such mythologies. Be it Greek, Be it Hindu or be it Chinese, each one of them can somehow be related to our daily life. This portal tries to unify these old-told tales, projecting you with a complete new insight on each mythical tale.
            </p>
-           <p><strong> If you want to share any thoughts, you can contact us<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com">here</a></strong></p>
+           <p><strong> If you want to share any thoughts, you can contact us<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com"> here</a></strong></p>
            <!-- <a href="#"><i class="icon-plus-sign"></i>Read More</a> !-->
         </div>
     </div><!-- End Headline -->
