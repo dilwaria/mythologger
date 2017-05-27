@@ -61,8 +61,8 @@
             <section class="post-content">
                 <div class="post-body about-author">
                     <img src="/images/user-avatar.jpg" alt="author">
-                    <h4>About Nathan Brown</h4>
-                    Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.
+                    <h4>About {!! $blog->createdBy !!}</h4>
+                   {!! $creator->about !!}
                 </div>
             </section>
 

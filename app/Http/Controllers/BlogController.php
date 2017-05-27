@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use  Illuminate\Support\Facades\Request;
 use App\Services\BlogService;
+use App\Services\UserService;
 use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
 
     private $blogService;
+    private $userService;
 
-    public function __construct(BlogService $b){
+    public function __construct(BlogService $b, UserService $u){
         $this->blogService= $b;
+        $this->userService = $u;
     }
 
     public function getContactUs(){
@@ -42,10 +45,14 @@ class BlogController extends Controller
 
     public function getBlogDescription($slug,$blogID){
         $blog= $this->blogService->getBlog($blogID);
+
+        $creator = $this->userService->getCreator($blog->creatorID);
+
+        // var_dump($creator);
         if($slug!=$blog->slug){
             return redirect(route('blogDescription',['slug'=>$blog->slug,'blogID'=>$blogID]),301);
         }
-    	return view('blog.fulldescription',['blog'=>$blog]);
+    	return view('blog.fulldescription',['blog'=>$blog, 'creator'=> $creator]);
     }
 
     // /blog/admin/mythologger/mYthologgerBlog123@mty
