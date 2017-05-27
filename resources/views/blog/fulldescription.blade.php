@@ -50,8 +50,10 @@
                         <ul class="post-data">
                             <li><i class="icon-calendar"></i> {!! $blog->createDateTime !!} </li>
                             <li><i class="icon-user"></i> <a href="#">{!! $blog->createdBy !!}</a></li>
-                            <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
-                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a></li>
+                            <li><i class="icon-comment " id = "dsq-count-scr"></i> 5 Comments</li>
+                            <li><i class="icon-tags"></i> <a href="#">Mythology</a>, 
+                            <!-- <a href="#"></a>, -->
+                             <!-- <a href="#">illustration</a></li> -->
                         </ul>
                     </div>
                 </div>
