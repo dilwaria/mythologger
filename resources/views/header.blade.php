@@ -70,16 +70,7 @@
                 <a href="{{route('contactus')}}">Contact </a>
 
             </li>
-             <!-- <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Blog <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="blog-style1.htm">Blog Style 1</a></li>
-                    <li><a href="blog-style2.htm">Blog Style 2</a></li>
-                    <li><a href="blog-style3.htm">Blog Style 3</a></li>
-                    <li><a href="blog-style4.htm">Blog Style 4</a></li>
-                    <li><a href="blog-single.htm">Blog Single</a></li>
-                </ul>
-             </li> -->
+             
             </ul>
            
             </div>
@@ -89,13 +80,13 @@
             <form action="#" id="mobile-nav" class="visible-phone">
                 <div class="mobile-nav-select">
                 <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-                    <option value="index.htm">Home</option>
-                    <option value="features.htm">Categories</option>
-                    <option value="page-full-width.htm"> -Chinese</option>
-                        <option value="page-full-width.htm"> -Hindu</option>
-                        <option value="page-right-sidebar.htm"> -Greek</option>
-                        <option value="page-left-sidebar.htm"> -Other</option>
-                    <option value="gallery-4col.htm">Archive</option>
+                    <option value="{{route('homePage')}}">Home</option>
+                    <option value="{{route('categoryPage')}}/greek-mythology">Greek Mlogs</option>
+                    <option value="{{route('categoryPage')}}/hindu-mythology">Hindu Mlogs</option>
+                    <option value="{{route('categoryPage')}}/other-mythology">Other Mlogs</option>
+                       <!--  <option value="page-right-sidebar.htm"> -Greek</option>
+                        <option value="page-left-sidebar.htm"> -Other</option> -->
+                    <option value="{{route('contactus')}}">Contact</option>
                        
                 </select>
                 </div>
