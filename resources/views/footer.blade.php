@@ -14,8 +14,8 @@
                         Contact Us: <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com">contact@mythologger.com</a> 
                     </address>
                     <ul class="social-icons">
-                        <li><a href="javascript:void(0)" class="social-icon facebook"></a></li>
-                        <li><a href="javascript:void(0)" class="social-icon twitter"></a></li>
+                        <li><a href="https://www.facebook.com/mythologger" class="social-icon facebook"></a></li>
+                        <li><a href="https://twitter.com/MYTHOLOGGER365" class="social-icon twitter"></a></li>
 
                     <!--
                         <li><a href="javascript:void(0)" class="social-icon dribble"></a></li>
@@ -28,7 +28,7 @@
                     <h5>Testimonials</h5>
                     <ul>
                         <li> Comendable concept. Elucidating mythology in this sense is worth appreciating -- Rajeev Goyal,India</li>
-                        <li>Amazing idea. Newer thought that myhtology could be this much interesitng -- Zhang Yu, Philippines</li>
+                        <li>Amazing idea. Never thought that myhtology could be this much interesitng -- Zhang Yu, Philippines</li>
                         <li>Nice, succinct, simple. Great perspective. -- Maya Morris, U.S.A</li>
                     </ul>
                 </div>
