@@ -14,11 +14,14 @@
                         Contact Us: <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com">contact@mythologger.com</a> 
                     </address>
                     <ul class="social-icons">
-                        <li><a href="#" class="social-icon facebook"></a></li>
-                        <li><a href="#" class="social-icon twitter"></a></li>
-                        <li><a href="#" class="social-icon dribble"></a></li>
-                        <li><a href="#" class="social-icon rss"></a></li>
-                        <li><a href="#" class="social-icon forrst"></a></li>
+                        <li><a href="javascript:void(0)" class="social-icon facebook"></a></li>
+                        <li><a href="javascript:void(0)" class="social-icon twitter"></a></li>
+
+                    <!--
+                        <li><a href="javascript:void(0)" class="social-icon dribble"></a></li>
+                        <li><a href="javascript:void(0)" class="social-icon rss"></a></li>
+                        <li><a href="javascript:void(0)" class="social-icon forrst"></a></li>
+                        !-->
                     </ul>
                 </div>
                 <div class="span3 footer-col">
@@ -34,7 +37,7 @@
                      <ul class="post-list">
                      @foreach ( Widgets::getPopularPosts(4) as $posts)
 
-                        <li><a href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></li>
+                        <li><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></li>
                          @endforeach
                     </ul>
                 </div>
@@ -42,10 +45,10 @@
                     <h5>Other Links</h5>
                      <ul class="post-list">
 
-                        <li><a href="{{route('categoryPage')}}/hindu-mythology">Hindu Mythology</a></li>
-                        <li><a href="{{route('categoryPage')}}/greek-mythology">Greek Mythology</a></li>
-                        <li><a href="{{route('categoryPage')}}/chinese-mythology">Chinese Mythology</a></li>
-                        <li><a href="{{route('categoryPage')}}/other-mythology">Other Mythologies</a></li>
+                        <li><a target="_blank" href="{{route('categoryPage')}}/hindu-mythology">Hindu Mythology</a></li>
+                        <li><a target="_blank" href="{{route('categoryPage')}}/greek-mythology">Greek Mythology</a></li>
+                        <li><a target="_blank" href="{{route('categoryPage')}}/chinese-mythology">Chinese Mythology</a></li>
+                        <li><a target="_blank" href="{{route('categoryPage')}}/other-mythology">Other Mythologies</a></li>
                         
                     </ul>
                 </div>

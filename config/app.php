@@ -229,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Widgets' => App\Facades\Widgets::class,
+        'Common' => App\Facades\Common::class,
 
     ],
 

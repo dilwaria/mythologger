@@ -28,7 +28,7 @@ class BlogService{
 		$blogs= $blogs->orderBy('views')->orderBy('createDateTime','desc')->
 			offset($offset)->limit($limit)->get();
 		foreach($blogs as $b){
-			$this->preprocessPopularPosts($b);
+			$this->preprocessPopularPosts($b,400);
 		}
 		return ['count'=>$count,'blogs'=>$blogs->toArray()];
 	}
