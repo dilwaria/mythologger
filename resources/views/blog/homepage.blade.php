@@ -21,8 +21,8 @@
         <div class="span8">
             <div class="flexslider">
               <ul class="slides">
-                <li><a href="gallery-single.htm"><img src="/images/gallery/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="/images/gallery/slider-img-2.jpg" alt="slider" /></a></li>
+                <li><img src="/images/gallery/slider-img-1.jpg" alt="mythology-image-1" /></li>
+                <li><img src="/images/gallery/slider-img-2.jpg" alt="mythology-image-2" /></li>
                 <!-- <li><a href="gallery-single.htm"><img src="/images/gallery/slider-img-1.jpg" alt="slider" /></a></li>
                 <li><a href="gallery-single.htm"><img src="/images/gallery/slider-img-1.jpg" alt="slider" /></a></li>
                 <li><a href="gallery-single.htm"><img src="/images/gallery/slider-img-1.jpg" alt="slider" /></a></li> -->
