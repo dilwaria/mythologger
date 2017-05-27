@@ -7,7 +7,7 @@
 <ul class="popular-posts">
 @foreach ( Widgets::getPopularPosts() as $posts)
                 <li>
-                    <a href="#"><img class="popularImage" src="{{$posts['imgPath']}}" alt="Popular Post"></a>
+                    <a href="javascript:void(0)"><img class="popularImage" src="{{$posts['imgPath']}}" alt="Popular Post"></a>
                     <h6><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></h6>
                     <em>Posted on {{Carbon\Carbon::parse($posts['createDateTime'])->format('d-F-Y')}}</em>
                 </li>
@@ -21,7 +21,7 @@
             <h5 class="title-bg">Categories</h5>
             <ul class="post-category-list">
             @foreach ( Widgets::getCategories() as $categories)
-                <li><a href="#"><i class="icon-plus-sign"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
+                <li><a target="_blank" href="<?php echo route('categoryPage',['category'=> Common::processCategoryName($categories['tagName']) ]) ?>"><i class="icon-plus-sign"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
                 @endforeach
             </ul>
 

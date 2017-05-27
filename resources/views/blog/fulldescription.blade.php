@@ -24,7 +24,7 @@
 
             <!-- Blog Post 1 -->
             <article>
-                <h3 class="title-bg"><a href="#">{{ strip_tags($blog->title) }}</a></h3>
+                <h3 class="title-bg"><a href="javascript:void(0)">{{ strip_tags($blog->title) }}</a></h3>
                 <div class="post-content">
                 <div style="max-width:100%;">
                     <a href="#"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
@@ -48,7 +48,7 @@
 
                     <div class="post-summary-footer">
                         <ul class="post-data">
-                            <li><i class="icon-calendar"></i> {!! $blog->createDateTime !!} </li>
+                            <li><i class="icon-calendar"></i> {!! Carbon\Carbon::parse($blog->createDateTime)->format('d-F-Y') !!} </li>
                             <li><i class="icon-user"></i> <a href="#">{!! $blog->createdBy !!}</a></li>
                             <li><i class="icon-comment"></i> <a href="#">5 Comments</a></li>
                             <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a></li>

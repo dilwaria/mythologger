@@ -29,7 +29,7 @@ class BlogController extends Controller
         $pageNo= Request::input('pageNo',1);
         $pageSize= Request::input('limit',10);
         $pageSize=2;
-        $blogRes= $this->blogService->getBlogsByCategory($category,$pageNo-1,$pageSize);
+        $blogRes= $this->blogService->getBlogsByCategory($category,($pageNo-1)*$pageSize,$pageSize);
 
         $params = [ 'blogs'=>$blogRes['blogs'],'count'=>$blogRes['count'], 'pageNo'=>$pageNo, 'pageCount'=> ($blogRes['count']/$pageSize) ];
         return view('blog.categorypage', $params);
