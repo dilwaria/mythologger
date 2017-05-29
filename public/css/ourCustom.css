@@ -69,3 +69,25 @@
 	font-size: 14px;
 }
 
+.languageCheck {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    top:0;
+    z-index: 90;
+    max-height: 50px;
+    background-color: rgba(147,88,108,0.4);
+}
+
+.languageCheckText{
+	margin-top: 20px;
+	 position: relative;
+	 float: right;
+	 text-align: center;
+	 width: 100%;
+	 line-height: 1;
+	 font-family: monospace;
+	 font-weight: 10;
+}
+
