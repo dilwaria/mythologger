@@ -28,6 +28,7 @@
                 <div class="post-content">
                 <div style="max-width:100%;">
                     <img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb">
+                    <a href="javascript:void(0)"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
                 </div>
                     <div class="post-body fontDescription">
                         
@@ -49,9 +50,9 @@
                     <div class="post-summary-footer">
                         <ul class="post-data">
                             <li><i class="icon-calendar"></i> {!! Carbon\Carbon::parse($blog->createDateTime)->format('d-F-Y') !!} </li>
-                            <li><i class="icon-user"></i> <a href="#">{!! $blog->createdBy !!}</a></li>
+                            <li><i class="icon-user"></i> <a href="javascript:void(0)">{!! $blog->createdBy !!}</a></li>
                             <li><i class="icon-comment " id = "dsq-count-scr"></i> 5 Comments</li>
-                            <li><i class="icon-tags"></i> <a href="#">Mythology</a>, 
+                            <li><i class="icon-tags"></i> <a href="javascript:void(0)">Mythology</a>, 
                             <!-- <a href="#"></a>, -->
                              <!-- <a href="#">illustration</a></li> -->
                         </ul>

@@ -14,8 +14,8 @@
                         Contact Us: <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@mythologger.com">contact@mythologger.com</a> 
                     </address>
                     <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/mythologger" class="social-icon facebook"></a></li>
-                        <li><a href="https://twitter.com/MYTHOLOGGER365" class="social-icon twitter"></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/mythologger" class="social-icon facebook"></a></li>
+                        <li><a target="_blank" href="https://twitter.com/MYTHOLOGGER365" class="social-icon twitter"></a></li>
 
                     <!--
                         <li><a href="javascript:void(0)" class="social-icon dribble"></a></li>
@@ -60,7 +60,7 @@
                         <div class="span6"><span class="left">Copyright 2017 Mythologger. All rights reserved.</span></div>
                         <div class="span6">
                             <span class="right">
-                            <a href="{{route('homePage')}}">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{route('contactus')}}">Contact</a>
+                            <a target="_blank" href="{{route('homePage')}}">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('contactus')}}">Contact</a>
                             </span>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ class CommonServices{
 
 	public function processCategoryName($categoryName){
 		$categoryName= strtolower($categoryName);
-		// also add the replace of space with -
+		$categoryName = preg_replace('/\s+/', '-', $categoryName);
 		return $categoryName;
 	}
 	
