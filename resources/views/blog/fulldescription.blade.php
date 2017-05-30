@@ -27,6 +27,7 @@
                 <h3 class="title-bg"><a href="javascript:void(0)">{{ strip_tags($blog->title) }}</a></h3>
                 <div class="post-content">
                 <div style="max-width:100%;">
+                    <img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb">
                     <a href="javascript:void(0)"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>
                 </div>
                     <div class="post-body fontDescription">
