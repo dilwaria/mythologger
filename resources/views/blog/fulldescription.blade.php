@@ -50,9 +50,9 @@
                     <div class="post-summary-footer">
                         <ul class="post-data">
                             <li><i class="icon-calendar"></i> {!! Carbon\Carbon::parse($blog->createDateTime)->format('d-F-Y') !!} </li>
-                            <li><i class="icon-user"></i> <a href="javascript:void(0)">{!! $blog->createdBy !!}</a></li>
+                            <li><i class="icon-user"></i> <a href="javascript:void(0)">{!! $creator->FirstName !!} {!! $creator->LastName !!}</a></li>
                             <li><i class="icon-comment " id = "dsq-count-scr"></i> 5 Comments</li>
-                            <li><i class="icon-tags"></i> <a href="javascript:void(0)">Mythology</a>, 
+                            <li><i class="icon-tags"></i> <a href="javascript:void(0)">{{ Common::processCategoryNameToDisplay($blog->tagList) }}</a>
                             <!-- <a href="#"></a>, -->
                              <!-- <a href="#">illustration</a></li> -->
                         </ul>
@@ -63,8 +63,8 @@
             <!-- About the Author -->
             <section class="post-content">
                 <div class="post-body about-author">
-                    <img src="/images/user-avatar.jpg" alt="author">
-                    <h4>About {!! $blog->createdBy !!}</h4>
+                    <img src="{!! $creator->imgPath !!}" alt="author">
+                    <h4>About {!! $creator->FirstName !!} {!! $creator->LastName !!}</h4><br>
                    {!! $creator->about !!}
                 </div>
             </section>

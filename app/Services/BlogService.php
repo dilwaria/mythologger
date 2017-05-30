@@ -4,13 +4,25 @@ namespace App\Services;
 
 use App\Blog;
 use App\Tags;
+use App\Users;
 use DB;
+use App\Services\UserService;
+use App;
 
 class BlogService{
+
+	private $userService;
+
+	public function __construct(){
+		$this->userService= App::make('userService');
+	}
 	
 	public function saveBlog($blog,$tags,$blogID){
 		$b= $this->handleBlogUpdate($blog,$blogID);
 		$b->tags()->detach();
+		$b->users()->detach();
+		$blogUser = $this->userService->getCreator();
+		$b->users()->save($blogUser);
         foreach ($tags as $tempTags) {
         	$t= $this->handleTags($tempTags);
         	$b->tags()->save($t);
@@ -67,11 +79,23 @@ class BlogService{
 			$tagArr[]=$t->tagName;
 		}
 		$blog->tagList= implode(",",$tagArr);
+		$createdByUser= $blog->users;
+		$blog->createdBy= $createdByUser->FirstName." ".$createdByUser->LastName;
 	}
 
 	public function getBlog($blogID){
-			$blog= Blog::where('id','=',$blogID)->first();
-			return $blog;
+		if(!$blogID){
+			return NULL;
+		}
+		$blog= Blog::where('id','=',$blogID)->first();
+
+		$tagArr=[];
+		foreach ($blog->tags as $t){
+			$tagArr[]=$t->tagName;
+		}
+		$blog->tagList= implode(",",$tagArr);
+
+		return $blog;
 	}
 
 	public function searchTags($val){

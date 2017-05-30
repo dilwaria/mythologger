@@ -26,9 +26,30 @@
         @endif
     required>
 
+    <label><b>User ID</b></label>
+    <input type="text" name="userID" 
+        @if ($blog)
+            value="{!! $user->userID !!}"
+        @endif
+    required>
+
+    <label><b>Priority</b></label>
+    <input type="text" name="blog[priority]" 
+        @if ($blog)
+            value="{!! $blog->priority !!}"
+        @endif
+    required>
+
+    <label><b>Keywords</b></label>
+    <input type="text" name="blog[seoMetakeywords]" 
+        @if ($blog)
+            value="{!! $blog->seoMetakeywords !!}"
+        @endif
+    required>  
+
     <label><b>Title(to display)</b></label>
      
-    <input type="textarea" name="blog[title]" 
+    <input type="text" name="blog[title]" 
         @if ($blog)
             value="{!! $blog->title !!}"
         @endif

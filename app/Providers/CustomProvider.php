@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Services\Widgets;
 use App\Services\CommonServices;
+use App\Services\UserService;
+use App\Services\BlogService;
 
 class CustomProvider extends ServiceProvider
 {
@@ -27,6 +29,14 @@ class CustomProvider extends ServiceProvider
     {
           $this->app->singleton('widgets', function ($app) {
             return new Widgets();
+        });
+
+        $this->app->singleton('userService', function ($app) {
+            return new UserService();
+        });
+
+        $this->app->singleton('blogService', function ($app) {
+            return new BlogService();
         });
 
         $this->app->singleton('common', function ($app) {
