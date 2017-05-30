@@ -15,6 +15,10 @@ class Blog extends Model
     	return $this->belongsToMany('App\Tags','tagMapping','blogID','tagID');
     }
 
+    function users(){
+        return $this->belongsTo('App\Users','creatorID','userID');
+    }
+
     function createFromArray($arr){
     	foreach ($arr as $key => $value) {
     		if($value){

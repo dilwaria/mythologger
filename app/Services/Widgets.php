@@ -6,13 +6,14 @@ use App\Blog;
 use App\Tags;
 use DB;
 use App\Services\BlogService;
+use App;
 
 class Widgets{
 
 	private $blogService;
 
 	public function __construct(){
-		$this->blogService= new BlogService();
+		$this->blogService= App::make('blogService');
 	}
 
 	public function getPopularPosts($limit=4){

@@ -6,6 +6,7 @@ use  Illuminate\Support\Facades\Request;
 use App\Services\BlogService;
 use App\Services\UserService;
 use App\Http\Controllers\Controller;
+use DB;
 
 class BlogController extends Controller
 {
@@ -34,7 +35,7 @@ class BlogController extends Controller
         $pageSize=6;
         $blogRes= $this->blogService->getBlogsByCategory($category,($pageNo-1)*$pageSize,$pageSize);
 
-        $params = [ 'blogs'=>$blogRes['blogs'],'count'=>$blogRes['count'], 'pageNo'=>$pageNo, 'pageCount'=> ($blogRes['count']/$pageSize) ];
+        $params = [ 'blogs'=>$blogRes['blogs'],'count'=>$blogRes['count'], 'pageNo'=>$pageNo, 'pageCount'=> ceil($blogRes['count']/$pageSize) ];
         return view('blog.categorypage', $params);
     }
 
@@ -45,14 +46,10 @@ class BlogController extends Controller
 
     public function getBlogDescription($slug,$blogID){
         $blog= $this->blogService->getBlog($blogID);
-
-        $creator = $this->userService->getCreator($blog->creatorID);
-
-        // var_dump($creator);
         if($slug!=$blog->slug){
             return redirect(route('blogDescription',['slug'=>$blog->slug,'blogID'=>$blogID]),301);
         }
-    	return view('blog.fulldescription',['blog'=>$blog, 'creator'=> $creator]);
+    	return view('blog.fulldescription',['blog'=>$blog, 'creator'=> $blog->users, 'tagList'=>$blog->tagList]);
     }
 
     // /blog/admin/mythologger/mYthologgerBlog123@mty

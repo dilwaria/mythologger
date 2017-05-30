@@ -11,14 +11,19 @@ class Users extends Model
 
     protected $table = 'users';
 
-   
-    // function createFromArray($arr){
-    // 	foreach ($arr as $key => $value) {
-    // 		if($value){
-    // 			$this->$key=$value;
-    // 		}
-    // 	}
-    // 	return $this;
-    // }
+    protected $primaryKey="userID";
+
+    function createFromArray($arr){
+    	foreach ($arr as $key => $value) {
+    		if($value){
+    			$this->$key=$value;
+    		}
+    	}
+    	return $this;
+    }
+
+    function blogs(){
+        return $this->hasMany('App\Blog','creatorID','userID');
+    }
 
 }
