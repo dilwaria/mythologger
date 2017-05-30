@@ -20,9 +20,6 @@ class BlogService{
 	public function saveBlog($blog,$tags,$blogID){
 		$b= $this->handleBlogUpdate($blog,$blogID);
 		$b->tags()->detach();
-		$b->users()->detach();
-		$blogUser = $this->userService->getCreator();
-		$b->users()->save($blogUser);
         foreach ($tags as $tempTags) {
         	$t= $this->handleTags($tempTags);
         	$b->tags()->save($t);

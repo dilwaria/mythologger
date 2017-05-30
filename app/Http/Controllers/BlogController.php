@@ -61,7 +61,7 @@ class BlogController extends Controller
             if($blog){
                 $tagArr= $blog->tags;
             }
-            return view('blog.blogAdmin',['blog'=>$blog,'tagArr'=>$tagArr,'user'=>$blog->users]);
+            return view('blog.blogAdmin',['blog'=>$blog,'tagArr'=>$tagArr]);
         }else{
             abort(404);
             

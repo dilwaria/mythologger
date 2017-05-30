@@ -27,9 +27,9 @@
     required>
 
     <label><b>User ID</b></label>
-    <input type="text" name="userID" 
+    <input type="text" name="blog[creatorID]" 
         @if ($blog)
-            value="{!! $user->userID !!}"
+            value="{!! $blog->creatorID !!}"
         @endif
     required>
 
