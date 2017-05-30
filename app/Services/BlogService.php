@@ -16,6 +16,15 @@ class BlogService{
 	public function __construct(){
 		$this->userService= App::make('userService');
 	}
+
+	public function incrementViewCount($blog){
+		$blogView= intval($blog->views);
+		if(isset($blog->tagList)){
+			unset($blog->tagList);
+		}
+		$blog->views= $blogView+1;
+		$blog->save();
+	}
 	
 	public function saveBlog($blog,$tags,$blogID){
 		$b= $this->handleBlogUpdate($blog,$blogID);

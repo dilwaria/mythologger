@@ -49,6 +49,7 @@ class BlogController extends Controller
         if($slug!=$blog->slug){
             return redirect(route('blogDescription',['slug'=>$blog->slug,'blogID'=>$blogID]),301);
         }
+        $this->blogService->incrementViewCount($blog);
     	return view('blog.fulldescription',['blog'=>$blog, 'creator'=> $blog->users, 'tagList'=>$blog->tagList]);
     }
 
