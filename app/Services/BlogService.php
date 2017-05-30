@@ -115,6 +115,7 @@ class BlogService{
 		if($blogID){
 			$b= $this->getBlog($blogID);
 			$b->createFromArray($blog);
+			unset($b->tagList);
 	        $b->save();
 		}else{
 			$b= new Blog();
