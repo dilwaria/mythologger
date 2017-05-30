@@ -62,7 +62,7 @@
             <!-- About the Author -->
             <section class="post-content">
                 <div class="post-body about-author">
-                    <img src="{!! $creator->imgPath !!}" alt="author">
+                    <img class="userImg" src="{!! $creator->imgPath !!}" alt="{!! $creator->FirstName !!} {!! $creator->LastName !!}">
                     <h4>About {!! $creator->FirstName !!} {!! $creator->LastName !!}</h4><br>
                    {!! $creator->about !!}
                 </div>
