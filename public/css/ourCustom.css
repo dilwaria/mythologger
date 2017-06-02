@@ -83,6 +83,7 @@
 
 .languageCheckText{
 	margin-top: 20px;
+	visibility: hidden;
 	 position: relative;
 	 float: right;
 	 text-align: center;
