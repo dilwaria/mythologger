@@ -23,30 +23,34 @@ Contact Us - mythologger.com • Contact Us
 
             <h2>Contact Us</h2>
             <p>If you have any suggestion or critical view point related to Mythologger or Mythology, feel free to contact us. We invite guest articles also, if you have imagination and want to publish it on our site, you are most welcome. Thanks for landing on Mythologger. </p>
-
-            <div class="alert alert-success">
-                Well done! You successfully read this important alert message. 
+            @if(isset($msg) && $msg)
+            <div id="successMsg" class="alert alert-success">
+                Thank you for contacting us.
             </div>
+            @endif
 
-            <form action="#" id="contact-form">
+            <form method="post" action="{{route('contactus')}}" id="contact-form">
                 <div class="input-prepend">
                     <span class="add-on"><i class="icon-user"></i></span>
-                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Name">
+                    <input class="span4" id="prependedInput" name="contactName" size="16" type="text" placeholder="Name" required>
                 </div>
                 <div class="input-prepend">
                     <span class="add-on"><i class="icon-envelope"></i></span>
-                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Email Address">
+                    <input class="span4" name="contactEmail" id="prependedInput" size="16" type="email" placeholder="Email Address" required>
                 </div>
-                <div class="input-prepend">
+              <!--  <div class="input-prepend">
                     <span class="add-on"><i class="icon-globe"></i></span>
                     <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
                 </div>
-                <textarea class="span6"></textarea>
+                -->
+                <textarea name="contactSubmit" class="span6" required></textarea>
                 <div class="row">
                     <div class="span2">
                         <input type="submit" class="btn btn-inverse" value="Send Message">
                     </div>
                 </div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="msg" value="1">
             </form>
 
         </div> <!--End page content column-->
@@ -85,6 +89,12 @@ Contact Us - mythologger.com • Contact Us
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlDbIZnZH8KBfyQhAolKEn7ZaMZ6LH_0A&sensor=false"></script>
 
 		<script>
+
+        $('#contact-form').submit(function(e) {
+            e.preventDefault(); // don't submit multiple times
+            this.submit(); // use the native submit method of the form element
+            $('#successMsg').removeAttr('vbHidden'); // blank the input
+        });
 		function initialize()
 		{
 		var mapProp = {

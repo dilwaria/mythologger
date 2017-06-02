@@ -20,8 +20,12 @@ class BlogController extends Controller
     }
 
     public function getContactUs(){
+        $msg= Request::input('msg','');
+	 return view('blog.contactus',['msg'=>$msg]);
+    }
 
-	 return view('blog.contactus',[]);
+    public function contactSubmit(){
+        return view('blog.contactus',['msg'=>1]);
     }
 
     public function getHomePage(){
