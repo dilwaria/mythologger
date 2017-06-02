@@ -17,7 +17,7 @@
 
 Route::get('/',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
 
-Route::get('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
+Route::any('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
 
 Route::get('/about-us',['uses'=>'BlogController@getAboutUs','as'=>'aboutus']);
 
@@ -31,3 +31,5 @@ Route::get('/getTags',['uses'=>'BlogController@getTagListFromQuery','as'=>'getTa
 Route::get("sitemap.xml", ['uses'=>'BlogController@sitemap','as'=>'sitemap']);
 
 Route::get('/category/{category?}',['uses'=>'BlogController@getCategories','as'=>'categoryPage']);
+
+Route::post('/contact-form-submit',['uses'=>'BlogController@contactSubmit','as'=>'contactSubmit']);
