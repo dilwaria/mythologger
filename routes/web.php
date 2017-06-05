@@ -33,3 +33,7 @@ Route::get("sitemap.xml", ['uses'=>'BlogController@sitemap','as'=>'sitemap']);
 Route::get('/category/{category?}',['uses'=>'BlogController@getCategories','as'=>'categoryPage']);
 
 Route::post('/contact-form-submit',['uses'=>'BlogController@contactSubmit','as'=>'contactSubmit']);
+
+Route::get('/privacy',function(){
+	return view('privacy');
+});
