@@ -70,6 +70,17 @@
                 <a href="{{route('contactus')}}">Contact </a>
 
             </li>
+
+            
+             @if (url()->current() == route('aboutus'))
+            <li class="dropdown  active">
+           @else
+            <li class="dropdown  ">
+            @endif
+                <a href="{{route('aboutus')}}">About Us </a>
+
+            </li>
+
              
             </ul>
            
@@ -87,6 +98,7 @@
                        <!--  <option value="page-right-sidebar.htm"> -Greek</option>
                         <option value="page-left-sidebar.htm"> -Other</option> -->
                     <option value="{{route('contactus')}}">Contact</option>
+                    <option value="{{route('aboutus')}}">About Us</option>
                        
                 </select>
                 </div>

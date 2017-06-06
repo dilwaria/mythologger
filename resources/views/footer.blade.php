@@ -61,6 +61,7 @@
                         <div class="span6">
                             <span class="right">
                             <a target="_blank" href="{{route('homePage')}}">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('contactus')}}">Contact</a>
+                            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('privacy')}}">Privacy Policy</a>
                             </span>
                         </div>
                     </div>

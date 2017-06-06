@@ -19,8 +19,6 @@ Route::get('/',['uses'=>'BlogController@getHomePage','as'=>'homePage']);
 
 Route::any('/contact-us',['uses'=>'BlogController@getContactUs','as'=>'contactus']);
 
-Route::get('/about-us',['uses'=>'BlogController@getAboutUs','as'=>'aboutus']);
-
 Route::get('/blog/{slug}/{blogID}',['uses'=>'BlogController@getBlogDescription','as'=>'blogDescription']);
 Route::get('/blog/admin/{userName}/{password}',['uses'=>'BlogController@getAdminPanel','as'=>'adminPanel']);
 
@@ -36,4 +34,8 @@ Route::post('/contact-form-submit',['uses'=>'BlogController@contactSubmit','as'=
 
 Route::get('/privacy',function(){
 	return view('privacy');
-});
+})->name('privacy');
+
+Route::get('/about-us',function(){
+	return view('aboutUs');
+})->name('aboutus');
