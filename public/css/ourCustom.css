@@ -176,6 +176,10 @@
 	font-family: "Arial, Halvetica, Serif, Sans-Serif";
 }
 
+.gAds{
+	margin-top: 10%;
+}
+
 @media screen and (max-width: 700px) and and (min-width: 500px){
 	.errorText{
 		font-size: 25px;
