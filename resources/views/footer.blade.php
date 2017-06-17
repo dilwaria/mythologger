@@ -35,7 +35,7 @@
                 <div class="span3 footer-col">
                     <h5>Popular M-logs</h5>
                      <ul class="post-list">
-                     @foreach ( Widgets::getPopularPosts(4) as $posts)
+                     @foreach ( Widgets::getPopularPosts(5) as $posts)
 
                         <li><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></li>
                          @endforeach
@@ -48,6 +48,7 @@
                         <li><a target="_blank" href="{{route('categoryPage')}}/hindu-mythology">Hindu Mythology</a></li>
                         <li><a target="_blank" href="{{route('categoryPage')}}/greek-mythology">Greek Mythology</a></li>
                         <li><a target="_blank" href="{{route('categoryPage')}}/chinese-mythology">Chinese Mythology</a></li>
+                        <li><a target="_blank" href="{{route('categoryPage')}}/egyptian-mythology">Egyptian Mythology</a></li>
                         <li><a target="_blank" href="{{route('categoryPage')}}/other-mythology">Other Mythologies</a></li>
                         
                     </ul>
@@ -62,6 +63,7 @@
                             <span class="right">
                             <a target="_blank" href="{{route('homePage')}}">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('contactus')}}">Contact</a>
                             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('privacy')}}">Privacy Policy</a>
+                            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a target="_blank" href="{{route('homePage')}}/sitemap.xml">Sitemap</a>
                             </span>
                         </div>
                     </div>

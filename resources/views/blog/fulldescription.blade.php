@@ -24,7 +24,7 @@
 
             <!-- Blog Post 1 -->
             <article>
-                <h3 class="title-bg"><a href="javascript:void(0)">{{ strip_tags($blog->title) }}</a></h3>
+                <h1 class="title-bg titleSize"><a href="javascript:void(0)">{{ strip_tags($blog->title) }}</a></h1>
                 <div class="post-content">
                 <div style="max-width:100%;">
                     <a href="javascript:void(0)"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>

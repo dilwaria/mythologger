@@ -2,16 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
     <loc>https://www.mythologger.com</loc> 
+      <changefreq>daily</changefreq>
+      <priority>1</priority>
   </url>
 
 <url>
     <loc>https://www.mythologger.com/category/hindu-mythology</loc> 
+     <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mythologger.com/category/greek-mythology</loc> 
+     <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mythologger.com/category/chinese-mythology</loc> 
+     <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/category/egyptian-mythology</loc> 
+     <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
   </url>
 
   <url>
@@ -51,6 +64,18 @@ https://www.mythologger.com/blog/samudra-manthan/2</loc>
   </url>
   <url>
     <loc>https://www.mythologger.com/blog/narayana-vs-narayana-sena/1</loc> 
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/blog/the-wise-choice/12</loc> 
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/blog/change/13</loc> 
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/blog/ambition/14</loc> 
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/blog/argument-and-promise/15</loc> 
   </url>
 </urlset>
 
