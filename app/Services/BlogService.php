@@ -41,7 +41,11 @@ class BlogService{
 				whereHas('tags',function($query) use ($category){
 					$query->where('tagName','=',$category);
 				});
-		$count= $blogs->count();	
+		$count= $blogs->count();
+		if($count==0){
+			abort(404);
+			exit;
+		}	
 
 		$blogs= $blogs->orderBy('views')->orderBy('createDateTime','desc')->
 			offset($offset)->limit($limit)->get();
