@@ -51,6 +51,7 @@
 	width:270px;
 	height: 220px;
 }
+
 @media screen and (min-width: 700px){
 	.fontDescription{
 		font-family: 'Raleway', sans-serif;
@@ -213,4 +214,14 @@
 .titleSize{
 	font-size: 24px;
 	line-height: 40px;
+}
+
+.breadCrumbs{
+	margin-top: -1%;
+    margin-left: 2%;
+}
+
+.breadCrumbs h5 a {
+	color: black;
+	cursor: pointer;
 }

@@ -25,6 +25,9 @@
             <!-- Blog Post 1 -->
             <article>
                 <h1 class="title-bg titleSize"><a href="javascript:void(0)">{{ strip_tags($blog->title) }}</a></h1>
+                <div class="breadCrumbs">
+                    <h5> <a style="color: black" href="{{ route('homePage') }}">Home</a> > <a href="{{ route('categoryPage',['category'=>Common::processCategoryUrlForBreadCrumb($blog->tagList) ]) }}">{{ Common::processCategoryNameForBreadCrumb($blog->tagList) }}</h5>
+                </div>
                 <div class="post-content">
                 <div style="max-width:100%;">
                     <a href="javascript:void(0)"><img class="dashboardImage dashboardImageMinWidth" src="{!! $blog->imgPath !!}" alt="Post Thumb"></a>

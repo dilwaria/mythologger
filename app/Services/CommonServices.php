@@ -6,6 +6,12 @@ use App;
 
 class CommonServices{
 
+	private $commonBreadCrumbTags=[
+		'hindu-mythology',
+		'greek-mythology',
+		'chinese-mythology'
+	];
+
 	public function processCategoryName($categoryName){
 		$categoryName= strtolower($categoryName);
 		$categoryName = preg_replace('/\s+/', '-', $categoryName);
@@ -26,6 +32,41 @@ class CommonServices{
 		$res=trim($res);
 		$res=trim($res,",");
 		return $res;
+	}
+
+	public function processCategoryNameForBreadCrumb($categoryName){
+		$res="";
+		if(!is_array($categoryName)){
+			$categoryName= explode(",", $categoryName);
+		}
+		$catName= '';
+		foreach ($this->commonBreadCrumbTags as $key => $tag) {
+			if(in_array($tag, $categoryName)){
+				$catName= $tag;
+				break;
+			}else{
+				$catName= $categoryName[0];
+			}
+		}
+		$tempStr= str_replace("-", " ", $catName);
+		return ucwords($tempStr);;
+	}
+
+	public function processCategoryUrlForBreadCrumb($categoryName){
+		$res="";
+		if(!is_array($categoryName)){
+			$categoryName= explode(",", $categoryName);
+		}
+		$catName= '';
+		foreach ($this->commonBreadCrumbTags as $key => $tag) {
+			if(in_array($tag, $categoryName)){
+				$catName= $tag;
+				break;
+			}else{
+				$catName= $categoryName[0];
+			}
+		}
+		return $catName;
 	}
 	
 }
