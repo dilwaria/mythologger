@@ -27,7 +27,7 @@
                 <div class="span3 footer-col">
                     <h5>Testimonials</h5>
                     <ul>
-                        <li> Comendable concept. Elucidating mythology in this sense is worth appreciating -- Rajeev Goyal,India</li>
+                        <li> Commendable concept. Elucidating mythology in this sense is worth appreciating -- Rajeev Goyal,India</li>
                         <li>Amazing idea. Never thought that myhtology could be this much interesitng -- Zhang Yu, Philippines</li>
                         <li>Nice, succinct, simple. Great perspective. -- Maya Morris, U.S.A</li>
                     </ul>
