@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Blog;
 use App\Tags;
 use App\Users;
+use App\Facts;
 use DB;
 use App\Services\UserService;
 use App;
@@ -112,8 +113,9 @@ class BlogService{
 		return Tags::where('tagName', 'LIKE', "%$val%")->get();
 	}
 
-
-
+	public function getFactsService(){
+		return  Facts::where('active','=',1)->orderBy('createDateTime','desc')->get();
+	}
 
 	private function handleTags($tempTags){
 		if($t=Tags::where('tagName','=',$tempTags['tagName'])->first()){
@@ -137,4 +139,6 @@ class BlogService{
     	}
     	return $b;
 	}
+
+
 }

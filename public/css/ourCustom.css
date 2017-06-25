@@ -225,3 +225,8 @@
 	color: black;
 	cursor: pointer;
 }
+
+.factQuizSlider{
+	height: 200px;
+	text-align: center;
+}

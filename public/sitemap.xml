@@ -26,6 +26,11 @@
      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.mythologger.com/category/norse-mythology</loc> 
+     <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+  </url>
 
   <url>
     <loc>https://www.mythologger.com/blog/myth-of-spheres/11</loc> 
@@ -76,6 +81,15 @@ https://www.mythologger.com/blog/samudra-manthan/2</loc>
   </url>
   <url>
     <loc>https://www.mythologger.com/blog/argument-and-promise/15</loc> 
+  </url>
+  <url>
+    <loc>https://www.mythologger.com/blog/selfitis-and-narcissus/16</loc> 
+  </url>
+   <url>
+    <loc>https://www.mythologger.com/blog/beethoven-and-jingwei/17</loc> 
+  </url>
+   <url>
+    <loc>https://www.mythologger.com/blog/patience-and-thor-hammer/18</loc> 
   </url>
 </urlset>
 

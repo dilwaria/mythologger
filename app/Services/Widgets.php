@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Blog;
 use App\Tags;
+use App\Facts;
 use DB;
 use App\Services\BlogService;
 use App;
@@ -27,6 +28,13 @@ class Widgets{
 			},SORT_REGULAR,true);
 			$blogs= $blogs->toArray();
 			return $blogs;
+	}
+
+	public function getFacts(){
+		 $facts  = $this->blogService->getFactsService();
+		 $facts= $facts->toArray();
+		 return $facts;
+		
 	}
 }
 

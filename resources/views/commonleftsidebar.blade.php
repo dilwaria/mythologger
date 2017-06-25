@@ -29,6 +29,21 @@
 
 
 <!--Categories-->
+             <h4 class="title-bg">facts</h4>
+                
+                   <div class="flexslider">
+                     <ul class="slides" >
+                     @foreach ( Widgets::getFacts() as $facts)
+                     <li>
+                        <div class="factQuizSlider post-content">
+                           <h5> {{$facts['factDesc']}} </h5>
+                        </div>
+                     </li>
+                     @endforeach
+                     </ul>
+                   </div>
+                 
+
             <h5 class="title-bg">Categories</h5>
             <ul class="post-category-list">
             @foreach ( Widgets::getCategories() as $categories)
