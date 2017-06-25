@@ -226,7 +226,12 @@
 	cursor: pointer;
 }
 
+
 .factQuizSlider{
 	height: 200px;
 	text-align: center;
+}
+.homePageAds{
+	margin-left: 2%;
+	height: 100px;
 }

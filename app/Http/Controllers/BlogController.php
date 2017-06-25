@@ -29,7 +29,7 @@ class BlogController extends Controller
     }
 
     public function getHomePage(){
-        	$blogs= $this->blogService->getHomePageBlogs(9);
+        	$blogs= $this->blogService->getHomePageBlogs(12);
     	   return view('blog.homepage',['allDisplayBlogs'=>$blogs]);
     }
 

@@ -46,6 +46,7 @@
 
 
     <h3 class="title-bg" title="Mythological Blogs"> LATEST M-LOGS </h3>
+            @php ($itr=0)
             @foreach($allDisplayBlogs as $popularBlogs)
                 <div class="row">
                 @foreach ($popularBlogs as $b)
@@ -56,8 +57,23 @@
                         <button class="btn btn-small btn-inverse" type="button" onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")'>Read more</button>
                     </div>
                   @endforeach
-    					
+             
+                @php ($itr++)
                 </div>
+                 @if($itr ==2 )
+                <div class="homePageAds row">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- descriptionPage2 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3341786863476895"
+                         data-ad-slot="7895928569"
+                         data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+              @endif
             @endforeach
 
 		@endsection
