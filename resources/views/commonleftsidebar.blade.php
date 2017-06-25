@@ -29,6 +29,7 @@
 
 
 <!--Categories-->
+<!--
              <h4 class="title-bg">facts</h4>
                 
                    <div class="flexslider">
@@ -42,7 +43,7 @@
                      @endforeach
                      </ul>
                    </div>
-                 
+                 !-->
 
             <h5 class="title-bg">Categories</h5>
             <ul class="post-category-list">
