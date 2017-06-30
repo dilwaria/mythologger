@@ -11,10 +11,23 @@
                 </script>
             </div>
 
+             <h5 class="title-bg f16">Do you know ?</h5>
+            
+               <div class="flexslider">
+                 <ul class="slides" >
+                 @foreach ( Widgets::getFacts() as $facts)
+                 <li>
+                    <div class="factQuizSlider post-content">
+                       <span class="quote-text"> @php echo $facts['factDesc'] @endphp </span>
+                    </div>
+                 </li>
+                 @endforeach
+                 </ul>
+               </div>
 
 
             <!--Popular Posts-->
-            <h5 class="title-bg">Popular Posts</h5>
+            <h5 class="title-bg f16">Popular Posts</h5>
 <ul class="popular-posts">
 @foreach ( Widgets::getPopularPosts() as $posts)
                 <li>
@@ -29,28 +42,15 @@
 
 
 <!--Categories-->
-
-             <h4 class="title-bg">facts</h4>
-                
-                   <div class="flexslider">
-                     <ul class="slides" >
-                     @foreach ( Widgets::getFacts() as $facts)
-                     <li>
-                        <div class="factQuizSlider post-content">
-                           <span class="quote-text"> @php echo $facts['factDesc'] @endphp </span>
-                        </div>
-                     </li>
-                     @endforeach
-                     </ul>
-                   </div>
                  
-
+<!--
             <h5 class="title-bg">Categories</h5>
             <ul class="post-category-list">
             @foreach ( Widgets::getCategories() as $categories)
                 <li><a target="_blank" href="<?php echo route('categoryPage',['category'=> Common::processCategoryName($categories['tagName']) ]) ?>"><i class="icon-plus-sign"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
                 @endforeach
             </ul>
+            -->
 
 
             <div class="gAds" >
