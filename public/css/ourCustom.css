@@ -228,10 +228,16 @@
 
 
 .factQuizSlider{
-	height: 200px;
+	height: 150px;
 	text-align: center;
+	padding-top: 2%;
+	font-size: 15px;
 }
 .homePageAds{
 	margin-left: 2%;
 	height: 100px;
+}
+
+.factText{
+	font-size: 16px;
 }

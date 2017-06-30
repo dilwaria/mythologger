@@ -33,6 +33,10 @@ class Widgets{
 	public function getFacts(){
 		 $facts  = $this->blogService->getFactsService();
 		 $facts= $facts->toArray();
+		 // foreach($facts as $id=>$f){
+		 // 	$len= strlen($f['factDesc']);
+	 	// 	$facts[$id]['factDesc']="<span>".$facts[$id]['factDesc']."</h5>";
+		 // }
 		 return $facts;
 		
 	}
