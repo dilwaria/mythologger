@@ -37,7 +37,7 @@
                      @foreach ( Widgets::getFacts() as $facts)
                      <li>
                         <div class="factQuizSlider post-content">
-                           <h5 class="factText"> @php echo $facts['factDesc'] @endphp </h5>
+                           <span class="quote-text"> @php echo $facts['factDesc'] @endphp </span>
                         </div>
                      </li>
                      @endforeach
