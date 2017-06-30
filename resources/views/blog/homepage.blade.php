@@ -44,6 +44,19 @@
         </div>
     </div><!-- End Headline -->
 
+    <div class="homePageAds row">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- descriptionPage2 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3341786863476895"
+                         data-ad-slot="7895928569"
+                         data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
 
     <h3 class="title-bg" title="Mythological Blogs"> LATEST M-LOGS </h3>
             @php ($itr=0)
