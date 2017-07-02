@@ -262,3 +262,11 @@
     text-shadow: 1px 1px #d4caca;
     font-size: 14px;	
 }
+
+*{
+	box-sizing: content-box !important;
+}
+
+#st-2, #st-2 *{
+	box-sizing: border-box !important;
+}

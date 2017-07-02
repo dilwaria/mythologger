@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 @yield('metadescription')
+
+
 <!-- CSS
 ================================================== -->
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/bootstrap.css">
 <link rel="stylesheet" href="/css/bootstrap-responsive.css">
 <link rel="stylesheet" href="/css/prettyPhoto.css" />
@@ -30,6 +33,8 @@
 <link rel="apple-touch-icon" href="/images/mythologger-apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/images/mythologger-apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="/images/mythologger-apple-touch-icon-114x114.png">
+
+@yield('styleCss')
 
 <!-- JS
 ================================================== -->
