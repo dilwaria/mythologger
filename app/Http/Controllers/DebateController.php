@@ -15,6 +15,7 @@ class DebateController extends Controller{
     private $userService;
 
     public function __construct(DebateService $d, UserService $u){
+    	var_dump($d);
         $this->debateService= $d;
         $this->userService = $u;
     }
@@ -27,12 +28,13 @@ class DebateController extends Controller{
 
     // /debate/admin/mythologger/mYthologgerBlog123@mty
     public function getDebateAdminPanel($userName,$password){
+    	echo "string";
         $debateID= Request::input('debateID');
         $debate=$this->debateService->getDebate($debateID);
         if($userName=='mythologger' && $password== 'mYthologgerBlog123@mty'){
             $tagArr=NULL;
-            if($blog){
-                $tagArr= $blog->tags;
+            if($debate){
+                $tagArr= $debate->tagID;
             }
             return view('debate.debateAdmin',['debate'=>$debate,'tagArr'=>$tagArr]);
         }else{
@@ -40,6 +42,18 @@ class DebateController extends Controller{
             
         }
     }
+
+    public function saveDebate(){
+        $debate= Request::input('debate');
+        // $tags= Request::input('tags');
+        $debateID= Request::input('debateID','');
+        // if(empty($tags)){
+        //     echo "There must be at least one tag. Not inserted";
+        //     return;
+        // }
+        $this->debateService->saveDebate($debate,$debateID);
+        echo "Saved Sucessfully";
+   }
 
 
 }

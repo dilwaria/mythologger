@@ -39,6 +39,8 @@ Route::get('/debate',['uses'=>'DebateController@showDebatePage','as'=>'showDebat
 
 Route::get('/debate/admin/{userName}/{password}',['uses'=>'DebateController@getDebateAdminPanel','as'=>'adminPanelDebate']);
 
+Route::post('/debate/saveDebate',['uses'=>'DebateController@saveDebate']);
+
 Route::get('/privacy',function(){
 	return view('privacy');
 })->name('privacy');

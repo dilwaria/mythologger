@@ -17,7 +17,7 @@
     <label><b>Debate Content</b></label><br>
         Please convert to HTML before insertion. <a rel="nofollow" target="_blank" href="http://www.textfixer.com/html/convert-word-to-html.php"> Open</a>
     <br><br>
-    <textarea name="debate[blogContent]">@if ($debate){!! $debate->debateDesc !!}@endif</textarea><br><br>
+    <textarea name="debate[debateDesc]">@if ($debate){!! $debate->debateDesc !!}@endif</textarea><br><br>
 
     <label><b>Slug</b></label>
     <input type="text" name="debate[slug]" 
@@ -26,12 +26,7 @@
         @endif
     required>
 
-    <!-- <label><b>User ID</b></label>
-    <input type="text" name="blog[creatorID]" 
-        @if ($blog)
-            value="{!! $blog->creatorID !!}"
-        @endif
-    required> -->
+    
 
     <label><b>Priority</b></label>
     <input type="text" name="debate[karmaPoints]" 
@@ -76,20 +71,7 @@
         @endif
     required>
 
-  <!--   <span class="tagGrp">
-        <label><b>Tags(Please press enter)</b></label>
-        @if ($blog)
-            @foreach ($tagArr as $tags)
-                <input class="tagList" list="tagDataList" type="text" name="tags[][tagName]" value="{{$tags->tagName}}" autocomplete="off" >
-            @endforeach
-        @else
-            <input class="tagList" list="tagDataList" type="text" name="tags[][tagName]" autocomplete="off" >
-        @endif
-        <datalist id="tagDataList">
-           
-        </datalist>
-
-    </span> -->
+ 
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="clearfix">

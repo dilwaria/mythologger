@@ -1,4 +1,4 @@
-<?
+<?php
 namespace App\Services;
 
 use App\Debate;
@@ -13,6 +13,7 @@ class DebateService{
 	private $userService;
 
 	public function __construct(){
+		
 		$this->userService= App::make('userService');
 	}
 
@@ -30,5 +31,29 @@ class DebateService{
 
 		return $debate;
 	}
+
+	public function saveDebate($debate,$debateID){
+		$d= $this->handleDebateUpdate($debate,$debateID);
+		// $d->tags()->detach();
+  //       foreach ($tags as $tempTags) {
+  //       	$t= $this->handleTags($tempTags);
+  //       	$b->tags()->save($t);
+  //       }
+	}
+
+	private function handleDebateUpdate($debate,$debateID){
+		if($debateID){
+			$d= $this->getBlog($debateID);
+			$d->createFromArray($debate);
+			// unset($b->tagList);
+	        $d->save();
+		}else{
+			$d= new Debate();
+	        $d= $d->createFromArray($debate);
+	        $res=$d->save();
+    	}
+    	return $d;
+	}
+
 
 }
