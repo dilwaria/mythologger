@@ -37,6 +37,7 @@ Route::any('/profile/{profileSlug}',['uses'=>'ProfileController@getProfile','as'
 
 Route::get('/debate',['uses'=>'DebateController@showDebatePage','as'=>'showDebate']);
 
+Route::get('/debate/admin/{userName}/{password}',['uses'=>'DebateController@getDebateAdminPanel','as'=>'adminPanelDebate']);
 
 Route::get('/privacy',function(){
 	return view('privacy');
