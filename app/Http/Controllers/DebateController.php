@@ -15,7 +15,7 @@ class DebateController extends Controller{
     private $userService;
 
     public function __construct(DebateService $d, UserService $u){
-    	var_dump($d);
+    	
         $this->debateService= $d;
         $this->userService = $u;
     }

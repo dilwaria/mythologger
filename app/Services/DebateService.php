@@ -43,7 +43,7 @@ class DebateService{
 
 	private function handleDebateUpdate($debate,$debateID){
 		if($debateID){
-			$d= $this->getBlog($debateID);
+			$d= $this->getDebate($debateID);
 			$d->createFromArray($debate);
 			// unset($b->tagList);
 	        $d->save();
