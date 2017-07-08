@@ -16,7 +16,7 @@
     </div>
     <div class="container">
 
-     @include('header')
+    @include('header')
 
 	@yield('content')
 

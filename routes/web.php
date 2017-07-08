@@ -32,7 +32,11 @@ Route::get('/category/{category?}',['uses'=>'BlogController@getCategories','as'=
 
 Route::post('/contact-form-submit',['uses'=>'BlogController@contactSubmit','as'=>'contactSubmit']);
 
+
 Route::any('/profile/{profileSlug}',['uses'=>'ProfileController@getProfile','as'=>'getProfile']);
+
+Route::get('/debate',['uses'=>'DebateController@showDebatePage','as'=>'showDebate']);
+
 
 Route::get('/privacy',function(){
 	return view('privacy');
