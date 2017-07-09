@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/css/flexslider.css" />
 <link rel="stylesheet" href="/css/custom-styles.css">
 
-<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Josefin+Slab" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/ourCustom.css">
 
