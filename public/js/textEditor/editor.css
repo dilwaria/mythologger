@@ -302,7 +302,6 @@ h1{
 .dropdown-menu>li>a{
   cursor:pointer;
   }
-
-
-
-  
+.navbar{
+  min-height: inherit;
+}
