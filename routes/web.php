@@ -35,7 +35,9 @@ Route::post('/contact-form-submit',['uses'=>'BlogController@contactSubmit','as'=
 
 Route::any('/profile/{profileSlug}',['uses'=>'ProfileController@getProfile','as'=>'getProfile']);
 
-Route::get('/debate',['uses'=>'DebateController@showDebatePage','as'=>'showDebate']);
+Route::post('/profile/save',['uses'=>'ProfileController@saveProfile','as'=>'saveProfile']);
+
+Route::get('/debate/{slug}/{debateID}',['uses'=>'DebateController@showDebatePage','as'=>'showDebate']);
 
 Route::get('/debate/admin/{userName}/{password}',['uses'=>'DebateController@getDebateAdminPanel','as'=>'adminPanelDebate']);
 

@@ -5,7 +5,7 @@
  @endsection
 
  @section('styleCss')
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrapcdnrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="js/textEditor/editor.css" type="text/css" rel="stylesheet"/>
  @endsection
@@ -30,11 +30,12 @@
         ================================================== --> 
         <div class="span6"><!--Begin page content column-->
 
-            <h2 class="title-bg">Double Sidebar Example</h2>
+            <h2 class="title-bg">{!! $debate->debateTitle !!}</h2>
 
-            <img src="/images/jingwei.jpg" alt="Image">
-
-            <p class="debateQuestion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie.</p>
+            @if($debate->imagePath)
+                <img src="{!! $debate->imagePath !!}" alt="Image">
+            @endif
+            <p class="debateQuestion">{!! $debate->debateDesc !!}</p>
 
             <div class="row" style="margin:0;">
                 <div class="debateAnswer" id="txtEditor">

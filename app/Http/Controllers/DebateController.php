@@ -21,8 +21,12 @@ class DebateController extends Controller{
     }
 
 
-	public function showDebatePage(){
-		return view('debate/debate');
+	public function showDebatePage($slug,$debateID){
+        $debate= $this->debateService->getDebate($debateID);
+        if(!$debate){
+            abort(404);
+        }
+		return view('debate/debate',['debate'=>$debate]);
 	}
 
 

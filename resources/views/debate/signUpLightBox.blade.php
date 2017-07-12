@@ -4,7 +4,12 @@
             <h5 id="myModalLabel">Modal header</h5>
         </div>
         <div class="modal-body">
-            <p>One fine body…</p>
+            <form id="signUpForm" action="{{route('saveProfile')}}">
+                UserName: <input type="text" name="userName">
+                Email: <input type="text" name="emailID">
+                Password: <input type="password" name="password">
+                <input type="submit" name="submit">
+            </form>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
