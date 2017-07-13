@@ -9,7 +9,7 @@ class Users extends Model
     const CREATED_AT = 'createDateTime';
     const UPDATED_AT = 'updateDateTime';
 
-    protected $table = 'users';
+    protected $table = 'userAdmin';
 
     protected $primaryKey="userID";
 

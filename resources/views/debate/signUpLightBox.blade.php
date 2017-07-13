@@ -6,14 +6,16 @@
         <div class="modal-body">
             <form id="signUpForm" action="{{route('saveProfile')}}">
                 UserName: <input type="text" name="userName">
-                Email: <input type="text" name="emailID">
-                Password: <input type="password" name="password">
-                <input type="submit" name="submit">
+                Password: <input type="text" name="emailID">
+                Retype Password: <input type="password" name="password">
+                
             </form>
         </div>
         <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            
             <button class="btn btn-inverse">Save changes</button>
-         	<button class="btn btn-inverse">Save changes</button>
+         	
         </div>
     </div>
+
+    <!-- <input type="submit" name="submit">/ -->
