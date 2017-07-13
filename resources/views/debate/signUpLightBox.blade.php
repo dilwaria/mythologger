@@ -4,17 +4,22 @@
             <h5 id="myModalLabel">Modal header</h5>
         </div>
         <div class="modal-body">
-            <form id="signUpForm" action="{{route('saveProfile')}}">
-                UserName: <input type="text" name="userName">
-                Password: <input type="text" name="emailID">
-                Retype Password: <input type="password" name="password">
+            
+            <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }}
+
+                Name: <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                Email: <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                Password: <input id="password" type="password" class="form-control" name="password" required>
+
+                Confirm Password<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                 
-            </form>
+            
         </div>
         <div class="modal-footer">
             
-            <button class="btn btn-inverse">Save changes</button>
-         	
+            <button type="submit"  class="btn btn-inverse">Register</button>
+         	</form>
         </div>
     </div>
 
