@@ -6,6 +6,7 @@
 
  @section('styleCss')
    <link rel="stylesheet" href="/css/profile.css">
+   <link rel="stylesheet" href="/css/qa.css">
  @endsection
 
 @section('content')

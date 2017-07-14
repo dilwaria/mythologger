@@ -4,14 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Users extends Model
+class Comments extends Model
 {
     const CREATED_AT = 'createDateTime';
     const UPDATED_AT = 'updateDateTime';
 
-    protected $table = 'userAdmin';
+    protected $table = 'comment';
 
-    protected $primaryKey="userID";
+    function answer(){
+    	return $this->belongsTo('App\Answers','id','debateAnswerID');
+    }
 
     function createFromArray($arr){
     	foreach ($arr as $key => $value) {
@@ -20,10 +22,6 @@ class Users extends Model
     		}
     	}
     	return $this;
-    }
-
-    function blogs(){
-        return $this->hasMany('App\Blog','creatorID','userID');
     }
 
 }

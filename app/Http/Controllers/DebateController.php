@@ -7,32 +7,35 @@ use App\Services\DebateService;
 use App\Services\UserService;
 use App\Http\Controllers\Controller;
 use DB;
+use App;
 
 
 class DebateController extends Controller{
 
 	private $debateService;
     private $userService;
+    private $answerService;
 
     public function __construct(DebateService $d, UserService $u){
     	
         $this->debateService= $d;
         $this->userService = $u;
+        $this->answerService= App::make('answerService');
     }
 
 
 	public function showDebatePage($slug,$debateID){
         $debate= $this->debateService->getDebate($debateID);
+        $answers= $this->answerService->getAnswers($debateID);
         if(!$debate){
             abort(404);
         }
-		return view('debate/debate',['debate'=>$debate]);
+		return view('debate/debate',['debate'=>$debate,'answers'=>$answers]);
 	}
 
 
     // /debate/admin/mythologger/mYthologgerBlog123@mty
     public function getDebateAdminPanel($userName,$password){
-    	echo "string";
         $debateID= Request::input('debateID');
         $debate=$this->debateService->getDebate($debateID);
         if($userName=='mythologger' && $password== 'mYthologgerBlog123@mty'){
@@ -57,6 +60,23 @@ class DebateController extends Controller{
         // }
         $this->debateService->saveDebate($debate,$debateID);
         echo "Saved Sucessfully";
+   }
+
+   public function saveAnswer(){
+        $arr=[];
+        $arr['debateID']= Request::input('debateID');
+        $arr['answerContent']= Request::input('answerContent');
+        $arr['creatorID']= Request::input('creatorID');
+        $this->answerService->saveAnswer($arr,NULL);
+   }
+
+    public function saveComment(){
+        $arr=[];
+        $arr['debateAnswerID']= Request::input('debateAnswerID');
+        $arr['commentContent']= Request::input('commentContent');
+        $arr['creatorID']= Request::input('creatorID');
+        $arr['parentID']= Request::input('parentID');
+        $this->answerService->saveComment($arr);
    }
 
 

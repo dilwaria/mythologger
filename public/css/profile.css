@@ -37,25 +37,6 @@
 	padding: 3%;
 }
 
-.question{
-	font-family: 'Josefin Slab', serif;
-    font-size: 18px;
-    text-align: justify;
-    color: #943437;
-    font-weight: 900;
-    padding: 2%
-}
-
-.answer{
-	font-family: 'Josefin Slab', serif;
-    font-size: 16px;
-    text-align: justify;
-    font-weight: 500;
-	margin-top: 1%;
-	background-color: #ebe6ff;
-	padding: 2%;
-}
-
 .singleQuestion{
 	margin: 3%; 
 	padding: 3%;

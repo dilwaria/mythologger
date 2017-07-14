@@ -5,6 +5,7 @@ use App\Debate;
 use App\Tags;
 use App\Users;
 use App\Facts;
+use App\Answers;
 use DB;
 use App\Services\UserService;
 use App;

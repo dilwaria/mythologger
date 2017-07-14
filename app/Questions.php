@@ -4,14 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Users extends Model
+class Blog extends Model
 {
     const CREATED_AT = 'createDateTime';
     const UPDATED_AT = 'updateDateTime';
 
-    protected $table = 'userAdmin';
+    protected $table = 'blogs';
 
-    protected $primaryKey="userID";
+    function tags(){
+    	return $this->belongsToMany('App\Tags','tagMapping','blogID','tagID');
+    }
+
+    function users(){
+        return $this->belongsTo('App\Users','creatorID','userID');
+    }
 
     function createFromArray($arr){
     	foreach ($arr as $key => $value) {
@@ -20,10 +26,6 @@ class Users extends Model
     		}
     	}
     	return $this;
-    }
-
-    function blogs(){
-        return $this->hasMany('App\Blog','creatorID','userID');
     }
 
 }

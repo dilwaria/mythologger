@@ -43,6 +43,10 @@ Route::get('/debate/admin/{userName}/{password}',['uses'=>'DebateController@getD
 
 Route::post('/debate/saveDebate',['uses'=>'DebateController@saveDebate']);
 
+Route::post('/debate/saveAnswer',['uses'=>'DebateController@saveAnswer','as'=>'submitAnswer']);
+
+Route::post('/debate/postComment',['uses'=>'DebateController@saveComment','as'=>'postComment']);
+
 Route::get('/privacy',function(){
 	return view('privacy');
 })->name('privacy');

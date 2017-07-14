@@ -1,0 +1,40 @@
+.question{
+	font-family: 'Josefin Slab', serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #943437;
+    font-weight: 900;
+}
+
+.answer{
+	font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 500;
+	margin-top: 1%;
+	background-color: #ebe6ff;
+}
+
+.comment{
+        border-radius: 2%;
+    padding-top: 1%;
+    background-color: white;
+    margin: 2%;
+    padding-bottom: 1%;
+    font-size: 12px;
+    display: inline-block;
+    box-sizing:border-box !important;
+    width: 86%;
+}
+
+.buttonComment {
+    background-color: #418586; /* Green */
+    border-radius: 15%;
+    color: white;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2%;
+}
