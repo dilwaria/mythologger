@@ -54,3 +54,6 @@ Route::get('/privacy',function(){
 Route::get('/about-us',function(){
 	return view('aboutUs');
 })->name('aboutus');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,25 +1,25 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
-
-class User extends Model
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class User extends Authenticatable
 {
-    const CREATED_AT = 'createDateTime';
-    const UPDATED_AT = 'updateDateTime';
-
-    protected $table = 'mUsers';
-
-    protected $primaryKey="id";
-
-    function createFromArray($arr){
-    	foreach ($arr as $key => $value) {
-    		if($value){
-    			$this->$key=$value;
-    		}
-    	}
-    	return $this;
-    }
-
+    use Notifiable;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }
