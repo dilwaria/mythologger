@@ -68,6 +68,10 @@ class CommonServices{
 		}
 		return $catName;
 	}
+
+	public function getUserPic($userObj){
+		return "/images/user-avatar.jpg";
+	}
 	
 }
 

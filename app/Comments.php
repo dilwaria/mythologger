@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Comments extends Model
 {
@@ -10,6 +11,7 @@ class Comments extends Model
     const UPDATED_AT = 'updateDateTime';
 
     protected $table = 'comment';
+
 
     function answer(){
     	return $this->belongsTo('App\Answers','id','debateAnswerID');
@@ -23,5 +25,9 @@ class Comments extends Model
     	}
     	return $this;
     }
+
+    function writer(){
+        return $this->belongsTo('App\User','creatorID','id');
+    }   
 
 }

@@ -2,6 +2,8 @@
 
 namespace App;
 use Illuminate\Notifications\Notifiable;
+use App\Answers;
+use App\Comments;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
@@ -22,4 +24,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    function answers(){
+        return $this->hasMany('App\Answers','creatorID','id');
+    }
+
+    function comments(){
+        return $this->hasMany('App\Comments','creatorID','id');
+    }
 }
