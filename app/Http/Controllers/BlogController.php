@@ -19,13 +19,14 @@ class BlogController extends Controller
         $this->userService = $u;
     }
 
-    public function getContactUs(){
-        $msg= Request::input('msg','');
-	 return view('blog.contactus',['msg'=>$msg]);
+    public function getContactUs(){ 
+	 return view('blog.contactus');
     }
 
     public function contactSubmit(){
-        return view('blog.contactus',['msg'=>1]);
+        $contact = Request::input('contact');
+        $this->blogService->saveContactForm($contact);
+        return redirect('contact-us')->with('status', '1');;
     }
 
     public function getHomePage(){
@@ -96,6 +97,11 @@ class BlogController extends Controller
    {
     $content = View::make('sitemap', ['doctors' => $doctors, 'patients' => $patients]);
     return Response::make($content)->header('Content-Type', 'text/xml;charset=utf-8');
+    }
+
+
+    public function saveContactForm(){
+
     }
 
 }

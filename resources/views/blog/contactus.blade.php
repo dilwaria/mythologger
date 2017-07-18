@@ -23,34 +23,31 @@ Contact Us - mythologger.com • Contact Us
 
             <h2>Contact Us</h2>
             <p>If you have any suggestion or critical view point related to Mythologger or Mythology, feel free to contact us. We invite guest articles also, if you have imagination and want to publish it on our site, you are most welcome. Thanks for landing on Mythologger. </p>
-            @if(isset($msg) && $msg)
+            @if (session('status'))
             <div id="successMsg" class="alert alert-success">
-                Thank you for contacting us.
+                Thank you  for contacting us.
             </div>
             @endif
 
-            <form method="post" action="{{route('contactus')}}" id="contact-form">
+            <form method="post" action="{{route('contactSubmit')}}" id="contact-form">
                 <div class="input-prepend">
                     <span class="add-on"><i class="icon-user"></i></span>
-                    <input class="span4" id="prependedInput" name="contactName" size="16" type="text" placeholder="Name" required>
+                    <input class="span4" id="prependedInput" name="contact[name]" size="16" type="text" placeholder="Name" required>
                 </div>
                 <div class="input-prepend">
                     <span class="add-on"><i class="icon-envelope"></i></span>
-                    <input class="span4" name="contactEmail" id="prependedInput" size="16" type="email" placeholder="Email Address" required>
+                    <input class="span4" name="contact[emailID]" id="prependedInput" size="16" type="email" placeholder="Email Address" required>
                 </div>
-              <!--  <div class="input-prepend">
-                    <span class="add-on"><i class="icon-globe"></i></span>
-                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
-                </div>
-                -->
-                <textarea name="contactSubmit" class="span6" required></textarea>
-                <div class="row">
-                    <div class="span2">
-                        <input type="submit" class="btn btn-inverse" value="Send Message">
-                    </div>
-                </div>
+              
+                <textarea name="contact[data]" class="span6" required></textarea>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="msg" value="1">
+                <div class="row">
+                    <div class="span2">
+                        <input type="submit"  class="btn btn-inverse" value="Send Message">
+                    </div>
+                </div>
+                
             </form>
 
         </div> <!--End page content column-->

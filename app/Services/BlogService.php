@@ -6,6 +6,7 @@ use App\Blog;
 use App\Tags;
 use App\Users;
 use App\Facts;
+use App\Contactus;
 use DB;
 use App\Services\UserService;
 use App;
@@ -138,6 +139,14 @@ class BlogService{
 	        $res=$b->save();
     	}
     	return $b;
+	}
+
+
+	public function saveContactForm($contactForm){
+		$contact= new Contactus();
+	    $contact= $contact->createFromArray($contactForm);
+	    $res=$contact->save();
+	    return 1;
 	}
 
 
