@@ -2,7 +2,7 @@
                         <div class="mt2">
                             <img class="img-circle mr2 floatL" src="{{Common::getUserPic($c->writer)}}" style=" height: 30px;width: 30px;">
                             <div class="dspIB">
-                                {{$c->writer}}, <br> <span style="font-size:12px;">{{Carbon\Carbon::parse($c->updateDateTime)->format('d-F-Y')}}</span>
+                                {{$c->writer->name}}, <br> <span style="font-size:12px;">{{Carbon\Carbon::parse($c->updateDateTime)->format('d-F-Y')}}</span>
                             </div> 
                         </div>
                         <div class="comment pl4 p1">
