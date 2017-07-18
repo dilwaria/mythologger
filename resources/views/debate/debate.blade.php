@@ -55,22 +55,22 @@
                     <input type="hidden" name="debateID" value="{{$debate->id}}">
                     <!-- need to get userID dynamic   !-->
                     <input type="hidden" name="creatorID" value="1">
-                    <textarea class="span6" rows="5" name="answerContent"></textarea>
+                    <textarea class="span6" id="editorText" rows="5" name="answerContent"></textarea>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <button class="btn btn-small btn-warning floatR" type="button" id="answerSubmit">Submit</button>
+                    <button class="btn btn-small btn-warning floatR mt2 mb9 dspIB" type="button" id="answerSubmit">Submit</button>
                 </form>
             </div>
-
+            <div id="hiddenDiv9" class="mb9 mt2 dspN"></div>
             @foreach($answers as $a)
                 <div class="answer p2 mt2">
-                    <div style="margin-bottom: 2%;">
+                    <div class="mb2">
                             <img class="img-circle mt2" src="/images/user-avatar.jpg" style="height: 30px;width: 30px;margin-top: -4% "> 
                             <div class="mt2 dspIB">
                                 Abhinav Sharma<br><span style="font-size:12px;">June 27</span>
                             </div>  
                     </div>
                     <div style="margin-left: 2%">
-                        {{$a->answerContent}}
+                        {!! $a->answerContent !!}
                     </div>
                 </div>
                 <div id="commentText_{{$a->id}}" class="btn btn-mini mt2 comments">
@@ -110,12 +110,15 @@
 @section('javascript')
 <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
 <!-- <script src="js/textEditor/editor.js"></script> -->
+<script src="//cdn.ckeditor.com/4.7.1/basic/ckeditor.js"></script>
+<script src="/js/ckeditor_config.js"></script>
 <script type="text/javascript">
 $(document).ready( function() {
 // $("#txtEditor").Editor();  
 
     $('#answerBtn').click(function(){
         $('#userAnswerInput').toggle();
+        $('#hiddenDiv9').toggle();
     }); 
 
     $('#answerSubmit').click(function(){
@@ -138,7 +141,25 @@ $(document).ready( function() {
             $('#reply_'+answerID+"_"+commentID).toggle();
         }
     );
+     CKEDITOR.config.customConfig = '/js/ckeditor_config.js';
+     CKEDITOR.replace( 'editorText',{
+         toolbar : 'Basic', 
+         uiColor : '#9AB8F3',
+         width:"100%"
 
+     } );
+    
+    CKEDITOR.config.toolbar="None";
+    CKEDITOR.config.uiColor='#9AB8F3';
+    CKEDITOR.config.height="100%";
+    CKEDITOR.config.width="80%";
+    CKEDITOR.config.float="left";
+    CKEDITOR.on("instanceReady", function ( event ) {
+        $('.cke_top').hide();
+        $('#cke_1_top').show();
+        
+    });
+    CKEDITOR.replaceClass = 'commentInput';
 
 
 });

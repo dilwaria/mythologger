@@ -4,8 +4,8 @@
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div class="answer p1 mt2" style="border-radius: 15px;margin-left: 10%;">
                 <div class="comment p1 dspIB">
-                        <input type="textbox" style="width: 82%;padding-left: 1%" name="commentContent">
-                        <button class="btn btn-mini mt1"> Submit</button>
+                        <textarea rows="1" style="padding-left: 1%" class="commentInput" name="commentContent"></textarea>
+                        <button class="btn btn-mini mt1 commentSubmit"> Submit</button>
                     
                 </div>
             </div>

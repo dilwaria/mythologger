@@ -1,4 +1,4 @@
-<div class="answer p1 mt2" style="border-radius: 15px;margin-left: {{$mt}}%;">
+<div class="answer p1 mt2 inputForReply" style="border-radius: 15px;margin-left: {{$mt}}%;">
                         <div class="mt2">
                             <img class="img-circle mr2 floatL" src="/images/user-avatar.jpg" style=" height: 30px;width: 30px;">
                             <div class="dspIB">
@@ -6,7 +6,7 @@
                             </div> 
                         </div>
                         <div class="comment pl4 p1">
-                                {{$c->commentContent}} 
+                                {!! $c->commentContent !!} 
                         </div>
                         <button id="replyToComment_{{$a->id}}_{{$c->id}}" class="btn btn-mini mt1 replyToComment"> Reply</button>
         </div>
@@ -19,7 +19,7 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="answer p1 mt2" style="border-radius: 15px;margin-left: {{$mt+5}}%;">
                         <div class="comment p1 dspIB">
-                                <input type="textbox" style="width: 82%;padding-left: 1%" name="commentContent">
+                                <textarea class="commentInput" style="width: 82%;" name="commentContent"></textarea>
                                 <button class="btn btn-mini mt1"> Submit</button>
                             
                         </div>
