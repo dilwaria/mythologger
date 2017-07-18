@@ -47,6 +47,8 @@ Route::post('/debate/saveAnswer',['uses'=>'DebateController@saveAnswer','as'=>'s
 
 Route::post('/debate/postComment',['uses'=>'DebateController@saveComment','as'=>'postComment']);
 
+Route::get('/followProfile',['uses'=>'ProfileController@followProfile','as'=>'followProfile']);
+
 Route::get('/privacy',function(){
 	return view('privacy');
 })->name('privacy');

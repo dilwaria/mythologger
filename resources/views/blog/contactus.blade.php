@@ -25,7 +25,7 @@ Contact Us - mythologger.com • Contact Us
             <p>If you have any suggestion or critical view point related to Mythologger or Mythology, feel free to contact us. We invite guest articles also, if you have imagination and want to publish it on our site, you are most welcome. Thanks for landing on Mythologger. </p>
             @if (session('status'))
             <div id="successMsg" class="alert alert-success">
-                Thank you  for contacting us.
+                Thank you for contacting us.
             </div>
             @endif
 
