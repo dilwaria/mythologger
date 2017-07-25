@@ -15,7 +15,7 @@
 <meta property="og:description" content="{{ strip_tags($blog->seoDescription) }}" />
 <meta property="og:url" content="<?php echo route('blogDescription',['blogID'=>$blog['id'], 'slug'=>$blog['slug']] ) ?>" />
 <meta property="og:site_name" content="mythologger.com" />
-<meta property="og:image" content="{!! $blog->imgPath !!}" />
+<meta property="og:image" content="{!! url($blog->imgPath) !!}" />
 <meta property="og:image:width" content="800" />
 <meta property="og:image:height" content="400" />
 @endsection
