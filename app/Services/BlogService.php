@@ -59,13 +59,17 @@ class BlogService{
 
 	public function getHomePageBlogs($limit){
 		$offset=0;
+		$blogsCreatedBy= Blog::where('showOnWeb','=',1)->
+					orderBy('createDateTime','desc')->offset($offset)->limit(2)->get();
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('views')->orderBy('createDateTime','desc')->offset($offset)->limit($limit)->get();
-		foreach($blogs as $b){
+					->orderBy('priority','desc')->orderBy('views','desc')->orderBy('createDateTime','desc')->offset($offset)->limit($limit-2)->get();
+		$mergedResult=$blogsCreatedBy->merge($blogs);
+		$resArray= $mergedResult->all();
+		foreach($resArray as $b){
 			$this->preprocessPopularPosts($b,250);
 		}
-		$tempBlogs= $blogs->toArray();
-		return array_chunk($tempBlogs, 3);
+		// $tempBlogs= $res->toArray();
+		return array_chunk($resArray, 3);
 	}
 
 	public function getPopularBlogs($limit=6){

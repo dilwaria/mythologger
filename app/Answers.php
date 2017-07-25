@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Answers extends Model
 {
@@ -22,6 +23,10 @@ class Answers extends Model
     		}
     	}
     	return $this;
+    }
+
+    function writer(){
+        return $this->belongsTo('App\User','creatorID','id');
     }
 
 }

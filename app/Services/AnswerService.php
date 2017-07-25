@@ -61,6 +61,7 @@ class AnswerService{
 		foreach($rootComments as $rc){
 			$resultingComments[]= $this->processRootComment($childComments,$rc);
 		}
+		// var_dump($resultingComments[0]->children[0]);die;
 		return $resultingComments;
 	}
 

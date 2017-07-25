@@ -54,7 +54,7 @@
                 <form id="submitAnswerForm" action="{{route('submitAnswer')}}" method="post">
                     <input type="hidden" name="debateID" value="{{$debate->id}}">
                     <!-- need to get userID dynamic   !-->
-                    <input type="hidden" name="creatorID" value="1">
+                    <input type="hidden" name="creatorID" value="{{session(config('constants.user_cookie'))->id}}">
                     <textarea class="span6" id="editorText" rows="5" name="answerContent"></textarea>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button class="btn btn-small btn-warning floatR mt2 mb9 dspIB" type="button" id="answerSubmit">Submit</button>
@@ -64,9 +64,9 @@
             @foreach($answers as $a)
                 <div class="answer p2 mt2">
                     <div class="mb2">
-                            <img class="img-circle mt2" src="/images/user-avatar.jpg" style="height: 30px;width: 30px;margin-top: -4% "> 
+                            <img class="img-circle " src="{{Common::getUserPic($a->writer)}}" style="height: 30px;width: 30px;margin-top: -4%"> 
                             <div class="mt2 dspIB">
-                                Abhinav Sharma<br><span style="font-size:12px;">June 27</span>
+                                {{$a->writer->name}}<br><span style="font-size:12px;">{{Carbon\Carbon::parse($a->updateDateTime)->format('d-F-Y')}}</span>
                             </div>  
                     </div>
                     <div style="margin-left: 2%">
