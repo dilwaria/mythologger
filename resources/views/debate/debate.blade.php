@@ -6,7 +6,6 @@
 
  @section('styleCss')
     <!-- <link href="http://netdna.bootstrapcdn.com/bootstrapcdnrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link href="js/textEditor/editor.css" type="text/css" rel="stylesheet"/> -->
      <link href="/css/profile.css" type="text/css" rel="stylesheet">
      <link rel="stylesheet" href="/css/qa.css">
