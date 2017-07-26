@@ -61,25 +61,9 @@
                 </form>
             </div>
             <div id="hiddenDiv9" class="mb9 mt2 dspN"></div>
-            @foreach($answers as $a)
-                <div class="answer p2 mt2">
-                    <div class="mb2">
-                            <img class="img-circle " src="{{Common::getUserPic($a->writer)}}" style="height: 30px;width: 30px;margin-top: -4%"> 
-                            <div class="mt2 dspIB">
-                                {{$a->writer->name}}<br><span style="font-size:12px;">{{Carbon\Carbon::parse($a->updateDateTime)->format('d-F-Y')}}</span>
-                            </div>  
-                    </div>
-                    <div style="margin-left: 2%">
-                        {!! $a->answerContent !!}
-                    </div>
-                </div>
-                <div id="commentText_{{$a->id}}" class="btn btn-mini mt2 comments">
-                    Comment
-                </div>
-                <div id="comment_{{$a->id}}" class="dspN">
-                    @include('debate/comment',['answerID'=>$a->id ])
-                </div>
-            @endforeach
+            <div id="answerContainer">
+                @include('debate/answer')
+            </div>
 
             
         </div> <!--End page content column--> 
@@ -125,23 +109,31 @@ $(document).ready( function() {
         $('#submitAnswerForm').submit();
     });
 
-    $('.comments').click( 
-        function(){
-            var name= $(this).attr('id');
-            var answerID=name.split("_")[1];
-            $("#comment_"+answerID).toggle();
-        }    
-    );
+    $('#answerContainer').on("click",
+        function(e){
+            if($(e.target).hasClass('commentSubmitBtn')){
+                var name= $(e.target).attr('id');
+                var answerID=name.split("_")[1];
+                var commentID=name.split("_")[2];
+                $('#reply_'+answerID+"_"+commentID).toggle();
+            }
 
-    $('.replyToComment').click(
-        function(){
-            var name= $(this).attr('id');
-            var answerID=name.split("_")[1];
-            var commentID=name.split("_")[2];
-            $('#reply_'+answerID+"_"+commentID).toggle();
+            if($(e.target).hasClass('comments')){
+                var name= $(e.target).attr('id');
+                var answerID=name.split("_")[1];
+                $("#comment_"+answerID).toggle();
+            }
+
+            if($(e.target).hasClass('replyToComment')){
+                var name= $(e.target).attr('id');
+                var answerID=name.split("_")[1];
+                var commentID=name.split("_")[2];
+                $('#reply_'+answerID+"_"+commentID).toggle();
+            }
         }
     );
      CKEDITOR.config.customConfig = '/js/ckeditor_config.js';
+
      CKEDITOR.replace( 'editorText',{
          toolbar : 'Basic', 
          uiColor : '#9AB8F3',
@@ -159,8 +151,50 @@ $(document).ready( function() {
         $('#cke_1_top').show();
         
     });
-    CKEDITOR.replaceClass = 'commentInput';
+    // CKEDITOR.replaceClass = 'commentInput';
+   
 
+    $('#answerContainer').on('submit','.commentFormSubmit',function(e){
+        e.preventDefault();
+        var form = $(this);
+        var post_url = form.attr('action');
+        var post_data = form.serialize();
+        $.ajax({
+            type: 'POST',
+            url: post_url, 
+            data: post_data,
+            success: function(resp) {
+                var respArr= JSON.parse(resp);
+                var answerID= respArr.answerID; 
+                $('#comment_'+answerID).html(respArr.comment);
+                $('#comment_'+answerID).hide()
+                $('#comment_'+answerID).show()
+            }
+        });
+    });
+    
+
+
+    $('#submitAnswerForm').on('submit',function(e){
+        e.preventDefault();
+        for ( instance in CKEDITOR.instances ){
+            CKEDITOR.instances[instance].updateElement();
+        }
+        var form = $(this);
+        var post_url = form.attr('action');
+        var post_data = form.serialize();
+        $.ajax({
+            type: 'POST',
+            url: post_url, 
+            data: post_data,
+            success: function(resp) {
+                var respArr= JSON.parse(resp); 
+                $('#answerContainer').html(respArr.answers);
+                $('#userAnswerInput').toggle();
+                $('#hiddenDiv9').toggle();
+            }
+        });
+    });
 
 });
 </script>

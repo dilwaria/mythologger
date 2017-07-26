@@ -8,6 +8,7 @@ use App\Services\UserService;
 use App\Http\Controllers\Controller;
 use DB;
 use App;
+use App\User;
 
 
 class DebateController extends Controller{
@@ -21,6 +22,8 @@ class DebateController extends Controller{
         $this->debateService= $d;
         $this->userService = $u;
         $this->answerService= App::make('answerService');
+        // $user= User::find(1);
+        // session()->put('mUsers',$user);
     }
 
 
@@ -68,6 +71,8 @@ class DebateController extends Controller{
         $arr['answerContent']= Request::input('answerContent');
         $arr['creatorID']= Request::input('creatorID');
         $this->answerService->saveAnswer($arr,NULL);
+        $answers=$this->answerService->getAnswers($arr['debateID']);
+        echo json_encode( ['answers'=>view()->make('debate/answer',['answers'=>$answers])->render()] );
    }
 
     public function saveComment(){
@@ -77,6 +82,8 @@ class DebateController extends Controller{
         $arr['creatorID']= Request::input('creatorID');
         $arr['parentID']= Request::input('parentID');
         $this->answerService->saveComment($arr);
+        $comments= $this->answerService->getCommentsByAnswerID($arr['debateAnswerID']);
+        echo json_encode(['answerID'=>$arr['debateAnswerID'] ,'comment'=>view()->make('debate/comment',['a'=>$comments])->render() ]);
    }
 
 

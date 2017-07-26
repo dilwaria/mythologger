@@ -37,7 +37,7 @@ class AnswerService{
 	}
 
 	public function getAnswers($debateID){
-		$answer= Answers::where('debateID','=',$debateID)->get();
+		$answer= Answers::where('debateID','=',$debateID)->orderBy('createDateTime','desc')->get();
 		$processedAnswers=[];
 		foreach ($answer as $a) {
 			$a->pComments= $this->processComments($a);
@@ -63,6 +63,12 @@ class AnswerService{
 		}
 		// var_dump($resultingComments[0]->children[0]);die;
 		return $resultingComments;
+	}
+
+	public function getCommentsByAnswerID($answerID){
+		$answerObj= $this->getAnswer($answerID);
+        $answerObj->pComments= $this->processComments($answerObj);
+        return $answerObj;
 	}
 
 	private function processRootComment($childComments,$rc){
