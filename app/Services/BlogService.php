@@ -62,7 +62,7 @@ class BlogService{
 		$blogsCreatedBy= Blog::where('showOnWeb','=',1)->
 					orderBy('createDateTime','desc')->offset($offset)->limit(2)->get();
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('priority','desc')->orderBy('views','desc')->orderBy('createDateTime','desc')->offset($offset+2)->limit($limit-2)->get();
+					->orderBy('priority','desc')->orderBy('views','desc')->orderBy('createDateTime','desc')->offset($offset)->limit($limit-2)->get();
 		$mergedResult=$blogsCreatedBy->merge($blogs);
 		$resArray= $mergedResult->all();
 		foreach($resArray as $b){

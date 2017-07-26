@@ -9,6 +9,15 @@
 <meta name="description" content="{{ strip_tags($blog->seoDescription) }}" />
 <meta name="keywords" content="{{ strip_tags($blog->seoMetakeywords) }}"/>
 <link rel="canonical" href="<?php echo route('blogDescription',['blogID'=>$blog['id'], 'slug'=>$blog['slug']] ) ?>" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ strip_tags($blog->seoTitle) }}" />
+<meta property="og:description" content="{{ strip_tags($blog->seoDescription) }}" />
+<meta property="og:url" content="<?php echo route('blogDescription',['blogID'=>$blog['id'], 'slug'=>$blog['slug']] ) ?>" />
+<meta property="og:site_name" content="mythologger.com" />
+<meta property="og:image" content="{!! url($blog->imgPath) !!}" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="400" />
 @endsection
 @section('content')
 
