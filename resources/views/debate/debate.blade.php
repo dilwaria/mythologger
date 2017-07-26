@@ -111,13 +111,6 @@ $(document).ready( function() {
 
     $('#answerContainer').on("click",
         function(e){
-            if($(e.target).hasClass('commentSubmitBtn')){
-                var name= $(e.target).attr('id');
-                var answerID=name.split("_")[1];
-                var commentID=name.split("_")[2];
-                $('#reply_'+answerID+"_"+commentID).toggle();
-            }
-
             if($(e.target).hasClass('comments')){
                 var name= $(e.target).attr('id');
                 var answerID=name.split("_")[1];

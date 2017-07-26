@@ -13,7 +13,7 @@ class Answers extends Model
     protected $table = 'debateAnswer';
 
     function comments(){
-        return $this->hasMany('App\Comments','debateAnswerID','id');
+        return $this->hasMany('App\Comments','debateAnswerID','id')->orderBy('createDateTime','desc');
     }
 
     function createFromArray($arr){
