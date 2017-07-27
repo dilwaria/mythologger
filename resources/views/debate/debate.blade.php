@@ -9,6 +9,7 @@
     <!-- <link href="js/textEditor/editor.css" type="text/css" rel="stylesheet"/> -->
      <link href="/css/profile.css" type="text/css" rel="stylesheet">
      <link rel="stylesheet" href="/css/qa.css">
+     <link rel="stylesheet" href="/css/profile.css">
  @endsection
 
 @section('content')
@@ -48,17 +49,19 @@
             </div> 
 
             -->
-            <button class="btn btn-small btn-warning" type="button" id="answerBtn">Answer</button>
-            <div class="mt2 dspN" id="userAnswerInput">
-                <form id="submitAnswerForm" action="{{route('submitAnswer')}}" method="post">
-                    <input type="hidden" name="debateID" value="{{$debate->id}}">
-                    <!-- need to get userID dynamic   !-->
-                    <input type="hidden" name="creatorID" value="{{session(config('constants.user_cookie'))->id}}">
-                    <textarea class="span6" id="editorText" rows="5" name="answerContent"></textarea>
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <button class="btn btn-small btn-warning floatR mt2 mb9 dspIB" type="button" id="answerSubmit">Submit</button>
-                </form>
-            </div>
+            @if(Auth::user())
+                <button class="btn btn-small btn-warning" type="button" id="answerBtn">Answer</button>
+                <div class="mt2 dspN" id="userAnswerInput">
+                    <form id="submitAnswerForm" action="{{route('submitAnswer')}}" method="post">
+                        <input type="hidden" name="debateID" value="{{$debate->id}}">
+                        <!-- need to get userID dynamic   !-->
+                        <input type="hidden" name="creatorID" value="{{ Auth::user()->id }}">
+                        <textarea class="span6" id="editorText" rows="5" name="answerContent"></textarea>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button class="btn btn-small btn-warning floatR mt2 mb9 dspIB" type="button" id="answerSubmit">Submit</button>
+                    </form>
+                </div>
+            @endif
             <div id="hiddenDiv9" class="mb9 mt2 dspN"></div>
             <div id="answerContainer">
                 @include('debate/answer')
@@ -72,8 +75,11 @@
          <!-- Page Right Sidebar
         ================================================== --> 
         <div class="span3 sidebar page-right-sidebar"><!-- Begin sidebar column -->
-
-           @include('debate/notLoggedInRightBar')
+        @if(!Auth::user())
+            @include('debate/notLoggedInRightBar')
+        @else
+            @include('debate/loggedInRightBar')
+        @endif
         
         </div><!-- End sidebar column -->
 
@@ -126,12 +132,14 @@ $(document).ready( function() {
     );
      CKEDITOR.config.customConfig = '/js/ckeditor_config.js';
 
-     CKEDITOR.replace( 'editorText',{
-         toolbar : 'Basic', 
-         uiColor : '#9AB8F3',
-         width:"100%"
+    if($('#editorText').length!=0){
+        CKEDITOR.replace( 'editorText',{
+             toolbar : 'Basic', 
+             uiColor : '#9AB8F3',
+             width:"100%"
 
-     } );
+        } );
+    }
     
     CKEDITOR.config.toolbar="None";
     CKEDITOR.config.uiColor='#9AB8F3';

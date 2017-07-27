@@ -10,10 +10,14 @@
                             {!! $a->answerContent !!}
                         </div>
                     </div>
-                    <div id="commentText_{{$a->id}}" class="btn btn-mini mt2 comments">
-                        Comment
-                    </div>
-                    <div id="comment_{{$a->id}}" class="dspN">
-                        @include('debate/comment',['answerID'=>$a->id ])
-                    </div>
+
+                    @if(Auth::user())
+                        <div id="commentText_{{$a->id}}" class="btn btn-mini mt2 comments">
+                            Comment
+                        </div>
+                        <div id="comment_{{$a->id}}" class="dspN">
+                            @include('debate/comment',['answerID'=>$a->id ])
+                        </div>
+                    @endif 
+                     
                 @endforeach

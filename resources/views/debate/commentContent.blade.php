@@ -10,20 +10,19 @@
                         </div>
                         <button id="replyToComment_{{$a->id}}_{{$c->id}}" class="btn btn-mini mt1 replyToComment"> Reply</button>
         </div>
-
-<div id="reply_{{$a->id}}_{{$c->id}}" class="dspN">
-        <form id="replySubmit_{{$a->id}}_{{$c->id}}" method="post" class="commentFormSubmit" action="{{route('postComment')}}" >
-         <input type="hidden" name="debateAnswerID" value="{{$a->id}}">
-        <input type="hidden" name="creatorID" value="{{session(config('constants.user_cookie'))->id}}">
-        <input type="hidden" name="parentID" value="{{$c->id}}">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="answer p1 mt2" style="border-radius: 15px;margin-left: {{$mt+5}}%;">
-                        <div class="comment p1 dspIB">
-                                <!-- <textarea class="commentInput" style="width: 82%;" name="commentContent"></textarea> -->
-                                <input type="text" class="commentInput" style="width: 82%;" name="commentContent">
-                                <button class="btn btn-mini mt1 commentSubmitBtn"> Submit</button>
-                            
+    <div id="reply_{{$a->id}}_{{$c->id}}" class="dspN">
+            <form id="replySubmit_{{$a->id}}_{{$c->id}}" method="post" class="commentFormSubmit" action="{{route('postComment')}}" >
+             <input type="hidden" name="debateAnswerID" value="{{$a->id}}">
+            <input type="hidden" name="creatorID" value="{{Auth::user()->id}}">
+            <input type="hidden" name="parentID" value="{{$c->id}}">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="answer p1 mt2" style="border-radius: 15px;margin-left: {{$mt+5}}%;">
+                            <div class="comment p1 dspIB">
+                                    <!-- <textarea class="commentInput" style="width: 82%;" name="commentContent"></textarea> -->
+                                    <input type="text" class="commentInput" style="width: 82%;" name="commentContent">
+                                    <button class="btn btn-mini mt1 commentSubmitBtn"> Submit</button>
+                                
+                            </div>
                         </div>
-                    </div>
-        </form>
-    </div>
+            </form>
+        </div>

@@ -11,7 +11,8 @@ use App;
 use App\User;
 // use Cookie;
 // use Tracker;
-// use Session;
+use Session;
+use Auth;
 
 
 class DebateController extends Controller{
@@ -23,22 +24,10 @@ class DebateController extends Controller{
 
     public function __construct(DebateService $d, UserService $u, Request $rr){
         $this->request = $rr;
-    	
         $this->debateService= $d;
         $this->userService = $u;
         $this->answerService= App::make('answerService');
         
-        // $data = $this->request->session()->all();
-        // $user= User::find(1);
-        // Session::put('mUsers', $user);
-
-
-        // // var_dump(Session::all());
-        // // echo "oooppppp";
-        // // var_dump(Session::get('mUsers'));
-        // // die($data);
-        
-        // session()->put('mUsers',$user);
     }
 
 

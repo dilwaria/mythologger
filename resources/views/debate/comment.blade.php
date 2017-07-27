@@ -1,6 +1,6 @@
 <form id="commentSubmit_{{$a->id}}" class="commentFormSubmit" method="post" action="{{route('postComment')}}" >
 <input type="hidden" name="debateAnswerID" value="{{$a->id}}">
-<input type="hidden" name="creatorID" value="{{session(config('constants.user_cookie'))->id}}">
+<input type="hidden" name="creatorID" value="{{Auth::user()->id}}">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div class="answer p1 mt2" style="border-radius: 15px;margin-left: 10%;">
                 <div class="comment p1 dspIB">
