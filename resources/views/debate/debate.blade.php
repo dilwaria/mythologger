@@ -5,8 +5,6 @@
  @endsection
 
  @section('styleCss')
-    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrapcdnrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="js/textEditor/editor.css" type="text/css" rel="stylesheet"/> -->
      <link href="/css/profile.css" type="text/css" rel="stylesheet">
      <link rel="stylesheet" href="/css/qa.css">
      <link rel="stylesheet" href="/css/profile.css">
@@ -22,15 +20,18 @@
 
         <!-- Page Left Sidebar
         ================================================== --> 
-        <div class="span3 sidebar page-left-sidebar"><!-- Begin sidebar column -->
-
-           @include('debate/notLoggedInLeftBar')     
+        <div class="span2 sidebar page-left-sidebar"><!-- Begin sidebar column -->
+            @if(!Auth::user())
+                @include('debate/notLoggedInLeftBar') 
+            @else
+                 @include('debate/loggedInLeftBar') 
+            @endif    
 
         </div><!-- End sidebar column -->
 
         <!-- Page Content
         ================================================== --> 
-        <div class="span6"><!--Begin page content column-->
+        <div class="span8"><!--Begin page content column-->
 
             <h2 class="title-bg">{!! $debate->debateTitle !!}</h2>
 
@@ -74,7 +75,7 @@
 
          <!-- Page Right Sidebar
         ================================================== --> 
-        <div class="span3 sidebar page-right-sidebar"><!-- Begin sidebar column -->
+        <div class="span2 sidebar page-right-sidebar"><!-- Begin sidebar column -->
         @if(!Auth::user())
             @include('debate/notLoggedInRightBar')
         @else
