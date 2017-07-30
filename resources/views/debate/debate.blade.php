@@ -38,7 +38,7 @@
             @if($debate->imagePath)
             
              <!-- src="{!! $debate->imagePath !!}" -->
-                <img class="qa_thumb" src="/images/sekhmet.jpg" alt="Image">
+                <img class="qa_thumb" src="{!! $debate->imagePath !!}" alt="Image">
             @endif
             <div class="question mt2">{!! $debate->debateDesc !!}</div>
 
