@@ -45,7 +45,10 @@ h5.title-bg button {
 a, a:hover { color:#d8450b; }
 
 /***** Misc *****/
-i {margin-right: 3px;}
+i {
+	margin-right: 10px;
+    margin-bottom: 10px;
+}
 p {margin-bottom: 20px;}
 blockquote {
 	font-size:16px; 

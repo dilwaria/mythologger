@@ -20,7 +20,7 @@
 
         <!-- Page Left Sidebar
         ================================================== --> 
-        <div class="span2 sidebar page-left-sidebar"><!-- Begin sidebar column -->
+        <div class="span2 sidebar page-left-sidebar deb_left_side"><!-- Begin sidebar column -->
             @if(!Auth::user())
                 @include('debate/notLoggedInLeftBar') 
             @else
@@ -31,12 +31,14 @@
 
         <!-- Page Content
         ================================================== --> 
-        <div class="span8"><!--Begin page content column-->
+        <div class="span8 deb_content"><!--Begin page content column-->
 
             <h2 class="title-bg">{!! $debate->debateTitle !!}</h2>
 
             @if($debate->imagePath)
-                <img src="{!! $debate->imagePath !!}" alt="Image">
+            
+             <!-- src="{!! $debate->imagePath !!}" -->
+                <img class="qa_thumb" src="/images/sekhmet.jpg" alt="Image">
             @endif
             <div class="question mt2">{!! $debate->debateDesc !!}</div>
 
@@ -51,7 +53,9 @@
 
             -->
             @if(Auth::user())
+                <div class="qa_btn">
                 <button class="btn btn-small btn-warning" type="button" id="answerBtn">Answer</button>
+                </div>
                 <div class="mt2 dspN" id="userAnswerInput">
                     <form id="submitAnswerForm" action="{{route('submitAnswer')}}" method="post">
                         <input type="hidden" name="debateID" value="{{$debate->id}}">
@@ -75,7 +79,7 @@
 
          <!-- Page Right Sidebar
         ================================================== --> 
-        <div class="span2 sidebar page-right-sidebar"><!-- Begin sidebar column -->
+        <div class="span2 sidebar page-right-sidebar deb_right_side"><!-- Begin sidebar column -->
         @if(!Auth::user())
             @include('debate/notLoggedInRightBar')
         @else

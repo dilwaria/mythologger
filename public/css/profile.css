@@ -7,13 +7,19 @@
 }
 
 .profileImg{
-	padding-left: 34%;
+	padding-left: 25%;
 	margin-bottom: 5%;
+}
+.profileImg img{
+	width: 70%;
 }
 
 .profileName{
 	font-family: 'Josefin Slab', serif;
-	font-size: 18px;
+	font-size: 23px;
+    padding-top: 13px;
+    line-height: 26px;
+
 	text-align: center;
 }
 

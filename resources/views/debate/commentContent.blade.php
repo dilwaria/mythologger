@@ -19,8 +19,8 @@
             <div class="answer p1 mt2" style="border-radius: 15px;margin-left: {{$mt+5}}%;">
                             <div class="comment p1 dspIB">
                                     <!-- <textarea class="commentInput" style="width: 82%;" name="commentContent"></textarea> -->
-                                    <input type="text" class="commentInput" style="width: 82%;" name="commentContent">
-                                    <button class="btn btn-mini mt1 commentSubmitBtn"> Submit</button>
+                                    <input type="text" class="commentInput" style="width: 82%;margin: 0 10px;" name="commentContent">
+                                    <button class="btn btn-mini commentSubmitBtn"> Submit</button>
                                 
                             </div>
                         </div>

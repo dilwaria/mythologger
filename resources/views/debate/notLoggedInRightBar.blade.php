@@ -27,14 +27,14 @@
              @include('debate/signUpLightBox')
 
             <h5 class="title-bg">Top Mythologists</h5>
-            <ul class="">
+            <ul class="list_blt">
             @foreach ( Widgets::getCategories() as $categories)
                 <li><a target="_blank" href="<?php echo route('categoryPage',['category'=> Common::processCategoryName($categories['tagName']) ]) ?>"><i class="icon-user"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
                 @endforeach
             </ul>
 
              <h5 class="title-bg">Debate Stats</h5>
-            <ul class="">
+            <ul class="list_blt">
            
                 <li><i class="icon-asterisk"></i>40 Followers</li>
                  <li><i class="icon-asterisk"></i>100 views</li>

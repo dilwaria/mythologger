@@ -8,11 +8,14 @@
             <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                Name: <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                Email: <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                Password: <input id="password" type="password" class="form-control" name="password" required>
+              <div class="mod_input"> <label> Name: </label><input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus> </div>
 
-                Confirm Password<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+              <div class="mod_input">  <label>  Email: </label><input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required> </div>
+
+              <div class="mod_input">  <label>  Password: </label><input id="password" type="password" class="form-control" name="password" required> </div>
+
+
+              <div class="mod_input"> <label>  Confirm Password: </label><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required> </div>
                 
             
         </div>

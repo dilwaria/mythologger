@@ -42,3 +42,42 @@
     float: right;
     margin-top: 1%;
 }
+.qa_thumb{
+    width:25%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.qa_btn{
+    text-align: right;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.deb_content{
+    margin-left: 18px;
+    width: 670px;
+}
+.deb_left_side{
+    width: 200px;
+}
+.deb_right_side{
+    width: 250px;
+}
+.input-prepend{
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+.mod_input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.mod_input label{
+    width: 25%;
+    float: left;
+}
+.mod_input input{
+    width: 70%;
+}
+.list_blt{
+    list-style: none;
+}
