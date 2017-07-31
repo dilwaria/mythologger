@@ -52,23 +52,7 @@
             </div> 
 
             -->
-            @if(Auth::user())
-                <div class="qa_btn">
-                <button class="btn btn-small btn-warning" type="button" id="answerBtn">Answer</button>
-                </div>
-                <div class="mt2 dspN" id="userAnswerInput">
-                    <form id="submitAnswerForm" action="{{route('submitAnswer')}}" method="post">
-                        <input type="hidden" name="debateID" value="{{$debate->id}}">
-                        <!-- need to get userID dynamic   !-->
-                        <input type="hidden" name="creatorID" value="{{ Auth::user()->id }}">
-                        <textarea class="span6" id="editorText" rows="5" name="answerContent"></textarea>
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button class="btn btn-small btn-warning floatR mt2 mb9 dspIB" type="button" id="answerSubmit">Submit</button>
-                    </form>
-                </div>
-            @endif
-            <div id="hiddenDiv9" class="mb9 mt2 dspN"></div>
-            <div id="answerContainer">
+            <div id="answerSection">
                 @include('debate/answer')
             </div>
 
@@ -194,7 +178,7 @@ $(document).ready( function() {
             data: post_data,
             success: function(resp) {
                 var respArr= JSON.parse(resp); 
-                $('#answerContainer').html(respArr.answers);
+                $('#answerSection').html(respArr.answers);
                 $('#userAnswerInput').toggle();
                 $('#hiddenDiv9').toggle();
             }

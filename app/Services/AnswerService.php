@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Answers;
 use App\Comments;
 use DB;
+use Auth;
 
 class AnswerService{
 	
@@ -44,6 +45,20 @@ class AnswerService{
 			$processedAnswers[]=$a;
 		}
 		return $processedAnswers;
+	}
+
+	public function checkIfUserAnswered($answers){
+		if(!Auth::user()){
+			return false;
+		}
+		$userID= Auth::user()->id;
+		foreach ($answers as $a) {
+			$aID= $a->writer->id;
+			if($aID== $userID){
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private function processComments($answer){

@@ -34,10 +34,11 @@ class DebateController extends Controller{
 	public function showDebatePage($slug,$debateID){
         $debate= $this->debateService->getDebate($debateID);
         $answers= $this->answerService->getAnswers($debateID);
+        $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
         if(!$debate){
             abort(404);
         }
-		return view('debate/debate',['debate'=>$debate,'answers'=>$answers]);
+		return view('debate/debate',['debate'=>$debate,'answers'=>$answers, 'hasUserAnswered'=>$hasUserAnswered]);
 	}
 
 
@@ -76,7 +77,8 @@ class DebateController extends Controller{
         $arr['creatorID']= Request::input('creatorID');
         $this->answerService->saveAnswer($arr,NULL);
         $answers=$this->answerService->getAnswers($arr['debateID']);
-        echo json_encode( ['answers'=>view()->make('debate/answer',['answers'=>$answers])->render()] );
+        $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
+        echo json_encode( ['answers'=>view()->make('debate/answer',['answers'=>$answers,'hasUserAnswered'=>$hasUserAnswered])->render()] );
    }
 
     public function saveComment(){

@@ -81,3 +81,7 @@
 .list_blt{
     list-style: none;
 }
+
+.answer p{
+    margin-bottom: 5px;
+}
