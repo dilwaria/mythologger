@@ -34,7 +34,10 @@ class BlogController extends Controller
     	   return view('blog.homepage',['allDisplayBlogs'=>$blogs]);
     }
 
-    public function getCategories($category){
+    public function getCategories($category=''){
+        if(!$category){
+            abort(404);
+        }
         $pageNo= Request::input('pageNo',1);
         $pageSize= Request::input('limit',10);
         $pageSize=6;
