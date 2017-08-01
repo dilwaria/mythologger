@@ -33,6 +33,9 @@ class DebateController extends Controller{
 
 	public function showDebatePage($slug,$debateID){
         $debate= $this->debateService->getDebate($debateID);
+        if($slug!=$debate->slug){
+            return redirect(route('showDebate',['slug'=>$debate->slug,'debateID'=>$debateID]),301);
+        }
         $answers= $this->answerService->getAnswers($debateID);
         $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
         if(!$debate){
@@ -75,10 +78,15 @@ class DebateController extends Controller{
         $arr['debateID']= Request::input('debateID');
         $arr['answerContent']= Request::input('answerContent');
         $arr['creatorID']= Request::input('creatorID');
-        $this->answerService->saveAnswer($arr,NULL);
+        $answerID=NULL;
+        if(Request::input('answerID')){
+            $answerID= Request::input('answerID');
+        }
+        $this->answerService->saveAnswer($arr,$answerID);
         $answers=$this->answerService->getAnswers($arr['debateID']);
         $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
-        echo json_encode( ['answers'=>view()->make('debate/answer',['answers'=>$answers,'hasUserAnswered'=>$hasUserAnswered])->render()] );
+        $debate= $this->debateService->getDebate($arr['debateID']);
+        echo json_encode( ['answers'=>view()->make('debate/answer',['debate'=>$debate,'answers'=>$answers,'hasUserAnswered'=>$hasUserAnswered])->render()] );
    }
 
     public function saveComment(){
@@ -90,6 +98,13 @@ class DebateController extends Controller{
         $this->answerService->saveComment($arr);
         $comments= $this->answerService->getCommentsByAnswerID($arr['debateAnswerID']);
         echo json_encode(['answerID'=>$arr['debateAnswerID'] ,'comment'=>view()->make('debate/comment',['a'=>$comments])->render() ]);
+   }
+
+   public function getMyAnswer(){
+        $arr=[];
+        $arr['debateID']= Request::input('debateID');
+        $res= $this->answerService->getUserAnswer($arr['debateID']);
+        echo json_encode($res);
    }
 
 

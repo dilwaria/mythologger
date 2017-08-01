@@ -47,6 +47,8 @@ Route::group( ['middleware' => ['web'] ], function () {
 
 	Route::post('/debate/postComment',['uses'=>'DebateController@saveComment','as'=>'postComment']);
 
+	Route::post('/debate/getUserAnswer',['uses'=>'DebateController@getMyAnswer','as'=>'getMyAnswer']);
+
 	Route::get('/followProfile',['uses'=>'ProfileController@followProfile','as'=>'followProfile']);
 
 	Route::get('/privacy',function(){
