@@ -1,7 +1,7 @@
 <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h5 id="myModalLabel">Modal header</h5>
+            <h5 id="myModalLabel">Enter into the world of Mythology</h5>
         </div>
         <div class="modal-body">
             
@@ -21,7 +21,7 @@
         </div>
         <div class="modal-footer">
             
-            <button type="submit"  class="btn btn-inverse">Register</button>
+            <button type="submit"  class="btn btn-inverse">Become Mythologger</button>
          	</form>
         </div>
     </div>

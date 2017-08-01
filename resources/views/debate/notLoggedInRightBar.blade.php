@@ -13,18 +13,20 @@
             </div>
 
             <div class="input-prepend">
-                <span class="add-on"><i class="icon-lock"></i></span><input
+                <span class="add-on"><i class="icon-lock"></i></span>
+                <input
                 input id="password" type="password"  name="password" required
                  class="span2"  size="16" type="text" placeholder="Password">
             </div>
             <button class="btn btn-small btn-inverse" type="submit">Login</button>
             <button href="#myModal" class="btn btn-small btn-warning" data-toggle="modal" type="button">Register</button>
-
+            <span ><a href="#myModalReset" data-toggle="modal">Forgot Password</a></span>
 
             </form>
 
 
              @include('debate/signUpLightBox')
+             @include('debate/forgotPassword')
 
             <h5 class="title-bg">Top Mythologists</h5>
             <ul class="list_blt">
