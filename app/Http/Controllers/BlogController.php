@@ -7,6 +7,8 @@ use App\Services\BlogService;
 use App\Services\UserService;
 use App\Http\Controllers\Controller;
 use DB;
+use PHPMailer;
+use Exception;
 
 class BlogController extends Controller
 {
@@ -19,7 +21,25 @@ class BlogController extends Controller
         $this->userService = $u;
     }
 
-    public function getContactUs(){ 
+    public function getContactUs(){
+        try{//die('665');
+        $mail= new PHPMailer();
+        $mail->isSMTP(); // tell to use smtp
+        $mail->CharSet = "utf-8"; // set charset to utf8
+        $mail->SMTPAuth = true;  // use smpt auth
+        $mail->SMTPSecure = "tls"; // or ssl
+        $mail->Host = "smtp.google.com";
+        $mail->Port = 587; // most likely something different for you. This is the mailtrap.io port i use for testing. 
+        $mail->Username = "contact@mythologger.com";
+        $mail->Password = "mYTHOLOGGER123@";
+        $mail->setFrom("contact@mythologger.com", "Mythologger");
+        $mail->Subject = "Test";
+        $mail->MsgHTML("This is a test");
+        $mail->addAddress("abhinavsharma2308@gmail.com", "Recipient Name");
+        $mail->send(); 
+        }catch(Exception $e){
+            var_dump($e);
+        }
 	 return view('blog.contactus');
     }
 
