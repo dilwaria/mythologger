@@ -60,9 +60,10 @@ class BlogService{
 	public function getHomePageBlogs($limit){
 		$offset=0;
 		$blogsCreatedBy= Blog::where('showOnWeb','=',1)->
-					orderBy('createDateTime','desc')->offset($offset)->limit(2)->get();
+					orderBy('createDateTime','desc')->offset($offset)->limit(3)->get();
+
 		$blogs= Blog::where('showOnWeb','=',1)
-					->orderBy('priority','desc')->orderBy('views','desc')->orderBy('createDateTime','desc')->offset($offset)->limit($limit-2)->get();
+					->orderBy('priority','desc')->orderBy('views','desc')->orderBy('createDateTime','desc')->offset($offset)->limit($limit-1)->get();
 		$mergedResult=$blogsCreatedBy->merge($blogs);
 		$resArray= $mergedResult->all();
 		foreach($resArray as $b){
