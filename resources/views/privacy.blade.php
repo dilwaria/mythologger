@@ -13,7 +13,7 @@
 
 		<p>
 		We are not responsible for republished content from this blog on other blogs or websites without our permission.
-		This privacy policy is subject to change without notice and was last updated on June 3, 2017. If you have any questions feel free to contact us directly here: contact@mythologger.com
+		This privacy policy is subject to change without notice and was last updated on August 3, 2017. If you have any questions feel free to contact us directly here: contact@mythologger.com
 		</p>
 
 	</div>
