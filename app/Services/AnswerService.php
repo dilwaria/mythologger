@@ -61,6 +61,18 @@ class AnswerService{
 		return false;
 	}
 
+	public function getUserAnswer($debateID){
+		$userID= Auth::user()->id;
+		$answers= $this->getAnswers($debateID);
+		foreach ($answers as $a) {
+			$aID= $a->writer->id;
+			if($aID== $userID){
+				return $a;
+			}
+		}
+		return false;
+	}
+
 	private function processComments($answer){
 		$comments= $answer->comments;
 		$resultingComments=[];

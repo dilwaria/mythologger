@@ -91,17 +91,22 @@
 <script src="//cdn.ckeditor.com/4.7.1/basic/ckeditor.js"></script>
 <script src="/js/ckeditor_config.js"></script>
 <script type="text/javascript">
+var getMyAnswerUrl="{{route('getMyAnswer')}}";
 $(document).ready( function() {
 // $("#txtEditor").Editor();  
 
-    $('#answerBtn').click(function(){
-        $('#userAnswerInput').toggle();
-        $('#hiddenDiv9').toggle();
-    }); 
+    $('#answerSection').on("click",
+        function(e){
+            if($(e.target).is('#answerSubmit')){
+                $('#submitAnswerForm').submit();
+            }
 
-    $('#answerSubmit').click(function(){
-        $('#submitAnswerForm').submit();
-    });
+            if($(e.target).is('#answerBtn')){
+                $('#userAnswerInput').toggle();
+                $('#hiddenDiv9').toggle();
+            }
+        }
+    );
 
     $('#answerContainer').on("click",
         function(e){
@@ -128,6 +133,30 @@ $(document).ready( function() {
              width:"100%"
 
         } );
+    }
+    updateEditAnswerContent();
+
+    function updateEditAnswerContent(){
+        if($('#editableAnswerText').length!=0){
+        CKEDITOR.replace( 'editableAnswerText',{
+             toolbar : 'Basic', 
+             uiColor : '#9AB8F3',
+             width:"100%"
+
+        } );
+        var debateID=$('#submitAnswerForm input[name="debateID"]').val();
+        var csrfToken=$('#submitAnswerForm input[name="_token"]').val();
+        $.ajax({
+            type: 'POST',
+            url: getMyAnswerUrl, 
+            data: {debateID:debateID,_token:csrfToken},
+            success: function(resp) {
+                resp= JSON.parse(resp);
+                $('#submitAnswerForm input[name="answerID"]').val(resp.id);
+                CKEDITOR.instances['editableAnswerText'].setData(resp.answerContent);
+            }
+        });
+    }
     }
     
     CKEDITOR.config.toolbar="None";
@@ -181,6 +210,8 @@ $(document).ready( function() {
                 $('#answerSection').html(respArr.answers);
                 $('#userAnswerInput').toggle();
                 $('#hiddenDiv9').toggle();
+                updateEditAnswerContent();
+                $('#answerBtn').click();
             }
         });
     });
