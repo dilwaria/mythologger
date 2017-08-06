@@ -7,14 +7,18 @@ use App\Tags;
 use App\Facts;
 use DB;
 use App\Services\BlogService;
+use App\Services\DebateService;
+
 use App;
 
 class Widgets{
 
 	private $blogService;
+	private $debateService;
 
 	public function __construct(){
 		$this->blogService= App::make('blogService');
+		$this->debateService= App::make('debateService');
 	}
 
 	public function getPopularPosts($limit=4){
@@ -40,6 +44,12 @@ class Widgets{
 		 return $facts;
 		
 	}
+
+	public function getAllDebates($limit=3){
+		return $this->debateService->getAllDebate($limit);
+	}
+
+
 }
 
 ?>

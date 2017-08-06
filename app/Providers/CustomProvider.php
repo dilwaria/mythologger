@@ -8,6 +8,7 @@ use App\Services\CommonServices;
 use App\Services\UserService;
 use App\Services\BlogService;
 use App\Services\AnswerService;
+use App\Services\DebateService;
 
 class CustomProvider extends ServiceProvider
 {
@@ -38,6 +39,10 @@ class CustomProvider extends ServiceProvider
 
         $this->app->singleton('blogService', function ($app) {
             return new BlogService();
+        });
+
+        $this->app->singleton('debateService', function ($app) {
+            return new DebateService();
         });
 
         $this->app->singleton('common', function ($app) {
