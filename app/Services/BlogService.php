@@ -105,7 +105,9 @@ class BlogService{
 			return NULL;
 		}
 		$blog= Blog::where('id','=',$blogID)->first();
-
+		if(!$blog){
+			return NULL;
+		}
 		$tagArr=[];
 		foreach ($blog->tags as $t){
 			$tagArr[]=$t->tagName;
