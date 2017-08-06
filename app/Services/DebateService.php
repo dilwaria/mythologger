@@ -23,6 +23,9 @@ class DebateService{
 			return NULL;
 		}
 		$debate= Debate::where('id','=',$debateID)->first();
+		if(!$debate){
+			return NULL;
+		}
 
 		// $tagArr=[];
 		// foreach ($blog->tags as $t){
