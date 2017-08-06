@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use  Illuminate\Support\Facades\Request;
 use App\Services\BlogService;
 use App\Services\UserService;
+use App\Services\DebateService;
 use App\Http\Controllers\Controller;
 use DB;
 use PHPMailer;
@@ -15,10 +16,12 @@ class BlogController extends Controller
 
     private $blogService;
     private $userService;
+    private $debateService;
 
-    public function __construct(BlogService $b, UserService $u){
+    public function __construct(BlogService $b, UserService $u, DebateService $d){
         $this->blogService= $b;
         $this->userService = $u;
+        $this->debateService = $d;
     }
 
     public function getContactUs(){
@@ -51,7 +54,8 @@ class BlogController extends Controller
 
     public function getHomePage(){
         	$blogs= $this->blogService->getHomePageBlogs(12);
-    	   return view('blog.homepage',['allDisplayBlogs'=>$blogs]);
+            $debates =  $this->debateService->getAllDebate(3);
+    	   return view('blog.homepage',['allDisplayBlogs'=>$blogs, 'debates'=>$debates]);
     }
 
     public function getCategories($category=''){

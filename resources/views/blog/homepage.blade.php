@@ -58,6 +58,20 @@
                 </div>
 
 
+                 <h3 class="title-bg" title="Alternate Mythology Debate"> Alternate Mythology </h3>
+                  <div class="row">
+                @foreach ($debates as $d)
+                    <div class="span4 homePageCells">
+                        <img class="homePageImage" src="" alt="image">
+                        <h5>{{$d['debateTitle']}}</h5>
+                        <p>{{$d['debateDesc']}}</p>
+                        <button class="btn btn-small btn-inverse" type="button" onclick='window.open("<?php echo route('showDebate',['debateID'=>$d['id'], 'slug'=>$d['slug']] ) ?>","_blank")'>Discuss</button>
+                    </div>
+                  @endforeach
+             
+               
+                </div>
+
     <h3 class="title-bg" title="Mythological Blogs"> LATEST M-LOGS </h3>
             @php ($itr=0)
             @foreach($allDisplayBlogs as $popularBlogs)

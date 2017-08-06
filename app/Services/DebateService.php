@@ -60,4 +60,31 @@ class DebateService{
 	}
 
 
+	public function getAllDebate($limit){
+		$debate= Debate::where('active','=',1)->limit($limit)->get();
+		foreach($debate as $d){
+			$this->preprocessPopularDebates($d);
+		}
+		return $debate;
+	}
+
+
+    private function preprocessPopularDebates(&$debate,$contentLimit=250){
+		//strip off html from title and content
+		$resultDebateContent= strip_tags($debate->debateDesc);
+		$resultDebateContent = substr($resultDebateContent,0,$contentLimit);
+		$resultDebateContent.="...";
+	 	$debate->debateDesc= $resultDebateContent;
+		$debate->title= strip_tags($debate->debateTitle);
+		// var_dump($blog->tags[0]->tagName);die;
+		// add the tags after implode
+		// $tagArr=[];
+		// foreach ($blog->tags as $t){
+		// 	$tagArr[]=$t->tagName;
+		// }
+		// $blog->tagList= implode(",",$tagArr);
+		// $createdByUser= $blog->users;
+		// $blog->createdBy= $createdByUser->FirstName." ".$createdByUser->LastName;
+	}
+
 }
