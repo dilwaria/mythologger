@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Questions extends Model
 {
     const CREATED_AT = 'createDateTime';
     const UPDATED_AT = 'updateDateTime';
