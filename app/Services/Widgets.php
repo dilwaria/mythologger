@@ -49,6 +49,16 @@ class Widgets{
 		return $this->debateService->getAllDebate($limit);
 	}
 
+	public function getHomePageImgUrls($imgUrl){
+		$imgArr= explode('.', $imgUrl);
+		return $imgArr[0]."_250.".$imgArr[1];
+	}
+
+	public function getPopularImgUrls($imgUrl){
+		$imgArr= explode('.', $imgUrl);
+		return $imgArr[0]."_60.".$imgArr[1];
+	}
+
 
 }
 

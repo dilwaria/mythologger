@@ -78,7 +78,7 @@
                 <div class="row">
                 @foreach ($popularBlogs as $b)
                     <div class="span4 homePageCells">
-                        <img class="homePageImage" src="{{$b['imgPath']}}" alt="image">
+                        <img class="homePageImage" src="{{Widgets::getHomePageImgUrls($b['imgPath'])}}" alt="image">
                         <h5>{{$b['title']}}</h5>
                         <p>{{$b['blogContent']}}</p>
                         <button class="btn btn-small btn-inverse" type="button" onclick='window.open("<?php echo route('blogDescription',['blogID'=>$b['id'], 'slug'=>$b['slug']] ) ?>","_blank")'>Read more</button>
