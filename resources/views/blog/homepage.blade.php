@@ -58,14 +58,14 @@
                 </div>
 
 
-                 <h3 class="title-bg" title="Alternate Mythology Debate"> Alternate Mythology </h3>
+                 <h3 style="color:#d44141" class="title-bg" title="Alternate Mythology Debate"> Alternate Mythology </h3>
                   <div class="row">
                 @foreach ($debates as $d)
                     <div class="span4 homePageCells">
                         <img class="homePageImage" src="{{$d['imagePath']}}" alt="image">
                         <h5>{{$d['debateTitle']}}</h5>
                         <p>{{$d['debateDesc']}}</p>
-                        <button class="btn btn-small btn-inverse" type="button" onclick='window.open("<?php echo route('showDebate',['debateID'=>$d['id'], 'slug'=>$d['slug']] ) ?>","_blank")'>Discuss</button>
+                        <button class="btn btn-small btn-warning" type="button" onclick='window.open("<?php echo route('showDebate',['debateID'=>$d['id'], 'slug'=>$d['slug']] ) ?>","_blank")'>Discuss</button>
                     </div>
                   @endforeach
              
