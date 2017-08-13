@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use  Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use DB;
 
@@ -23,6 +23,7 @@ class DockableTest extends Controller
 
     	return "{\"text\": \"This is a line of text.And this is another one.\"}";
     }
+    else{ return "flase";}
 }
 
 }
