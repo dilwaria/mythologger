@@ -17,9 +17,12 @@ class DockableTest extends Controller
     }
 
     public function todolist(){
+    	$what = Request::input('token');
+    	$token = "igePHdSLSB9So4QwVAg3qaQI";
+    	if($what==$token){
 
-
-    	return "True";
+    	return "{\"text\": \"This is a line of text.And this is another one.\"}";
     }
+}
 
 }
