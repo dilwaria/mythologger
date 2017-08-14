@@ -25,8 +25,8 @@ class Widgets{
 		return $this->blogService->getPopularBlogs($limit);
 	}
 
-	public function getCategories(){
-		$blogs= Tags::withCount('blogs')->limit(4)->get()->
+	public function getCategories($limit=4){
+		$blogs= Tags::withCount('blogs')->limit($limit)->get()->
 			sortBy( function($tags) {
 				return $tags->blogs->count();
 			},SORT_REGULAR,true);

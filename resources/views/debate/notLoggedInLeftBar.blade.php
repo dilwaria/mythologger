@@ -1,22 +1,33 @@
-<h5 class="title-bg f16" style="margin-top: 0px;">Popular Posts</h5>
-<ul class="popular-posts">
-    @foreach ( Widgets::getPopularPosts() as $posts)
-    <li>
-        <a href="javascript:void(0)"><img class="popularImage" src="{{$posts['imgPath']}}" alt="Popular Post"></a>
-        <h6><a target="_blank" href="<?php echo route('blogDescription',['blogID'=>$posts['id'], 'slug'=>$posts['slug']]) ?>">{{$posts['title']}}</a></h6>
-        <em>Posted on {{Carbon\Carbon::parse($posts['createDateTime'])->format('d-F-Y')}}</em>
-    </li>
-    @endforeach
-</ul>
 
-<h5 class="title-bg f16" >Popular Debates</h5>
-<ul class="popular-posts">
-    @foreach ( Widgets::getAllDebates() as $debates)
-    <li>
-        <a href="javascript:void(0)"><img class="popularImage" src="{{$debates['imagePath']}}" alt="Creative Writing"></a>
-        <h6><a target="_blank" href="<?php echo route('showDebate',['debateID'=>$debates['id'], 'slug'=>$debates['slug']] ) ?>">{{$debates['debateTitle']}}</a></h6>
-        <em>Posted on {{Carbon\Carbon::parse($debates['createDateTime'])->format('d-F-Y')}}</em>
-    </li>
-    @endforeach
-</ul>
 
+
+<!-- -//////////////////////////////////// -->
+
+             <h5 class="title-bg">Debate Stats</h5>
+            <ul class="list_blt">
+           
+                <li><i class="icon-fire"></i>40 Followers</li>
+                 <li><i class="icon-fire"></i>{!! $debate->views !!} Views</li>
+                  <li><i class="icon-fire"></i>{{$total_answers}} Answers</li>
+                   <li><i class="icon-fire"></i>{{$mytho_points}} Mytho Points</li>
+                
+            </ul>
+
+            <h6 class="title-bg">Popularity Level</h6>
+
+            <div class="progress progress-danger progress-striped">
+                <div class="bar" style="width: 35%"></div>
+            </div>
+                        <h5 class="title-bg">Trending Tags</h5>
+            <ul class="list_blt">
+            @foreach ( Widgets::getCategories(6) as $categories)
+                <li><a target="_blank" href="<?php echo route('categoryPage',['category'=> Common::processCategoryName($categories['tagName']) ]) ?>"><i class="icon-tag"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
+                @endforeach
+            </ul>
+
+            <h6 class="title-bg">Instructions to Write</h6>
+                  <ul class="list_blt">
+                  <li><i class="icon-check"></i>Write within 400-600 .</li>
+                  <li><i class="icon-check"></i>Be Precise, </li>
+                  <li><i class="icon-check"></i>Respect the community.and other co-mythologers</li>
+                  <ul>
