@@ -31,6 +31,19 @@
 
    
 
+        <div class="gAds">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- descriptionPage -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-3341786863476895"
+                     data-ad-slot="2734358964"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
    <h5 class="title-bg f16" >Popular Debates</h5>
 <ul class="popular-posts">
     @foreach ( Widgets::getAllDebates() as $debates)
