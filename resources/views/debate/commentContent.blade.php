@@ -1,6 +1,6 @@
 <div class="answer p1 mt2 inputForReply" style="border-radius: 15px;margin-left: {{$mt}}%;">
                         <div class="mt2">
-                            <img class="img-circle mr2 floatL" src="{{Common::getUserPic($c->writer)}}" style=" height: 30px;width: 30px;">
+                            <img class="img-circle mr2 floatL" src=" {!! Avatar::create($c->writer->name)->toBase64()!!}" style=" height: 30px;width: 30px;">
                             <div class="dspIB">
                                 {{$c->writer->name}} <br> <span style="font-size:12px;">{{Carbon\Carbon::parse($c->updateDateTime)->format('d-F-Y')}}</span>
                             </div> 

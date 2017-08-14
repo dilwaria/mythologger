@@ -39,11 +39,11 @@
 <!-- JS
 ================================================== -->
 <script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/jquery.prettyPhoto.js"></script>
-<script src="/js/jquery.flexslider.js"></script>
-<script src="/js/jquery.custom.js"></script>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>    
+<script defer src="/js/bootstrap.js"></script>
+<script defer src="/js/jquery.prettyPhoto.js"></script>
+<script defer src="/js/jquery.flexslider.js"></script>
+<script defer src="/js/jquery.custom.js"></script>
+<script defer type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=59112938ef4e140012286c0a&product=sticky-share-buttons"></script>    
 <script type="text/javascript">
 $(document).ready(function () {
 
