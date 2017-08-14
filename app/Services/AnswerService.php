@@ -118,4 +118,9 @@ class AnswerService{
         $res=$c->save();
 	}
 
+	public function getTotalAnswers($userID){
+		$answer= Answers::where('creatorID','=',$userID)->get();
+		return count($answer);
+	}
+
 }

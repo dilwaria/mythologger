@@ -27,7 +27,10 @@
 
             <h6 class="title-bg">Instructions to Write</h6>
                   <ul class="list_blt">
-                  <li><i class="icon-check"></i>Write within 400-600 .</li>
-                  <li><i class="icon-check"></i>Be Precise, </li>
-                  <li><i class="icon-check"></i>Respect the community.and other co-mythologers</li>
+                  <li><i class="icon-check"></i>Write within 400-600.</li>
+                  <li><i class="icon-check"></i>Be Precise.</li>
+                  <li><i class="icon-check"></i>Respect the community.</li>
+                   <li><i class="icon-check"></i>Respect other co-mythologers.</li>
+                   <!-- <li><i class="icon-check"></i>Dont hate</li> -->
+
                   <ul>

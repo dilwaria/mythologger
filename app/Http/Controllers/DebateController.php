@@ -47,11 +47,19 @@ class DebateController extends Controller{
         if(!$debate){
             abort(404);
         }
+        if(Auth::user()){
+                $count_of_answers= $this->answerService->getTotalAnswers(Auth::user()->id);
+                $mcoins = $count_of_answers*20 + 10 ; 
+            }
+        else{ $count_of_answers =-1 ;
+                $mcoins =-1 ;}
         $mythoPoints = $debate->views + count($answers)*5 + 20 ;
         $params = ['debate'=>$debate,
                     'answers'=>$answers,
                     'total_answers'=>count($answers),
                     'mytho_points' => $mythoPoints,
+                    'count_of_answers'=>$count_of_answers,
+                    'mcoins' => $mcoins,
                     'hasUserAnswered'=>$hasUserAnswered];
 		return view('debate/debate',$params);
 	}
