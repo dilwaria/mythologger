@@ -42,11 +42,18 @@ class DebateController extends Controller{
 
         $this->debateService->incrementViewCount($debate);
         $answers= $this->answerService->getAnswers($debateID);
+        // var_dump(count($answers));
         $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
         if(!$debate){
             abort(404);
         }
-		return view('debate/debate',['debate'=>$debate,'answers'=>$answers, 'hasUserAnswered'=>$hasUserAnswered]);
+        $mythoPoints = $debate->views + count($answers)*5 + 20 ;
+        $params = ['debate'=>$debate,
+                    'answers'=>$answers,
+                    'total_answers'=>count($answers),
+                    'mytho_points' => $mythoPoints,
+                    'hasUserAnswered'=>$hasUserAnswered];
+		return view('debate/debate',$params);
 	}
 
 

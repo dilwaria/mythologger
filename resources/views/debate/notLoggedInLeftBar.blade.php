@@ -8,8 +8,8 @@
            
                 <li><i class="icon-fire"></i>40 Followers</li>
                  <li><i class="icon-fire"></i>{!! $debate->views !!} Views</li>
-                  <li><i class="icon-fire"></i>4 Answers</li>
-                   <li><i class="icon-fire"></i>34 Mytho Points</li>
+                  <li><i class="icon-fire"></i>{{$total_answers}} Answers</li>
+                   <li><i class="icon-fire"></i>{{$mytho_points}} Mytho Points</li>
                 
             </ul>
 
