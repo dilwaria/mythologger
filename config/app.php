@@ -179,6 +179,9 @@ return [
 
         App\Providers\CustomProvider::class,
 
+        //gravatar
+        Laravolt\Avatar\ServiceProvider::class,
+
     ],
 
     /*
@@ -230,6 +233,7 @@ return [
 
         'Widgets' => App\Facades\Widgets::class,
         'Common' => App\Facades\Common::class,
+        'Avatar'    => Laravolt\Avatar\Facade::class,
 
     ],
 
