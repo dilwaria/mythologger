@@ -87,4 +87,14 @@ class DebateService{
 		// $blog->createdBy= $createdByUser->FirstName." ".$createdByUser->LastName;
 	}
 
+
+	public function incrementViewCount($debate){
+		$debateView= intval($debate->views);
+		if(isset($debate->tagList)){
+			unset($debate->tagList);
+		}
+		$debate->views= $debateView+1;
+		$debate->save();
+	}
+
 }

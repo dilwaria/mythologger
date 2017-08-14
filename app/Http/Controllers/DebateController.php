@@ -39,6 +39,8 @@ class DebateController extends Controller{
         if($slug!=$debate->slug){
             return redirect(route('showDebate',['slug'=>$debate->slug,'debateID'=>$debateID]),301);
         }
+
+        $this->debateService->incrementViewCount($debate);
         $answers= $this->answerService->getAnswers($debateID);
         $hasUserAnswered= $this->answerService->checkIfUserAnswered($answers);
         if(!$debate){
