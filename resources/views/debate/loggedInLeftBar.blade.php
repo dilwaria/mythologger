@@ -4,7 +4,7 @@
     </div>
 
     <div class="profileName">
-        Abhinav Sharma
+        {{ Auth::user()->name}}
     </div>
 
     <div class="profilePoints">
@@ -13,6 +13,10 @@
         <i class="icon-ok"></i>340 Answers<br>
     </div>
 
+
+<div class="progress progress-success progress-striped">
+                <div class="bar" style="width: 40%"></div>
+            </div>
 </div>
 
 <!--  <h5 class="title-bg">Debate Stats</h5>
