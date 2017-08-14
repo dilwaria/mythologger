@@ -20,12 +20,3 @@
             </div>
 </div>
 
-<!--  <h5 class="title-bg">Debate Stats</h5>
-<ul class="">
-
-    <li><i class="icon-asterisk"></i>40 Followers</li>
-     <li><i class="icon-asterisk"></i>100 views</li>
-      <li><i class="icon-asterisk"></i>40 answers</li>
-       <li><i class="icon-asterisk"></i>340 karma points</li>
-    
-</ul> -->
