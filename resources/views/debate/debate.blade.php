@@ -1,8 +1,23 @@
 @extends('master')
 
  @section('title')
- Mythologger- Applied Mythology Blogging
+{{ strip_tags($debate->debateSeoTitle) }}
  @endsection
+@section('metadescription')
+<meta name="description" content="{{ strip_tags($debate->debateSeoDesc) }}" />
+<meta name="keywords" content="{{ strip_tags($debate->debateSeoMetaKeywords) }}"/>
+<link rel="canonical" href="<?php echo route('showDebate',['debateID'=>$debate['id'], 'slug'=>$debate['slug']] ) ?>" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ strip_tags($debate->debateSeoTitle) }}" />
+<meta property="og:description" content="{{ strip_tags($debate->debateSeoDesc) }}" />
+<meta property="og:url" content="<?php echo route('showDebate',['debateID'=>$debate['id'], 'slug'=>$debate['slug']] ) ?>" />
+<meta property="og:site_name" content="mythologger.com" />
+<meta property="og:image" content="{!! url($debate->imagePath) !!}" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="400" />
+@endsection
+
 
  @section('styleCss')
      <link href="/css/profile.css" type="text/css" rel="stylesheet">
