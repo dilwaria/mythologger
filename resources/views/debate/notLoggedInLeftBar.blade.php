@@ -24,3 +24,10 @@
                 <li><a target="_blank" href="<?php echo route('categoryPage',['category'=> Common::processCategoryName($categories['tagName']) ]) ?>"><i class="icon-tag"></i>{{$categories['tagName']}}( {{$categories['blogs_count']}} )</a></li>
                 @endforeach
             </ul>
+
+            <h6 class="title-bg">Instructions to Write</h6>
+                  <ul class="list_blt">
+                  <li><i class="icon-check"></i>Write within 400-600 .</li>
+                  <li><i class="icon-check"></i>Be Precise, </li>
+                  <li><i class="icon-check"></i>Respect the community.and other co-mythologers</li>
+                  <ul>
