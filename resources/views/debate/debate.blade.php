@@ -67,6 +67,14 @@
             </div> 
 
             -->
+            @if(!Auth::user())
+            <br>
+            <div class="alert alert-error">
+                
+                <strong>Please Login!</strong> Become a Mythologger to contribute.
+            </div>
+            @endif
+
             <div id="answerSection">
                 @include('debate/answer')
             </div>
