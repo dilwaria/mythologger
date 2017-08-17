@@ -47,7 +47,7 @@ class DockableTest extends Controller
 
 	private function alltodolist(){
 		$getToDoList  = $this->dService->getToDoList();
-		if($getToDoList==[]){
+		if(!$getToDoList){
 			return "Empty List , No TODO's";
 		}
 		return $getToDoList;

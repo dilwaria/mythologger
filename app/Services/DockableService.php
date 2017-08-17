@@ -44,7 +44,7 @@ class DockableService{
 		}
 		$todolists->active =1 ;
 		$todolists->save();
-		return "deleted the list";
+		return "deleted from the list". $text . " ";
 		
 	}
 
