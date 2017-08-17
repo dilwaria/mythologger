@@ -66,7 +66,11 @@ Route::group( ['middleware' => ['web'] ], function () {
 
 	Route::get('/home', 'HomeController@index')->name('home');
 
-	Route::any('/dockabletest',['uses'=>'DockableTest@todolist','as'=>'todolist']);
+	// Route::any('/dockabletest',['uses'=>'DockableTest@todolist','as'=>'todolist']);
 
 
+});
+
+Route::group(['namespace'=>'apis','middleware' => ['api']],function(){
+     Route::any('/dockabletest',['uses'=>'DockableTest@todolist','as'=>'todolist']);
 });
