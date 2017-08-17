@@ -29,15 +29,16 @@ class DockableTest extends Controller
     		if($command=="/todolist"){
     			$message = $this->alltodolist();
     		}
-    		if($command=="/addtodolist"){
+    		else if($command=="/addtodolist"){
     			$text = Request::input('text');
     			$message = $this->addtodolist($text);
     		}
-    		if($command=="/marktodolist"){
+    		else if($command=="/marktodolist"){
     			$text = Request::input('text');
     			$message = $this->marktodolist($text);
 
     		}
+    		else {return "bad command";}
     	 // $this->dService->markToDoList("ramu");
     	return $message;
     }
@@ -46,6 +47,9 @@ class DockableTest extends Controller
 
 	private function alltodolist(){
 		$getToDoList  = $this->dService->getToDoList();
+		if($getToDoList==[]){
+			return "Empty List , No TODO's";
+		}
 		return $getToDoList;
 	}
 
@@ -54,8 +58,8 @@ class DockableTest extends Controller
 		return $addToDoList;
 	}
 
-	private function marktodolist(){
-		$markToDoList  = $this->dService->markToDoList();
+	private function marktodolist($text){
+		$markToDoList  = $this->dService->markToDoList($text);
 		return $markToDoList;
 	}
 
