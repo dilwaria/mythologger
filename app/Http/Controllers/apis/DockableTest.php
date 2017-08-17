@@ -27,7 +27,7 @@ class DockableTest extends Controller
     		$command = Request::input('command');
 
     		if($command=="/todolist"){
-    			$message = $this->todolist();
+    			$message = $this->alltodolist();
     		}
     		if($command=="/addtodolist"){
     			$text = Request::input('text');
@@ -44,7 +44,7 @@ class DockableTest extends Controller
     else{ return "invalid token";}
 }
 
-	private function todolist(){
+	private function alltodolist(){
 		$getToDoList  = $this->dService->getToDoList();
 		return $getToDoList;
 	}
