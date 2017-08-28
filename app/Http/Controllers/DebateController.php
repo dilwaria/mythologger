@@ -128,4 +128,12 @@ class DebateController extends Controller{
    }
 
 
+   public function getdebateAllPage(){
+          $debate =  $this->debateService->getAllDebate(10);
+
+        $params =['debate'=>$debate];
+      return view('debate.debateAllPage',$params);
+   }
+
+
 }

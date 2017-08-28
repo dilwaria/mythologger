@@ -58,7 +58,10 @@
                 </div>
 
 
-                 <h3 style="color:#d44141" class="title-bg" title="Alternate Mythology Debate"> Alternate Mythology </h3>
+                 <h3 style="color:#d44141" class="title-bg" title="Alternate Mythology Debate"> Alternate Mythology 
+
+                 <button class="btn btn-mini btn-inverse hidden-phone" type="button">View Portfolio</button>
+                 </h3>
                   <div class="row">
                 @foreach ($debates as $d)
                     <div class="span4 homePageCells">

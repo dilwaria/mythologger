@@ -45,12 +45,12 @@
                 <a href="{{route('categoryPage')}}/greek-mythology">Greek Mlogs </a>
 
             </li>
-                @if (url()->current() == route('categoryPage',['category'=>'other-mythology']))
+                @if (url()->current() == route('getdebateAllPage'))
                 <li class="dropdown  active">
                @else
                 <li class="dropdown  ">
                 @endif
-                <a href="{{route('categoryPage')}}/other-mythology">Other Mlogs </a>
+                <a href="{{route('getdebateAllPage')}}">Alternate Mythology </a>
 
             </li>
             <!-- <li class="dropdown">
@@ -106,7 +106,7 @@
                     <option value="{{route('homePage')}}">Home</option>
                     <option value="{{route('categoryPage')}}/greek-mythology">Greek Mlogs</option>
                     <option value="{{route('categoryPage')}}/hindu-mythology">Hindu Mlogs</option>
-                    <option value="{{route('categoryPage')}}/other-mythology">Other Mlogs</option>
+                    <option value="{{route('getdebateAllPage')}}">Alternate Mythology</option>
                        <!--  <option value="page-right-sidebar.htm"> -Greek</option>
                         <option value="page-left-sidebar.htm"> -Other</option> -->
                     <option value="{{route('contactus')}}">Contact</option>
