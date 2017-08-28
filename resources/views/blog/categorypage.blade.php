@@ -1,8 +1,17 @@
 @extends('master')
 
  @section('title')
- Mythologger- Applied Mythology Blogging
+ Mythologger- CONNECTING CONTEMPORARY WORLD & MYTHOLOGY | MYTHOLOGY
  @endsection
+
+
+@section('metadescription')
+<meta name="description" content="Mythologger - a concept for relating contemporary world with mythology like Greek, Roman, Chinese, Hindu and Norse Mythology " />
+
+<meta name="keywords" content="Indian Mythology, Mythology , India, Hindu Mythology, Greek Mythology, Chinese Mythology, Norse Mythology, Norse, Mahabharata , stories, Myth, Mythos,  Roman Mythology, Egyptian Mythology, Iliad, , ancient Greece, Greek , Odysseus, Ramayana, Krishna "/>
+<link rel="canonical" href="https://www.mythologger.com" />
+@endsection
+
 
 @section('content')
 
