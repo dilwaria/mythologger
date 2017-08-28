@@ -45,7 +45,7 @@ class Widgets{
 		
 	}
 
-	public function getAllDebates($limit=3){
+	public function getAllDebates($limit=4){
 		return $this->debateService->getAllDebate($limit);
 	}
 
