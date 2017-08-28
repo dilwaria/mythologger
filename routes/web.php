@@ -66,7 +66,7 @@ Route::group( ['middleware' => ['web'] ], function () {
 
 	Route::get('/home', 'HomeController@index')->name('home');
 
-	Route::get('/debate', 'DebateController@getdebateAllPage')->name('getdebateAllPage');
+	Route::get('/alternate-mythology', 'DebateController@getdebateAllPage')->name('getdebateAllPage');
 	// Route::any('/dockabletest',['uses'=>'DockableTest@todolist','as'=>'todolist']);
 
 
