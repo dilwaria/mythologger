@@ -45,12 +45,12 @@
                 <a href="{{route('categoryPage')}}/greek-mythology">Greek Mlogs </a>
 
             </li>
-                @if (url()->current() == route('categoryPage',['category'=>'other-mythology']))
+                @if (url()->current() == route('getdebateAllPage'))
                 <li class="dropdown  active">
                @else
                 <li class="dropdown  ">
                 @endif
-                <a href="{{route('categoryPage')}}/other-mythology">Other Mlogs </a>
+                <a href="{{route('getdebateAllPage')}}">Alternate Mythology </a>
 
             </li>
             <!-- <li class="dropdown">
