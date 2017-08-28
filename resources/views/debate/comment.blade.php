@@ -1,4 +1,4 @@
-<form id="commentSubmit_{{$a->id}}" class="commentFormSubmit" method="post" action="{{route('postComment')}}" >
+<form id="commentSubmit_{{$a->id}}" class="commentFormSubmit" method="post" action="{{route('postComment')}}" onkeypress="return event.keyCode != 13;" >
 <input type="hidden" name="debateAnswerID" value="{{$a->id}}">
 <input type="hidden" name="creatorID" value="{{Auth::user()->id}}">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
