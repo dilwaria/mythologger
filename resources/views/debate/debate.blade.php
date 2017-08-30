@@ -75,8 +75,10 @@
             </div>
             @endif
 
-            <div id="answerSection">
-                @include('debate/answer')
+            <div id="answerWrapper">
+                <div id="answerSection">
+                    @include('debate/answer')
+                </div>
             </div>
 
             
@@ -115,10 +117,11 @@
 <script src="/js/ckeditor_config.js"></script>
 <script type="text/javascript">
 var getMyAnswerUrl="{{route('getMyAnswer')}}";
+
 $(document).ready( function() {
 // $("#txtEditor").Editor();  
 
-    $('#answerSection').on("click",
+    $('#answerWrapper').on("click",
         function(e){
             if($(e.target).is('#answerSubmit')){
                 $('#submitAnswerForm').submit();
@@ -131,7 +134,7 @@ $(document).ready( function() {
         }
     );
 
-    $('#answerContainer').on("click",
+    $('#answerWrapper').on("click",
         function(e){
             if($(e.target).hasClass('comments')){
                 var name= $(e.target).attr('id');
@@ -192,12 +195,18 @@ $(document).ready( function() {
         $('#cke_1_top').show();
         
     });
+
     // CKEDITOR.replaceClass = 'commentInput';
    
 
-    $('#answerContainer').on('submit','.commentFormSubmit',function(e){
+    $('#answerWrapper').on('submit','.commentFormSubmit',function(e){
         e.preventDefault();
         var form = $(this);
+        var formID= $(this).attr('id');
+        var commentVal= $("#"+formID+" [name=commentContent]").val();
+        if(!commentVal.trim()){
+            return;
+        }
         var post_url = form.attr('action');
         var post_data = form.serialize();
         $.ajax({
@@ -218,10 +227,16 @@ $(document).ready( function() {
 
     $('#submitAnswerForm').on('submit',function(e){
         e.preventDefault();
+        
         for ( instance in CKEDITOR.instances ){
             CKEDITOR.instances[instance].updateElement();
         }
         var form = $(this);
+        var formID= $(this).attr('id');
+        var answerVal= $("#"+formID+" [name=answerContent]").val();
+        if(!answerVal.trim()){
+            return;
+        }
         var post_url = form.attr('action');
         var post_data = form.serialize();
         $.ajax({

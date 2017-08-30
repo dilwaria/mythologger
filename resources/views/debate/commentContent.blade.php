@@ -11,7 +11,7 @@
                         <button id="replyToComment_{{$a->id}}_{{$c->id}}" class="btn btn-mini mt1 replyToComment"> Reply</button>
         </div>
     <div id="reply_{{$a->id}}_{{$c->id}}" class="dspN">
-            <form id="replySubmit_{{$a->id}}_{{$c->id}}" method="post" class="commentFormSubmit" action="{{route('postComment')}}" >
+            <form id="replySubmit_{{$a->id}}_{{$c->id}}" method="post" class="commentFormSubmit" action="{{route('postComment')}}" onkeypress="return event.keyCode != 13;" >
              <input type="hidden" name="debateAnswerID" value="{{$a->id}}">
             <input type="hidden" name="creatorID" value="{{Auth::user()->id}}">
             <input type="hidden" name="parentID" value="{{$c->id}}">
