@@ -67,7 +67,11 @@ Route::group( ['middleware' => ['web'] ], function () {
 	Route::get('/home', 'HomeController@index')->name('home');
 
 	Route::get('/alternate-mythology', 'DebateController@getdebateAllPage')->name('getdebateAllPage');
-	// Route::any('/dockabletest',['uses'=>'DockableTest@todolist','as'=>'todolist']);
+
+
+	Route::get('/quizAdmin', 'QuizController@handleAdmin')->name('handleAdmin');
+
+	Route::post('/quiz/saveQuiz',['uses'=>'QuizController@saveQuiz']);
 
 
 });
