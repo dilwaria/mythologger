@@ -61,7 +61,7 @@ class DebateService{
 
 
 	public function getAllDebate($limit){
-		$debate= Debate::where('active','=',1)->limit($limit)->get();
+		$debate= Debate::where('active','=',1)->orderBy('createDateTime','desc')->limit($limit)->get();
 		foreach($debate as $d){
 			$this->preprocessPopularDebates($d);
 		}
