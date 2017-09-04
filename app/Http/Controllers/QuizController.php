@@ -11,6 +11,7 @@ use App;
 use App\User;
 use Session;
 use Auth;
+use App\Events\eventTrigger;
 
 
 class QuizController extends Controller{
@@ -60,6 +61,10 @@ class QuizController extends Controller{
         }
         $this->quizService->saveQuiz($quiz,$tags,$quizID);
         echo "Saved Sucessfully";
+   }
+
+   public function quizPush(){
+        event(new eventTrigger());
    }
 
 }

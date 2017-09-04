@@ -73,6 +73,14 @@ Route::group( ['middleware' => ['web'] ], function () {
 
 	Route::post('/quiz/saveQuiz',['uses'=>'QuizController@saveQuiz']);
 
+	Route::any('/quizpush',['uses'=>'QuizController@quizPush']);
+
+	Route::any('/listen',function(){
+		return view('listener');
+	});
+
+
+
 
 });
 
